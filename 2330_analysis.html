@@ -136,10 +136,10 @@
 <nav class="stepnav">
   <a href="#step1">01 現金流量表分析</a>
   <a href="#step2">02 基本資訊查詢</a>
-  <a href="#step3" class="active">03 法說會討論</a>
-  <span class="disabled">04 營收趨勢</span>
-  <span class="disabled">05 前瞻本益比</span>
-  <span class="disabled">06 投資決策推理</span>
+  <a href="#step3">03 法說會討論</a>
+  <a href="#step4" class="active">04 營收趨勢</a>
+  <a href="#step5" class="active">05 前瞻本益比</a>
+  <a href="#step6" class="active">06 投資決策推理</a>
 </nav>
 
 <main>
@@ -443,6 +443,107 @@
   <div class="callout" style="margin-top:20px;">
     <b>四個方向串起來看：</b> 業務結構已轉向AI驅動（①），公司用加碼資本支出＋美國擴廠去搶這波需求（②③），美國投資同時也是地緣政治／貿易協議的產物（④），現金流體質仍撐得住這個擴張節奏，沒有出現體質轉弱的訊號。
   </div>
+</section>
+
+<section id="step4">
+  <div class="progress">【第 4 步／共 6 步：營收趨勢視覺化】</div>
+  <p>近9期月營收（<a href="https://tw.stock.yahoo.com/quote/2330.TW/revenue" style="color:var(--gold);" target="_blank">Yahoo股市營收表</a>），單位：億元</p>
+
+  <div class="chart-wrap">
+    <div class="bars">
+      <div class="bar-col"><div class="bar" style="height:216px;background:var(--accent-dim);"><span class="val">3,674.7</span></div><div class="bar-label">2025/10</div></div>
+      <div class="bar-col"><div class="bar" style="height:202px;background:var(--accent-dim);"><span class="val">3,436.1</span></div><div class="bar-label">2025/11</div></div>
+      <div class="bar-col"><div class="bar" style="height:197px;background:var(--accent-dim);"><span class="val">3,350.0</span></div><div class="bar-label">2025/12</div></div>
+      <div class="bar-col"><div class="bar" style="height:236px;background:var(--accent-dim);"><span class="val">4,012.6</span></div><div class="bar-label">2026/01</div></div>
+      <div class="bar-col"><div class="bar" style="height:187px;background:var(--c-trough);"><span class="val" style="color:var(--c-trough)">3,176.6▼</span></div><div class="bar-label">2026/02</div></div>
+      <div class="bar-col"><div class="bar" style="height:244px;background:var(--accent-dim);"><span class="val">4,151.9</span></div><div class="bar-label">2026/03</div></div>
+      <div class="bar-col"><div class="bar" style="height:241px;background:var(--accent-dim);"><span class="val">4,107.3</span></div><div class="bar-label">2026/04</div></div>
+      <div class="bar-col"><div class="bar" style="height:245px;background:var(--accent-dim);"><span class="val">4,169.8</span></div><div class="bar-label">2026/05</div></div>
+      <div class="bar-col"><div class="bar" style="height:260px;background:var(--c-peak);"><span class="val" style="color:var(--c-peak)">4,426.8▲</span></div><div class="bar-label">2026/06</div></div>
+    </div>
+    <div class="zero-axis"></div>
+  </div>
+
+  <table>
+    <thead><tr><th>月份</th><th>營收（億元）</th><th>月增率</th><th>年增率</th></tr></thead>
+    <tbody>
+      <tr><td>2025/10</td><td>3,674.7</td><td class="pos">+11.03%</td><td class="pos">+16.94%</td></tr>
+      <tr><td>2025/11</td><td>3,436.1</td><td class="neg">-6.49%</td><td class="pos">+24.47%</td></tr>
+      <tr><td>2025/12</td><td>3,350.0</td><td class="neg">-2.51%</td><td class="pos">+20.43%</td></tr>
+      <tr><td>2026/01</td><td>4,012.6</td><td class="pos">+19.78%</td><td class="pos">+36.81%</td></tr>
+      <tr class="hl-row"><td>2026/02</td><td>3,176.6</td><td class="neg">-20.83%</td><td class="pos">+22.17%</td></tr>
+      <tr><td>2026/03</td><td>4,151.9</td><td class="pos">+30.70%</td><td class="pos">+45.19%</td></tr>
+      <tr><td>2026/04</td><td>4,107.3</td><td class="neg">-1.08%</td><td class="pos">+17.50%</td></tr>
+      <tr><td>2026/05</td><td>4,169.8</td><td class="pos">+1.52%</td><td class="pos">+30.09%</td></tr>
+      <tr><td>2026/06</td><td>4,426.8</td><td class="pos">+6.16%</td><td class="pos">+67.87%</td></tr>
+    </tbody>
+  </table>
+  <p>2月是全年低點，主因農曆春節工作天數少（每年慣例性淡季），不是體質問題；3月立刻月增30.7%回補。整體趨勢是<b>年增率一路走高</b>（從16.94%擴大到67.87%），且近三個月站穩4,000億以上，反映AI/HPC需求持續加溫，與第2、3步看到的HPC占比拉高（66%）互相呼應。</p>
+</section>
+
+<section id="step5">
+  <div class="progress">【第 5 步／共 6 步：前瞻本益比／EPS 預估】</div>
+
+  <h2>市場法人 EPS 預估（2026-2028）</h2>
+  <table>
+    <thead><tr><th>機構</th><th>2026年EPS</th><th>2027年EPS</th><th>2028年EPS</th><th>目標價（法說後）</th></tr></thead>
+    <tbody>
+      <tr><td>瑞銀</td><td>99.84元</td><td>139.27元</td><td>182.04元</td><td>3,400元</td></tr>
+      <tr><td>花旗</td><td>106.15元</td><td>148.69元</td><td>198.42元</td><td>3,800元（未變動）</td></tr>
+      <tr><td>美銀</td><td>107元</td><td>153元</td><td>178元</td><td>3,100元</td></tr>
+    </tbody>
+  </table>
+  <p class="note">來源：<a href="https://money.udn.com/money/story/5607/9596199" style="color:var(--gold);" target="_blank">經濟日報（瑞銀）</a>、<a href="https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%B3%95%E8%AA%AA%E6%9C%83%E5%80%92%E6%95%B8-%E5%A4%96%E8%B3%87%E9%BD%8A%E5%8D%87%E7%9B%AE%E6%A8%99%E5%83%B9-%E6%9C%80%E9%AB%98%E5%96%8A%E5%88%B03800%E5%85%83-eps%E4%B8%8A%E7%9C%8B198-42%E5%85%83-005000550.html" style="color:var(--gold);" target="_blank">Yahoo股市（花旗）</a>、<a href="https://tw.stock.yahoo.com/news/%E6%B3%95%E8%AA%AA%E5%89%8D%E5%A4%96%E8%B3%87%E6%9C%80%E9%AB%98%E5%96%8A3-100%E5%85%83-%E5%8F%B0%E7%A9%8D%E9%9B%BBeps%E9%A0%90%E4%BC%B0%E4%B8%8A%E7%9C%8B178%E5%85%83-ai-2%E5%A5%88%E7%B1%B3-003600344.html" style="color:var(--gold);" target="_blank">Yahoo股市（美銀）</a>。目標價為法說會後（7/16後）重申或調整的最新數字，法說後多家外資調升，最高看到4,200元（亞系外資），也有一家亞系外資降評至「中立」、目標價下修至2,700元，如實並陳，並非所有法人都一致樂觀。</p>
+
+  <h2>隱含前瞻本益比（以 2026/07/24 收盤 2,350元計算）</h2>
+  <table>
+    <thead><tr><th>年度</th><th>EPS區間（元）</th><th>隱含本益比</th></tr></thead>
+    <tbody>
+      <tr><td>2026年（今年）</td><td>99.84～107</td><td>約 22.0～23.5 倍</td></tr>
+      <tr><td>2027年</td><td>139.27～153</td><td>約 15.4～16.9 倍</td></tr>
+      <tr><td>2028年</td><td>178～198.42</td><td>約 11.8～13.2 倍</td></tr>
+    </tbody>
+  </table>
+  <p>這是「已知股價、反推隱含倍數」的算法——現在買，等於用約22-23倍本益比買今年獲利，但如果2027、2028年獲利真的能成長到分析師預估的水準，隱含倍數會隨獲利成長而自然下降到15倍、甚至12倍左右。</p>
+
+  <h2>目標本益比法（反推目標價區間）</h2>
+  <p>這是另一種算法——已知假設倍數、反推目標價，跟上面「隱含本益比」不是同一件事。以2026年EPS約100-107元為基礎：</p>
+  <table>
+    <thead><tr><th>假設本益比倍數</th><th>對應目標價（元）</th></tr></thead>
+    <tbody>
+      <tr><td>20倍（保守）</td><td>約 2,000～2,140</td></tr>
+      <tr><td>25倍（中性，接近目前隱含倍數）</td><td>約 2,500～2,675</td></tr>
+      <tr><td>30倍（樂觀，比照AI成長股評價）</td><td>約 3,000～3,210</td></tr>
+    </tbody>
+  </table>
+  <p class="note">目標本益比法算出的價格對「倍數怎麼選」高度敏感，沒有標準答案，只是敏感度試算，不是預測。外資目標價（2,700～4,200元）背後隱含的本益比，大多落在25-35倍區間，反映市場多數仍用「AI成長股」而非「傳統晶圓代工廠」的倍數在評價台積電。</p>
+
+  <div class="callout warn">
+    <b>誠實揭露不確定性：</b> 法說會當天財報與展望雙雙創高、超越財測高標，隔天（7/17）台股卻史上最大單日崩跌近3,000點、台積電重挫180元。這說明短期股價走勢與法人預估之間存在明顯落差，法人上調的目標價（多在3,100-4,200元）是「未來1年」的預估，不代表短期不會劇烈波動。對法人預估宜保持適度懷疑，不宜過度信任。
+  </div>
+</section>
+
+<section id="step6">
+  <div class="progress">【第 6 步／共 6 步：投資決策推理】</div>
+  <p class="note">以下是根據前5步資料的推理與個人觀點，<b>不是專業投資建議</b>，我不是理財顧問，請自行判斷風險或諮詢合格顧問。</p>
+
+  <h3>若目前尚未持有，會不會進場？</h3>
+  <p>會考慮分批進場，但不會All-in追高。理由：</p>
+  <ul style="color:var(--text);">
+    <li>現金流體質（第1步）優秀90分，六大規則沒有警訊，代表這不是靠灌水撐出來的成長</li>
+    <li>業務結構（第3步）已確立轉向AI/HPC驅動，先進製程占比77%持續墊高，訂單能見度佳（3奈米今年利用率估超過120%）</li>
+    <li>但目前隱含本益比約22-23倍（用2026年EPS計算），並非便宜價位，且法說會後股價本身劇烈波動（一週內從2,290到2,400之間反覆），短線進場時機不確定性高</li>
+  </ul>
+  <p><b>具體可驗證的觀察條件：</b>股價拉回到隱含2026年本益比20倍以下（約2,000-2,140元附近），或等下一季（Q3，10月中旬）法說會確認2奈米毛利率稀釋幅度是否如預期收斂（原估稀釋3-4個百分點，是否符合），再決定是否進場，而不是看到大跌就急著猜底。</p>
+
+  <h3>若已經持有，續抱還是賣出？</h3>
+  <p>傾向續抱，理由呼應第1步現金流結論：</p>
+  <ul style="color:var(--text);">
+    <li>期末現金餘額連6年無下滑，投資紀律正常（|B|<A），不是靠舉債支撐的擴張</li>
+    <li>Q2財報與Q3展望都優於財測高標，基本面沒有轉弱訊號</li>
+    <li>7/17的暴跌更像總體面/情緒面的短線賣壓，不是公司體質出問題（法說會內容本身全面創高）</li>
+  </ul>
+  <p><b>會考慮減碼或賣出的訊號：</b>連續兩季本業現金流（A）年增率轉為衰退、或2奈米毛利率稀釋幅度明顯超出公司財測（例如稀釋超過5個百分點且未收斂）、或HPC營收占比連續下滑——任一項出現，代表AI需求或投資效益判斷出現偏差，屆時需要重新檢視第1步的六大規則是否還站得住腳。</p>
 </section>
 
 </main>

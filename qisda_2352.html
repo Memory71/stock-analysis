@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>佳世達 (2352) 個股分析報告</title>
+<style>
+  :root{
+    --bg:#FAF6EE;
+    --card:#FFFFFF;
+    --card-border:#E8E0CC;
+    --ink:#1E2A38;
+    --ink-dim:#7A7166;
+    --navband:#16273A;
+    --navband-dim:#5C6B7A;
+    --gold:#8B6A34;
+    --score-bg:#DCEFE1;
+    --score-text:#276849;
+    --score-bg-weak:#F7E3D6;
+    --score-text-weak:#9A5A25;
+    --score-bg-bad:#F7DEDC;
+    --score-text-bad:#A73F35;
+    --peak-bg:#F3E4C4;
+    --trough-bg:#F7DAD5;
+    --neg:#B23A2E;
+    --pos:#1E2A38;
+    --line:#EAE3D4;
+    --warnbg:#FBF1E2;
+    --warnborder:#D9A94A;
+    --gatebg:#FDF3E7;
+    --gateborder:#C98A2E;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans TC","PingFang TC",sans-serif;
+    line-height:1.7;
+  }
+  .serif{font-family:"Noto Serif TC",serif;}
+  header.hero{
+    padding:52px 24px 34px; border-bottom:1px solid var(--line);
+    background:var(--bg);
+  }
+  .hero-inner{max-width:980px;margin:0 auto;}
+  .eyebrow{color:var(--gold); letter-spacing:.12em; font-size:12.5px; text-transform:uppercase; font-weight:600;}
+  h1{font-size:32px; margin:10px 0 6px; font-weight:700; color:var(--ink); font-family:"Noto Serif TC",serif;}
+  .sub{color:var(--ink-dim); font-size:14.5px;}
+  nav.stepnav{
+    position:sticky; top:0; z-index:50; background:rgba(250,246,238,.97);
+    backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
+    display:flex; overflow-x:auto; gap:2px; padding:0 12px;
+  }
+  nav.stepnav a{
+    color:var(--ink-dim); text-decoration:none; font-size:13px;
+    padding:14px 14px; white-space:nowrap; border-bottom:2px solid transparent;
+  }
+  nav.stepnav a.active{color:var(--ink); border-bottom-color:var(--gold); font-weight:600;}
+  nav.stepnav a.disabled{color:#C7BFAF; pointer-events:none;}
+  main{max-width:980px; margin:0 auto; padding:8px 24px 80px;}
+  section{padding:44px 0 8px;}
+  .stepmark{
+    font-size:12px; color:var(--gold);
+    letter-spacing:.08em; margin-bottom:8px; text-transform:uppercase; font-weight:600;
+  }
+  h2{font-size:23px; margin:0 0 18px; font-family:"Noto Serif TC",serif;}
+
+  .callout{
+    border-left:4px solid var(--warnborder); background:var(--warnbg);
+    padding:16px 20px; border-radius:4px; margin:16px 0 28px;
+    font-size:14.5px;
+  }
+  .callout b{color:#000;}
+
+  /* rule card */
+  .rule-card{
+    background:var(--card); border:1px solid var(--card-border); border-radius:14px;
+    padding:26px 28px; margin:18px 0; box-shadow:0 1px 2px rgba(30,42,56,.04);
+  }
+  .rule-head{display:flex; align-items:flex-start; gap:16px; margin-bottom:20px;}
+  .rule-num{
+    flex:0 0 auto; width:38px; height:38px; border-radius:50%;
+    background:var(--navband); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:16px;
+  }
+  .rule-title{flex:1;}
+  .rule-title h3{margin:0 0 4px; font-size:18px; color:var(--ink);}
+  .rule-tag{color:var(--gold); font-size:13.5px; font-weight:600;}
+  .rule-score{
+    flex:0 0 auto; background:var(--score-bg); color:var(--score-text);
+    font-weight:700; font-size:16px; padding:8px 18px; border-radius:999px; white-space:nowrap;
+  }
+  .rule-score.weak{background:var(--score-bg-weak); color:var(--score-text-weak);}
+  .rule-score.bad{background:var(--score-bg-bad); color:var(--score-text-bad);}
+
+  .year-table{border-radius:8px; overflow:hidden; border:1px solid var(--line);}
+  .year-row{display:grid; grid-template-columns:repeat(var(--cols,7),1fr);}
+  .year-row.heads{background:var(--navband); color:#fff;}
+  .year-row.heads > div{padding:10px 6px; text-align:center; font-size:13px; font-weight:600;}
+  .year-row.values > div{padding:14px 6px; text-align:center; font-size:16px; font-family:"Roboto Mono",monospace; border-right:1px solid var(--line); background:#fff;}
+  .year-row.values > div:last-child{border-right:none;}
+  .year-row.values .peak{background:var(--peak-bg); font-weight:700;}
+  .year-row.values .trough{background:var(--trough-bg); font-weight:700;}
+  .cellmark{display:block; font-size:11px; font-weight:600; color:var(--gold); margin-top:2px;}
+  .year-row.values .trough .cellmark{color:var(--neg);}
+  .year-row.values .negv{color:var(--neg);}
+
+  .unit-note{color:var(--ink-dim); font-size:13px; margin:10px 2px 16px;}
+  .rule-body{font-size:15px; margin:0; color:var(--ink);}
+  .rule-body b{color:#000;}
+
+  .gate{
+    margin-top:32px; padding:26px 28px; border-radius:14px;
+    background:var(--gatebg); border:1px solid var(--gateborder);
+  }
+  .gate h3{margin-top:0; color:#8A5A1E; font-size:19px;}
+  .scorewrap{display:flex; align-items:baseline; gap:14px; margin:10px 0;}
+  .bigscore{font-family:"Roboto Mono",monospace; font-size:44px; color:#8A5A1E; font-weight:700;}
+  .gatesub{color:var(--ink-dim); font-size:13.5px;}
+
+  .datatbl{width:100%; border-collapse:collapse; margin:14px 0; font-size:14px;}
+  .datatbl th,.datatbl td{padding:9px 10px; text-align:right; border-bottom:1px solid var(--line);}
+  .datatbl th:first-child, .datatbl td:first-child{text-align:left; color:var(--ink-dim);}
+  .datatbl th{color:var(--ink-dim); font-weight:600; font-size:12.5px; background:#F5F0E4;}
+  .datatbl td.negv{color:var(--neg);}
+
+  .tblnote{color:var(--ink-dim); font-size:13px; margin:4px 0 22px;}
+  footer{max-width:980px;margin:0 auto;padding:24px; color:var(--ink-dim); font-size:12px; border-top:1px solid var(--line);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">台股個股初步分析・六步驟流程</div>
+    <h1>佳世達 Qisda Corporation（2352）</h1>
+    <div class="sub">分析起始：現金流量表六大規則盲測，尚未查詢股價、EPS、產業地位等基本面資訊</div>
+  </div>
+</header>
+
+<nav class="stepnav" id="stepnav">
+  <a href="#step1" class="active">① 現金流六大規則</a>
+  <a href="#step2">② 基本資訊</a>
+  <a href="#step3">③ 法說會</a>
+  <a href="#step4">④ 營收趨勢</a>
+  <a href="#step5">⑤ 本益比/EPS</a>
+  <a href="#step6">⑥ 投資決策</a>
+</nav>
+
+<main>
+
+<section id="step1">
+  <div class="stepmark">【第 1 步／共 6 步】現金流量表六大規則分析（盲測階段・依使用者提供之官方財報截圖重做）</div>
+  <h2>現金流量表六大規則分析</h2>
+
+  <div class="callout">
+    <b>重點結論：</b>六大規則平均約 <b>48 分</b>，落在「需觀察」區間（&lt;60%）。本業現金流（A）大起大落（規則一）與 2021~2022、2024 三年 A 不敵 D（規則五）是主要扣分來源；投資紀律（規則二）是六項中相對穩健的一項。
+  </div>
+
+  <h3 style="font-size:15px;color:var(--ink-dim);font-weight:600;margin:28px 0 10px;">原始數據（單位：新台幣億元）</h3>
+  <table class="datatbl">
+    <tr><th>年度</th><th>A 營業活動</th><th>B 投資活動</th><th>C 融資活動</th><th>其他活動</th><th>D 稅前淨利</th><th>E=A+B 自由金流</th><th>期末餘額</th></tr>
+    <tr><td>2020</td><td>146</td><td class="negv">-12.8</td><td class="negv">-21.4</td><td>6.04</td><td>82.1</td><td>133</td><td>225</td></tr>
+    <tr><td>2021</td><td>21.1</td><td class="negv">-57.4</td><td class="negv">-6.61</td><td class="negv">-4.74</td><td>130</td><td class="negv">-36.2</td><td>178</td></tr>
+    <tr><td>2022</td><td class="negv">-11.9</td><td>83.6</td><td>33.4</td><td>22.5</td><td>166</td><td>71.6</td><td>312</td></tr>
+    <tr><td>2023</td><td>136</td><td class="negv">-87.7</td><td class="negv">-105</td><td class="negv">-0.49</td><td>63.2</td><td>48.4</td><td>255</td></tr>
+    <tr><td>2024</td><td>33</td><td class="negv">-87.9</td><td>48.2</td><td>13.5</td><td>46.5</td><td class="negv">-54.9</td><td>262</td></tr>
+    <tr><td>2025</td><td>91.1</td><td class="negv">-72.9</td><td class="negv">-9.76</td><td class="negv">-4.19</td><td>28.3</td><td>18.2</td><td>266</td></tr>
+    <tr><td>2026 Q1（單季）</td><td class="negv">-45.2</td><td class="negv">-54.3</td><td>51.9</td><td>6.57</td><td>6.94</td><td class="negv">-99.5</td><td>225</td></tr>
+  </table>
+  <div class="tblnote">資料來源：使用者提供之財報彙整截圖（2020～2026Q1）。A/B/C 三項與先前用 HiStock 資料推算的數字高度吻合，可互相驗證；D 採<b>稅前淨利</b>（依 skill 規則，D 優先使用稅前淨利）。</div>
+
+  <!-- Rule 1 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">1</div>
+      <div class="rule-title">
+        <h3>A 逐年成長趨勢</h3>
+        <div class="rule-tag">個性標籤：大起大落型</div>
+      </div>
+      <div class="rule-score bad">35 / 100</div>
+    </div>
+    <svg viewBox="0 0 940 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="佳世達2352近六年營業活動現金流A逐年長條圖,單位億元" style="width:100%;height:auto;">
+<line x1="20" y1="191.4" x2="920" y2="191.4" stroke="#EAE3D4" stroke-width="1"/><text x="12" y="195.4" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">-50</text><line x1="20" y1="148.6" x2="920" y2="148.6" stroke="#EAE3D4" stroke-width="1"/><text x="12" y="152.6" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">0</text><line x1="20" y1="105.7" x2="920" y2="105.7" stroke="#EAE3D4" stroke-width="1"/><text x="12" y="109.7" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">50</text><line x1="20" y1="62.9" x2="920" y2="62.9" stroke="#EAE3D4" stroke-width="1"/><text x="12" y="66.9" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">100</text><line x1="20" y1="20.0" x2="920" y2="20.0" stroke="#EAE3D4" stroke-width="1"/><text x="12" y="24.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">150</text>
+<line x1="20" y1="148.6" x2="920" y2="148.6" stroke="#C3C2B7" stroke-width="1.5"/>
+<rect x="20.0" y="23.4" width="114.9" height="125.1" fill="#F3E4C4" rx="3"/><rect x="150.9" y="130.5" width="114.9" height="18.1" fill="#16273A" rx="3"/><rect x="281.7" y="148.6" width="114.9" height="10.2" fill="#16273A" rx="3"/><rect x="412.6" y="32.0" width="114.9" height="116.6" fill="#16273A" rx="3"/><rect x="543.4" y="120.3" width="114.9" height="28.3" fill="#16273A" rx="3"/><rect x="674.3" y="70.5" width="114.9" height="78.1" fill="#16273A" rx="3"/><rect x="805.1" y="148.6" width="114.9" height="38.7" fill="#F7DAD5" rx="3"/>
+<text x="77.4" y="17.4" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">146</text><text x="208.3" y="124.5" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">21.1</text><text x="339.1" y="174.8" text-anchor="middle" font-size="13" fill="#B23A2E" font-family="Roboto Mono, monospace" font-weight="700">-11.9</text><text x="470.0" y="26.0" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">136</text><text x="600.9" y="114.3" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">33</text><text x="731.7" y="64.5" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">91.1</text><text x="862.6" y="203.3" text-anchor="middle" font-size="13" fill="#B23A2E" font-family="Roboto Mono, monospace" font-weight="700">-45.2</text>
+<text x="77.4" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2020</text><text x="208.3" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2021</text><text x="339.1" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2022</text><text x="470.0" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2023</text><text x="600.9" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2024</text><text x="731.7" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2025</text><text x="862.6" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">26Q1</text>
+</svg>
+    <div class="unit-note">單位：億元。2022 年本業現金流轉負為近六年谷底，2023 年隨即反彈至近年高峰，之後又於 2024 年腰斬，2025 年再回升，2026Q1 單季再度轉負。</div>
+    <p class="rule-body">六年間沒有單向趨勢，最大單年落差達 148 億，且 2022 年本業現金流一度轉負。這不是穩定成長型公司的現金流「個性」，比較像<b>坐雲霄飛車</b>——很難用近幾年數字外推下一年表現，且最新一季（26Q1）再度轉負，需留意是否只是季節性因素還是趨勢轉折。</p>
+  </div>
+
+  <!-- Rule 2 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">2</div>
+      <div class="rule-title">
+        <h3>B 投資紀律評估</h3>
+        <div class="rule-tag">個性標籤：敢衝投資型，力道持續加大</div>
+      </div>
+      <div class="rule-score">58 / 100</div>
+    </div>
+    <svg viewBox="0 0 940 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="佳世達2352近六年投資活動現金流B逐年長條圖,單位億元" style="width:100%;height:auto;">
+<line x1="40" y1="160.0" x2="920" y2="160.0" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="164.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">-100</text><line x1="40" y1="125.0" x2="920" y2="125.0" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="129.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">-50</text><line x1="40" y1="90.0" x2="920" y2="90.0" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="94.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">0</text><line x1="40" y1="55.0" x2="920" y2="55.0" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="59.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">50</text><line x1="40" y1="20.0" x2="920" y2="20.0" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="24.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">100</text>
+<line x1="40" y1="90.0" x2="920" y2="90.0" stroke="#C3C2B7" stroke-width="1.5"/>
+<rect x="40.0" y="90.0" width="112.0" height="9.0" fill="#16273A" rx="3"/><rect x="168.0" y="90.0" width="112.0" height="40.2" fill="#16273A" rx="3"/><rect x="296.0" y="31.5" width="112.0" height="58.5" fill="#F3E4C4" rx="3"/><rect x="424.0" y="90.0" width="112.0" height="61.4" fill="#16273A" rx="3"/><rect x="552.0" y="90.0" width="112.0" height="61.5" fill="#F7DAD5" rx="3"/><rect x="680.0" y="90.0" width="112.0" height="51.0" fill="#16273A" rx="3"/><rect x="808.0" y="90.0" width="112.0" height="38.0" fill="#16273A" rx="3"/>
+<text x="96.0" y="115.0" text-anchor="middle" font-size="13" fill="#B23A2E" font-family="Roboto Mono, monospace" font-weight="700">-12.8</text><text x="224.0" y="146.2" text-anchor="middle" font-size="13" fill="#B23A2E" font-family="Roboto Mono, monospace" font-weight="700">-57.4</text><text x="352.0" y="25.5" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">83.6</text><text x="480.0" y="167.4" text-anchor="middle" font-size="13" fill="#B23A2E" font-family="Roboto Mono, monospace" font-weight="700">-87.7</text><text x="608.0" y="167.5" text-anchor="middle" font-size="13" fill="#B23A2E" font-family="Roboto Mono, monospace" font-weight="700">-87.9</text><text x="736.0" y="157.0" text-anchor="middle" font-size="13" fill="#B23A2E" font-family="Roboto Mono, monospace" font-weight="700">-72.9</text><text x="864.0" y="144.0" text-anchor="middle" font-size="13" fill="#B23A2E" font-family="Roboto Mono, monospace" font-weight="700">-54.3</text>
+<text x="96.0" y="180.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2020</text><text x="224.0" y="180.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2021</text><text x="352.0" y="180.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2022</text><text x="480.0" y="180.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2023</text><text x="608.0" y="180.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2024</text><text x="736.0" y="180.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2025</text><text x="864.0" y="180.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">26Q1</text>
+</svg>
+    <div class="unit-note">單位：億元。除 2022 年（處分資產/股權的一次性現金流入）外，其餘各年皆為淨流出，且 2021 年起投資規模明顯放大。</div>
+    <p class="rule-body">投資力道從 2021 年起明顯放大（-57.4 → -87.7 → -87.9 → -72.9 億），2023、2024 年甚至 |B| 超過當年 A。佳世達為明基集團控股型公司，旗下轉投資、併購活動本來就多，這種規模的持續資本支出屬產業常態，<b>不過度扣分</b>；但也代表現金流有相當比例被綁在對外投資上，自主調度空間變小。</p>
+  </div>
+
+  <!-- Rule 3 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">3</div>
+      <div class="rule-title">
+        <h3>B 投資效益分析（對照 A，非 D）</h3>
+        <div class="rule-tag">個性標籤：老將自費特訓型</div>
+      </div>
+      <div class="rule-score weak">42 / 100</div>
+    </div>
+    <div class="unit-note" style="margin-top:0;">觀察重度投資後隔 1 年 A 是否轉強（單位：億元）：</div>
+    <table class="datatbl">
+      <tr><th>投資年度</th><th>當年 B</th><th>隔年 A</th><th>是否轉強</th></tr>
+      <tr><td>2021</td><td class="negv">-57.4</td><td>→ 2022：-11.9</td><td class="negv">❌ 反而轉負</td></tr>
+      <tr><td>2023</td><td class="negv">-87.7</td><td>→ 2024：33（原 136）</td><td class="negv">❌ 大幅萎縮</td></tr>
+      <tr><td>2024</td><td class="negv">-87.9</td><td>→ 2025：91.1（原 33）</td><td>✅ 明顯轉強</td></tr>
+    </table>
+    <p class="rule-body">三次重度投資中，只有 <b>2024 年這一次在隔年看到本業現金流回升</b>，另外兩次都沒有轉化效果。「加碼投資 → 本業現金流轉強」的因果關係三次裡只成立一次，效益不穩定。<br><br>這個模式很像一位過了顛峰期、想拚回大聯盟的<b>老球員</b>——競爭力已經不像當年那麼穩，只能靠不斷自費特訓（持續砸錢投資）爭取被球隊看上的機會。但特訓的成效沒有保證：三次自主訓練只有一次真的換來隔年球探（本業現金流）點頭，另外兩次砸了錢卻沒被相中。不是不努力，只是這個階段的投入報酬率本來就不穩定，得靠運氣與時機。</p>
+  </div>
+
+  <!-- Rule 4 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">4</div>
+      <div class="rule-title">
+        <h3>C 融資活動合理性</h3>
+        <div class="rule-tag">個性標籤：多數自有資金支應，近期舉債頻率上升</div>
+      </div>
+      <div class="rule-score weak">50 / 100</div>
+    </div>
+    <div style="display:flex; gap:20px; font-size:12.5px; color:var(--ink-dim); margin-bottom:8px;">
+      <span><span style="display:inline-block;width:10px;height:10px;background:#16273A;border-radius:2px;margin-right:5px;"></span>B 投資活動</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:#C98A2E;border-radius:2px;margin-right:5px;"></span>C 融資活動</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:#F7DAD5;border-radius:2px;margin-right:5px;"></span>舉債投資年度（B負、C正同時出現）</span>
+    </div>
+    <svg viewBox="0 0 940 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="佳世達2352近六年投資活動B與融資活動C並排長條圖,單位億元,粉色底標示舉債投資年度" style="width:100%;height:auto;">
+<rect x="553.7" y="24.0" width="117.4" height="172.0" fill="#F7DAD5" rx="6" opacity="0.6"/><rect x="808.6" y="24.0" width="117.4" height="172.0" fill="#F7DAD5" rx="6" opacity="0.6"/>
+<line x1="50" y1="175.5" x2="920" y2="175.5" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="179.5" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">-100</text><line x1="50" y1="139.1" x2="920" y2="139.1" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="143.1" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">-50</text><line x1="50" y1="102.7" x2="920" y2="102.7" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="106.7" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">0</text><line x1="50" y1="66.4" x2="920" y2="66.4" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="70.4" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">50</text><line x1="50" y1="30.0" x2="920" y2="30.0" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="34.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">100</text>
+<line x1="50" y1="102.7" x2="920" y2="102.7" stroke="#C3C2B7" stroke-width="1.5"/>
+<rect x="50.0" y="102.7" width="50.7" height="9.3" fill="#16273A" rx="2"/><rect x="104.7" y="102.7" width="50.7" height="15.6" fill="#C98A2E" rx="2"/><rect x="177.4" y="102.7" width="50.7" height="41.7" fill="#16273A" rx="2"/><rect x="232.1" y="102.7" width="50.7" height="4.8" fill="#C98A2E" rx="2"/><rect x="304.9" y="41.9" width="50.7" height="60.8" fill="#16273A" rx="2"/><rect x="359.6" y="78.4" width="50.7" height="24.3" fill="#C98A2E" rx="2"/><rect x="432.3" y="102.7" width="50.7" height="63.8" fill="#16273A" rx="2"/><rect x="487.0" y="102.7" width="50.7" height="76.4" fill="#C98A2E" rx="2"/><rect x="559.7" y="102.7" width="50.7" height="63.9" fill="#16273A" rx="2"/><rect x="614.4" y="67.7" width="50.7" height="35.1" fill="#C98A2E" rx="2"/><rect x="687.1" y="102.7" width="50.7" height="53.0" fill="#16273A" rx="2"/><rect x="741.9" y="102.7" width="50.7" height="7.1" fill="#C98A2E" rx="2"/><rect x="814.6" y="102.7" width="50.7" height="39.5" fill="#16273A" rx="2"/><rect x="869.3" y="65.0" width="50.7" height="37.7" fill="#C98A2E" rx="2"/>
+<text x="75.4" y="125.0" text-anchor="middle" font-size="10.5" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">-12.8</text><text x="130.1" y="131.3" text-anchor="middle" font-size="10.5" fill="#8B5E1A" font-family="Roboto Mono, monospace" font-weight="700">-21.4</text><text x="202.8" y="157.5" text-anchor="middle" font-size="10.5" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">-57.4</text><text x="257.5" y="120.5" text-anchor="middle" font-size="10.5" fill="#8B5E1A" font-family="Roboto Mono, monospace" font-weight="700">-6.61</text><text x="330.2" y="36.9" text-anchor="middle" font-size="10.5" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">83.6</text><text x="384.9" y="73.4" text-anchor="middle" font-size="10.5" fill="#8B5E1A" font-family="Roboto Mono, monospace" font-weight="700">33.4</text><text x="457.6" y="179.5" text-anchor="middle" font-size="10.5" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">-87.7</text><text x="512.4" y="192.1" text-anchor="middle" font-size="10.5" fill="#8B5E1A" font-family="Roboto Mono, monospace" font-weight="700">-105</text><text x="585.1" y="179.7" text-anchor="middle" font-size="10.5" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">-87.9</text><text x="639.8" y="62.7" text-anchor="middle" font-size="10.5" fill="#8B5E1A" font-family="Roboto Mono, monospace" font-weight="700">48.2</text><text x="712.5" y="168.7" text-anchor="middle" font-size="10.5" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">-72.9</text><text x="767.2" y="122.8" text-anchor="middle" font-size="10.5" fill="#8B5E1A" font-family="Roboto Mono, monospace" font-weight="700">-9.76</text><text x="839.9" y="155.2" text-anchor="middle" font-size="10.5" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">-54.3</text><text x="894.6" y="60.0" text-anchor="middle" font-size="10.5" fill="#8B5E1A" font-family="Roboto Mono, monospace" font-weight="700">51.9</text>
+<text x="102.7" y="210.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2020</text><text x="230.1" y="210.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2021</text><text x="357.6" y="210.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2022</text><text x="485.0" y="210.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2023</text><text x="612.4" y="210.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2024</text><text x="739.9" y="210.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2025</text><text x="867.3" y="210.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">26Q1</text>
+</svg>
+    <div class="unit-note">單位：億元。粉色底色標示「B 重度負值同時 C 為正」（借錢支應投資）的年度：2024、2026Q1。</div>
+    <p class="rule-body"><b>2024 年、2026Q1 均出現「舉債支應投資」</b>的組合；2020、2021、2023、2025 年則是 B、C 同步為負，屬自有資金支應投資並降低槓桿（2023 年 C 高達 -105 億，大幅還債）。舉債投資並非每年出現，但近一年半內出現兩次，且<b>2026Q1 當季 A（-45.2億）、B（-54.3億）、C（+51.9億）三個條件同時成立</b>，<b class="negv">已完全符合「A為負＋重度投資＋C為正（疑似舉債）」的最高警戒組合</b>，只是目前僅發生在單一季度、尚非全年數字，建議密切留意 2026 全年是否延續此模式。</p>
+  </div>
+
+  <!-- Rule 5 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">5</div>
+      <div class="rule-title">
+        <h3>A &gt; D 現金流品質（A/D 比率）</h3>
+        <div class="rule-tag">個性標籤：帳上獲利與現金體感長期脫鉤</div>
+      </div>
+      <div class="rule-score bad">50 / 100</div>
+    </div>
+    <div class="callout" style="margin:0 0 16px;">
+      <b>計分方式：</b>採<b>嚴格二分法</b>：每年單純比較 A 是否大於 D，A&gt;D 算通過、A≤D 算不通過，不分程度高低、不設百分比門檻。分數 = 通過年數 ÷ 總年數 × 100。
+    </div>
+    <table class="datatbl">
+      <tr><th>年度</th><th>A（億）</th><th>D 稅前淨利（億）</th><th>A &gt; D？</th></tr>
+      <tr><td>2020</td><td>146</td><td>82.1</td><td>✅ 通過</td></tr>
+      <tr><td>2021</td><td>21.1</td><td>130</td><td class="negv">❌ 不通過</td></tr>
+      <tr><td>2022</td><td class="negv">-11.9</td><td>166</td><td class="negv">❌ 不通過</td></tr>
+      <tr><td>2023</td><td>136</td><td>63.2</td><td>✅ 通過</td></tr>
+      <tr><td>2024</td><td>33</td><td>46.5</td><td class="negv">❌ 不通過</td></tr>
+      <tr><td>2025</td><td>91.1</td><td>28.3</td><td>✅ 通過</td></tr>
+      <tr><td>2026 Q1（單季，僅供參考）</td><td class="negv">-45.2</td><td>6.94</td><td class="negv">❌ 不通過（不列入計分）</td></tr>
+    </table>
+    <p class="rule-body">六年中 <b>3 年通過（A&gt;D）、3 年不通過</b>，剛好一半一半，分數 50 分（計分基準為 2020~2025 六個完整年度，2026Q1 僅為單季數字，不納入計分，僅供參考）。不通過的三年中，2021、2022 兩年剛好是稅前淨利最高的兩年（130億、166億），本業現金流卻明顯不足以覆蓋，代表淨利有相當比例來自業外收益；2024 年則是 A（33億）僅些微低於 D（46.5億），差距不大但仍不通過。通過的三年（2020、2023、2025）現金流品質扎實，沒有一半一半那麼糟，但依嚴格二分法不看差距大小，一律等值計算。另外值得留意：<b>2026Q1 單季 A（-45.2億）已明顯不敵 D（6.94億）</b>，若這個型態延續到全年，2026 年很可能也會落入不通過的一年。</p>
+  </div>
+
+  <!-- Rule 6 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">6</div>
+      <div class="rule-title">
+        <h3>期末現金餘額穩定性</h3>
+        <div class="rule-tag">個性標籤：中期尚穩，最新一季明顯滑落待觀察</div>
+      </div>
+      <div class="rule-score weak">55 / 100</div>
+    </div>
+    <svg viewBox="0 0 940 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="佳世達2352近六年期末現金餘額長條圖,單位億元" style="width:100%;height:auto;">
+<line x1="40" y1="200.0" x2="920" y2="200.0" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="204.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">0</text><line x1="40" y1="148.6" x2="920" y2="148.6" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="152.6" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">100</text><line x1="40" y1="97.1" x2="920" y2="97.1" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="101.1" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">200</text><line x1="40" y1="45.7" x2="920" y2="45.7" stroke="#EAE3D4" stroke-width="1"/><text x="32" y="49.7" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">300</text>
+<rect x="40.0" y="84.3" width="112.0" height="115.7" fill="#16273A" rx="3"/><rect x="168.0" y="108.5" width="112.0" height="91.5" fill="#F7DAD5" rx="3"/><rect x="296.0" y="39.5" width="112.0" height="160.5" fill="#F3E4C4" rx="3"/><rect x="424.0" y="68.9" width="112.0" height="131.1" fill="#16273A" rx="3"/><rect x="552.0" y="65.3" width="112.0" height="134.7" fill="#16273A" rx="3"/><rect x="680.0" y="63.2" width="112.0" height="136.8" fill="#16273A" rx="3"/><rect x="808.0" y="84.3" width="112.0" height="115.7" fill="#16273A" rx="3"/>
+<text x="96.0" y="78.3" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">225</text><text x="224.0" y="102.5" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">178</text><text x="352.0" y="33.5" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">312</text><text x="480.0" y="62.9" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">255</text><text x="608.0" y="59.3" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">262</text><text x="736.0" y="57.2" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">266</text><text x="864.0" y="78.3" text-anchor="middle" font-size="13" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">225</text>
+<text x="96.0" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2020</text><text x="224.0" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2021</text><text x="352.0" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2022</text><text x="480.0" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2023</text><text x="608.0" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2024</text><text x="736.0" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">2025</text><text x="864.0" y="220.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">26Q1</text>
+</svg>
+    <div class="unit-note">單位：億元，期末現金餘額。</div>
+    <p class="rule-body">2023～2025 三年間相對收斂在 255~266 億區間，波動 &lt;5%，屬穩定；但 2021 年與最新一期 2026Q1 都出現超過 15% 的單期下滑，尤其 2026Q1 這一季現金餘額直接砍回 2023 年初的水準，是否為短期波動或趨勢轉折的起點，需要下一季數字才能確認。</p>
+  </div>
+
+  <div class="gate">
+    <h3>⛔ 關卡判斷</h3>
+    <div class="scorewrap">
+      <div class="bigscore">48%</div>
+      <div class="gatesub">六項平均：(35+58+42+50+50+55)/6 ≈ 48%</div>
+    </div>
+    <p class="rule-body">總分仍低於 60% 門檻，屬「需觀察」等級。主要風險訊號：<b>①本業現金流六年間大起大落（規則一）、②六年中有一半年度（2021、2022、2024）A 不敵 D，尤其2021~2022兩年淨利明顯有業外收益撐高（規則五）、③2024 年起舉債投資頻率增加（規則四）、④最新一季（2026Q1）本業現金流轉負且現金餘額明顯下滑（規則六）</b>。完整年度中未出現「A為負＋重度投資＋C為正（疑似舉債）」三重疊加的最嚴重訊號，但<b class="negv">2026Q1 單季已完全符合這個組合</b>（A=-45.2億、B=-54.3億、C=+51.9億），只是尚未累積成全年數字，值得列為觀察重點。</p>
+    <p class="rule-body" style="margin-top:12px;"><b>建議：</b>依規則，這類體質建議先不繼續深入基本面，除非你仍想往下看。要不要繼續進行第 2 步（股價／EPS／殖利率／營收／法說會等基本資訊）？</p>
+  </div>
+
+</section>
+
+<section id="step2">
+  <div class="stepmark">【第 2 步／共 6 步】基本資訊查詢</div>
+  <h2>股價／獲利／股利／營收／產業背景</h2>
+
+  <div class="callout">
+    <b>重點結論：</b>本益比在不同資料源之間<b>落差極大（26.8～49.0 倍）</b>，需特別留意估值判斷不要只看單一來源；近四季 EPS 僅 0.62～0.64 元，獲利明顯低於前幾年水準，與第一步看到的「D 逐年下滑」互相印證。
+  </div>
+
+  <!-- 股價 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">A</div>
+      <div class="rule-title">
+        <h3>股價</h3>
+        <div class="rule-tag">改用直接抓取的 Yahoo 股市頁面（非搜尋快照），數據較單一可靠</div>
+      </div>
+    </div>
+    <table class="datatbl">
+      <tr><th>項目</th><th>數值</th></tr>
+      <tr><td>收盤價</td><td>29.30 元</td></tr>
+      <tr><td>漲跌</td><td>+1.20（+3.93%）</td></tr>
+      <tr><td>本益比（同業平均）</td><td>49.19 倍（同業 35.28 倍）</td></tr>
+      <tr><td>成交量</td><td>10,751 張</td></tr>
+      <tr><td>每股淨值</td><td>18.54 元</td></tr>
+      <tr><td>資料時間</td><td>2026/06/26 14:30 收盤</td></tr>
+    </table>
+    <p class="rule-body">先前版本用網頁爬蟲抓 HiStock，同一天內兩批結果不一致（29.20元 vs 30.40元），可靠度有問題；這次改用<b>直接 fetch Yahoo 股市頁面</b>（不透過搜尋引擎快照），資料單一且附完整時間戳記，較值得信任。但仍要提醒：這是 Yahoo 頁面最後一次更新的快照（2026/06/26），<b>不是即時報價</b>，且與你我對話當下（7月）有將近一個月的時間差，<b>看盤請以你自己的券商 App／看盤軟體當下報價為準</b>，此處僅供背景參考。</p>
+    <div class="tblnote">來源：<a href="https://tw.stock.yahoo.com/quote/2352.TW/profile" target="_blank">Yahoo股市－佳世達基本資料頁</a>（直接fetch，非搜尋快照）。另嘗試透過 FinMind API（finmindtrade.com）查詢即時股價，但本次環境對該 API 的請求出現快取異常（不同參數回傳同一批舊資料），技術上無法取得，如實告知未強行湊數。</div>
+  </div>
+
+  <!-- EPS -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">B</div>
+      <div class="rule-title">
+        <h3>EPS（每股盈餘）</h3>
+        <div class="rule-tag">近四季獲利明顯轉弱</div>
+      </div>
+    </div>
+    <table class="datatbl">
+      <tr><th>期間</th><th>EPS</th><th>季增</th><th>年增</th></tr>
+      <tr><td>2026 Q1（單季）</td><td>0.2 元</td><td class="negv">財報狗：+506% ／ Win投資：+300%（兩來源數字不一致）</td><td class="negv">-20.0%</td></tr>
+      <tr><td>近四季合計</td><td>0.62 元</td><td>—</td><td class="negv">-50.14%（財報狗）</td></tr>
+      <tr><td>2025 全年</td><td>0.64 元</td><td>—</td><td class="negv">大幅低於2024</td></tr>
+      <tr><td>2024 全年</td><td>1.11 元</td><td>—</td><td class="negv">低於2023</td></tr>
+      <tr><td>2023 全年</td><td>1.51 元</td><td>—</td><td class="negv">遠低於2022</td></tr>
+      <tr><td>2022 全年</td><td>4.20 元</td><td>—</td><td>近四年最高</td></tr>
+    </table>
+    <p class="rule-body">兩個來源對 2026Q1 EPS 季增率算法不同（506% vs 300%），單季 EPS 本身兩者一致為 0.2 元。加上 Yahoo 股市直接抓取的歷年數字後看得更清楚：<b>EPS 從 2022 年的 4.20 元，連續四年下滑到 2025 年的 0.64 元</b>，累計跌幅超過 8 成，與第一步看到的稅前淨利（D）逐年下滑（2023 年 63.2 億 → 2025 年 28.3 億）方向完全一致，可互相驗證，這不是單一年度的波動，是連續四年的下滑趨勢。</p>
+    <div class="tblnote">來源：<a href="https://statementdog.com/analysis/2352/eps" target="_blank">財報狗－佳世達EPS</a>、<a href="https://winvest.tw/Stock/Symbol/Comment/2352" target="_blank">Win投資－佳世達個股頁</a>、<a href="https://tw.stock.yahoo.com/quote/2352.TW/profile" target="_blank">Yahoo股市－佳世達基本資料頁</a>（歷年EPS）。</div>
+  </div>
+
+  <!-- 本益比與殖利率 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">C</div>
+      <div class="rule-title">
+        <h3>本益比 ／ 殖利率</h3>
+        <div class="rule-tag">本益比各家落差極大，需謹慎判讀</div>
+      </div>
+    </div>
+    <table class="datatbl">
+      <tr><th>指標</th><th>數值</th><th>來源</th></tr>
+      <tr><td>本益比（歷史）</td><td>27.8 倍</td><td>WantGoo / CMoney</td></tr>
+      <tr><td>本益比（同業平均）</td><td class="negv">49.03 倍（同業 32.46 倍）</td><td>Yahoo股市技術分析頁</td></tr>
+      <tr><td>本益比（預估）</td><td>26.8 倍</td><td>FindBillion（用預估EPS 1.2元推算）</td></tr>
+      <tr><td>近五年平均現金殖利率</td><td>5.39%（平均配息 1.9 元）</td><td>Win投資</td></tr>
+      <tr><td>最新一次除息（2025/07/24）</td><td>配息 1.11 元，殖利率 4.16%</td><td>Win投資</td></tr>
+    </table>
+    <p class="rule-body">本益比在 26.8～49.0 倍之間跨度很大，可能與各站計算基準日、採用 EPS 期間（近四季 vs 預估）不同有關，<b>不代表哪一個一定正確</b>，建議查估值時同時對照 2~3 個來源。殖利率方面，近五年平均約 5.4%，但最新一次實際配發的殖利率（4.16%）已低於五年均值，呼應近期獲利走弱的趨勢。</p>
+    <div class="tblnote">來源：<a href="https://www.wantgoo.com/stock/2352/financial-statements/eps" target="_blank">WantGoo</a>、<a href="https://tw.stock.yahoo.com/quote/2352.TW/technical-analysis" target="_blank">Yahoo股市</a>、<a href="https://www.findbillion.com/twstock/2352/eps" target="_blank">FindBillion</a>、<a href="https://winvest.tw/Stock/Symbol/Comment/2352" target="_blank">Win投資</a>。</div>
+  </div>
+
+  <!-- 營收 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">D</div>
+      <div class="rule-title">
+        <h3>營收</h3>
+        <div class="rule-tag">營收規模穩定，成長趨緩</div>
+      </div>
+    </div>
+    <table class="datatbl">
+      <tr><th>期間</th><th>營收</th><th>備註</th></tr>
+      <tr><td>2026 年 6 月（單月，最新）</td><td>186.71 億</td><td>月增 <b>8.27%</b>，年減 0.62%，創近9個月新高</td></tr>
+      <tr><td>2026 年 Q2（單季）</td><td>527.29～527.3 億</td><td>季增 2.3%；年減率兩來源不一致：MoneyDJ 稱年減 1.37%，Yahoo新聞稱年減 0.69%</td></tr>
+      <tr><td>2026 年上半年累計</td><td>1,042.71 億</td><td>年增 1.03%</td></tr>
+      <tr><td>2025 全年</td><td>2,082.04 億</td><td>年增約 3%</td></tr>
+    </table>
+    <p class="rule-body">佳世達年營收規模約 2,000 億元上下，屬大型 EMS／顯示器集團。<b>6月營收月增 8.27%，創近9個月新高</b>，法人解讀為短期補庫存或需求回溫的訊號都有，還需要看後續幾個月是否延續成長、年減幅度是否持續收斂才能確認是否為趨勢反轉。整體近期月營收年增率在 -2%~+8% 之間震盪，成長力道平緩，並未看到爆發性成長，也未明顯衰退。</p>
+    <div class="tblnote">
+      <b>來源說明：</b>先前版本使用 Win投資（winvest.tw）作為主要來源，但該站未清楚註明其數字的原始出處、也無法確認其網站的長期穩定性，已改用<b>新聞通訊社報導（引用公司官方營收公告）</b>作為主要來源，較貼近原始出處：<a href="https://www.ttv.com.tw/finance/view/07202606081076DADFA15B714C28A56DDEEF413D68D8E1F3/587" target="_blank">MoneyDJ新聞（經台視財經轉載）－佳世達6月營收月增8%</a>、<a href="https://news.cnyes.com/news/id/6522273" target="_blank">Anue鉅亨－佳世達6月營收186.71億元月增8%</a>。5月營收數字（172.45億）已由 <a href="https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID=2352&RPT_CAT=M_YEAR" target="_blank">Goodinfo公告訊息頁</a>列出的公司官方公告「佳世達一一五年五月份合併營收NT$172.45億元」交叉驗證，數字一致。
+    </div>
+  </div>
+
+  <!-- 法說會 -->
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">E</div>
+      <div class="rule-title">
+        <h3>法說會日期與連結</h3>
+        <div class="rule-tag">官網為 JS 動態頁面，無法直接擷取內容</div>
+      </div>
+    </div>
+    <p class="rule-body">
+      佳世達官方投資人關係／法人說明會專區：<a href="https://www.qisda.com.tw/page.aspx?uid=100" target="_blank">https://www.qisda.com.tw/page.aspx?uid=100</a>（此頁面為前端 JavaScript 動態載入，本次無法直接讀取頁面內容，<b>請自行開啟連結查看最新場次與簡報</b>）。<br><br>
+      近期相關新聞（供背景參考，非法說會逐字稿）：
+    </p>
+    <table class="datatbl">
+      <tr><th>日期</th><th>標題</th><th>來源</th></tr>
+      <tr><td>2026/05/11</td><td>臺銀一銀攜手佳世達120億元ESG聯貸簽約，超額參貸2.07倍</td><td>Anue鉅亨</td></tr>
+      <tr><td>2026/03/11</td><td>佳世達董座：今年營運優於去年，衝刺AI機櫃解決方案</td><td>Anue鉅亨</td></tr>
+      <tr><td>2026/03/11</td><td>佳世達新任總座，前Google Cloud台灣區總經理柯淑芬接任</td><td>Anue鉅亨</td></tr>
+    </table>
+    <p class="rule-body">2026/05 的 120 億元 ESG 聯貸新聞，可能與第一步觀察到的「2026Q1 融資活動大幅為正（+51.9億）」有直接關連，建議在第 3 步深入討論法說會時特別確認這筆聯貸的用途與還款規劃。</p>
+  </div>
+
+</section>
+
+<section id="step3">
+  <div class="stepmark">【第 3 步／共 6 步】法說會重點概覽</div>
+  <h2>最近一次法說會（2026Q1，2026/05/08）重點</h2>
+
+  <div class="callout">
+    <b>資料說明：</b>佳世達官網法說會頁面為 JS 動態載入，本次無法直接讀取。改用財經媒體「富果直送」根據台灣證券交易所官方法說會影音檔整理的摘要（發布於 2026/05/09），此為<b>目前時間最新、內容也最完整</b>的一份法說會紀錄，兩個條件同時成立，不需額外取捨版本。
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">📋</div>
+      <div class="rule-title">
+        <h3>2026Q1 營運摘要</h3>
+        <div class="rule-tag">獲利谷底，但公司強調Q2/Q3將優於Q1</div>
+      </div>
+    </div>
+    <p class="rule-body">
+      2026Q1 營收 <b>515 億元</b>（季減1%、年增4%），毛利率 <b>16.7%</b>，歸屬母公司淨利 <b class="negv">3.18 億元</b>，EPS <b class="negv">0.2 元</b>，較去年同期下滑，主因<b>明基材料因偏光片市場由盈轉虧</b>，以及資訊產品事業受高階機種需求下降影響。<br><br>
+      董事長陳其宏表示<b>「2025 年是過去 12 年的獲利谷底」</b>，2026 年將重回成長軌道，對 Q2、Q3 表現「審慎樂觀」，預期明顯優於 Q1。公司近期完成組織調整：延攬前 Google Cloud 台灣區總經理<b>柯淑芬</b>出任新總經理，並更換商業暨工業用事業群主管。
+    </p>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">📋</div>
+      <div class="rule-title">
+        <h3>四大 AI 業務範疇</h3>
+        <div class="rule-tag">高附加價值事業營收占比已達52%</div>
+      </div>
+    </div>
+    <p class="rule-body">
+      公司將業務整合為<b>「AI視覺與顯示」「AI基礎設施」「AI解決方案與智慧製造」「智慧醫療與健康照護生態系」</b>四大範疇。其中：<br>
+      • <b>AI 基礎設施</b>：水冷 AI 伺服器<b>已接單即將量產</b>，1.6T 液冷交換器與 CDU 散熱方案已就緒，並導入 LPO 光學技術為 CPO 鋪路——這是集團全新投入的算力領域<br>
+      • <b>智能方案事業群(BSG)</b>：2026Q1 營收<b>首度突破 100 億元</b>（達101億），是各事業群中成長最快的一塊<br>
+      • <b>醫療事業群</b>：推出全台首套 IQMR 智能復健系統，並跨入寵物血液透析市場<br>
+      • 高附加價值事業（醫療、智能方案、網通、高階資訊產品）合計營收占比首度<b>超越傳統資訊事業，達 52%</b>
+    </p>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">📋</div>
+      <div class="rule-title">
+        <h3>財務體質重點</h3>
+        <div class="rule-tag">存貨天數上升、負債比持平</div>
+      </div>
+    </div>
+    <p class="rule-body">
+      存貨週轉天數由 92 天增至 <b>98 天</b>，公司說明主因是因應地緣政治風險拉長運輸時間而提前備貨，以及記憶體等原物料漲價進行策略性備貨；負債比維持 <b>72%</b>，與 2025 年底持平。營業淨利<b>季增 13%</b>（雖營收微減），主因 BSG 獲利持續成長，且明基材料、網通事業虧損較上季收斂，顯示<b>營運已從谷底回溫</b>。
+    </p>
+    <div class="tblnote">
+      資料來源：<a href="https://blog.fugle.tw/post/earnings-call-2352-2026-05-08" target="_blank">富果直送－【佳世達法說會重點內容備忘錄】20260508</a>（根據台灣證券交易所官方法說會影音檔摘要整理）。原始影音：<a href="https://irconference.twse.com.tw/2352_78_20260508_ch.mp4" target="_blank">irconference.twse.com.tw</a>；法說會簡報：<a href="https://mopsov.twse.com.tw/nas/STR/235220260508M001.pdf" target="_blank">mopsov.twse.com.tw</a>。
+    </div>
+  </div>
+
+</section>
+
+<section id="step4">
+  <div class="stepmark">【第 4 步／共 6 步】營收趨勢視覺化</div>
+  <h2>近 12 季合併營收（億元）</h2>
+
+  <div class="callout">
+    <b>重點結論：</b>近 12 季營收<b>穩定落在 469～541 億元之間</b>，波動幅度僅約 15%，沒有爆發性成長也沒有明顯衰退，與第二步「營收成長趨緩」的觀察一致。谷底出現在 2024Q1（469億），高峰在 2024Q4（541億），2026Q1（515億）落在區間中段偏上。
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">📊</div>
+      <div class="rule-title">
+        <h3>季度合併營收長條圖</h3>
+        <div class="rule-tag">米色＝高峰、粉色＝谷底</div>
+      </div>
+    </div>
+    <svg viewBox="0 0 940 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="佳世達2352近12季合併營收長條圖,單位億元" style="width:100%;height:auto;">
+<line x1="50" y1="260.0" x2="910" y2="260.0" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="264.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">0</text><line x1="50" y1="200.0" x2="910" y2="200.0" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="204.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">150</text><line x1="50" y1="140.0" x2="910" y2="140.0" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="144.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">300</text><line x1="50" y1="80.0" x2="910" y2="80.0" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="84.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">450</text><line x1="50" y1="20.0" x2="910" y2="20.0" stroke="#EAE3D4" stroke-width="1"/><text x="42" y="24.0" text-anchor="end" font-size="11" fill="#7A7166" font-family="Roboto Mono, monospace">600</text>
+<rect x="50.0" y="51.6" width="58.8" height="208.4" fill="#16273A" rx="3"/><rect x="122.8" y="58.5" width="58.8" height="201.5" fill="#16273A" rx="3"/><rect x="195.7" y="57.3" width="58.8" height="202.7" fill="#16273A" rx="3"/><rect x="268.5" y="72.3" width="58.8" height="187.7" fill="#F7DAD5" rx="3"/><rect x="341.3" y="60.6" width="58.8" height="199.4" fill="#16273A" rx="3"/><rect x="414.2" y="56.8" width="58.8" height="203.2" fill="#16273A" rx="3"/><rect x="487.0" y="43.6" width="58.8" height="216.4" fill="#F3E4C4" rx="3"/><rect x="559.8" y="61.0" width="58.8" height="199.0" fill="#16273A" rx="3"/><rect x="632.7" y="46.1" width="58.8" height="213.9" fill="#16273A" rx="3"/><rect x="705.5" y="49.9" width="58.8" height="210.1" fill="#16273A" rx="3"/><rect x="778.3" y="51.4" width="58.8" height="208.6" fill="#16273A" rx="3"/><rect x="851.2" y="53.8" width="58.8" height="206.2" fill="#16273A" rx="3"/>
+<text x="79.4" y="45.6" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">521</text><text x="152.2" y="52.5" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">504</text><text x="225.1" y="51.3" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">507</text><text x="297.9" y="66.3" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">469</text><text x="370.8" y="54.6" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">499</text><text x="443.6" y="50.8" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">508</text><text x="516.4" y="37.6" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">541</text><text x="589.2" y="55.0" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">497</text><text x="662.1" y="40.1" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">535</text><text x="734.9" y="43.9" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">525</text><text x="807.8" y="45.4" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">522</text><text x="880.6" y="47.8" text-anchor="middle" font-size="11" fill="#1E2A38" font-family="Roboto Mono, monospace" font-weight="700">515</text>
+<text x="79.4" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">23Q2</text><text x="152.2" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">23Q3</text><text x="225.1" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">23Q4</text><text x="297.9" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">24Q1</text><text x="370.8" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">24Q2</text><text x="443.6" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">24Q3</text><text x="516.4" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">24Q4</text><text x="589.2" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">25Q1</text><text x="662.1" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">25Q2</text><text x="734.9" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">25Q3</text><text x="807.8" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">25Q4</text><text x="880.6" y="278.0" text-anchor="middle" font-size="12" fill="#7A7166" font-family="Noto Sans TC, sans-serif">26Q1</text>
+</svg>
+    <div class="unit-note">單位：億元。資料來源：<a href="https://histock.tw/stock/2352/損益表" target="_blank">HiStock－佳世達損益表（季度）</a>，2023Q2～2026Q1 共12季。</div>
+    <p class="rule-body">
+      營收曲線呈現「箱型盤整」而非趨勢性成長或衰退：2024Q1（469億）落底，主要對應第一步觀察到的 2024 年整體現金流轉弱期；2024Q4 起回升至 541 億高峰後，2025～2026Q1 又緩步降回 515～525 億區間。整體來說<b>營收本身相對穩定，公司獲利波動主要來自毛利率與業外損益，而非營收規模劇烈變化</b>，這與第三步法說會提到「明基材料由盈轉虧」拖累獲利、而非營收下滑的說法互相印證。
+    </p>
+  </div>
+
+</section>
+
+<section id="step5">
+  <div class="stepmark">【第 5 步／共 6 步】前瞻本益比／EPS 預估</div>
+  <h2>2026 年展望與估值</h2>
+
+  <div class="callout">
+    <b>重點結論：</b>不同法人來源對 2026 年 EPS 預估<b>落差高達 38%（1.2元 vs 1.66元）</b>，前瞻本益比因此在 17.5～25.8 倍之間跳動；且該公司過去曾在法說會後被法人上修目標價至 40.5 元，但同一年度 Q1 實際 EPS 卻年減 20%，顯示<b>法人預估過去有過度樂觀的紀錄</b>，這份估值僅供參考，不宜過度信任單一數字。
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">📈</div>
+      <div class="rule-title">
+        <h3>2025 全年實際數字（已confirm）</h3>
+        <div class="rule-tag">董事會已通過，非預估</div>
+      </div>
+    </div>
+    <table class="datatbl">
+      <tr><th>項目</th><th>數值</th></tr>
+      <tr><td>合併營收</td><td>2,079～2,082 億元（較 2024 年增加約 62 億元）</td></tr>
+      <tr><td>毛利率</td><td>16.8%（連續 3 年成長）</td></tr>
+      <tr><td>EPS</td><td>0.64 元</td></tr>
+    </table>
+    <div class="tblnote">來源：<a href="https://www.istock.tw/stock/2352" target="_blank">愛玩股－佳世達目標價／合理價頁</a>（引述董事會通過 2025 年財報公告）、Win投資。</div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">📈</div>
+      <div class="rule-title">
+        <h3>2026 年（N+1）法人預估</h3>
+        <div class="rule-tag">兩個來源預估落差達 38%</div>
+      </div>
+    </div>
+    <table class="datatbl">
+      <tr><th>來源</th><th>2026F 營收</th><th>2026F EPS</th><th>對應前瞻本益比（股價以29~31元估）</th></tr>
+      <tr><td>券商研究報告（CMoney轉載）</td><td>2,186.67 億元</td><td>1.66 元</td><td>17.5～18.7 倍</td></tr>
+      <tr><td>FindBillion（近期滾動預估）</td><td>—</td><td>1.2 元</td><td>24.2～25.8 倍</td></tr>
+    </table>
+    <p class="rule-body">兩份預估的 EPS 差距近 4 成，代表<b>市場對佳世達 2026 年獲利修復力道的看法還沒有共識</b>——樂觀情境（EPS 1.66元）認為 AI 基礎設施與智能方案事業群的成長能快速彌補明基材料的虧損缺口；保守情境（EPS 1.2元）則反映近期 2026Q1 實際獲利仍然疲弱的現實。前瞻本益比也因此在 17.5～25.8 倍之間跳動，沒有單一「正確答案」。</p>
+    <div class="tblnote">來源：<a href="https://readmo.cmoney.tw/article/93e8df89-bae8-4694-8155-c7b32e0279c6" target="_blank">CMoney讀新聞－佳世達毛利率改善有多重要</a>、<a href="https://www.findbillion.com/twstock/2352/eps" target="_blank">FindBillion－佳世達EPS與本益比合理價分析</a>。</div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">📈</div>
+      <div class="rule-title">
+        <h3>目標價與過去預估準確度</h3>
+        <div class="rule-tag">法人曾明顯過度樂觀</div>
+      </div>
+    </div>
+    <table class="datatbl">
+      <tr><th>來源</th><th>1年目標價</th><th>備註</th></tr>
+      <tr><td>Fintel（多家法人平均）</td><td>32.64 元（區間 32.32～33.60）</td><td>較貼近近期股價（29~31元）</td></tr>
+      <tr><td>工商時報（單一法人，法說會後）</td><td>40.5 元</td><td class="negv">明顯偏樂觀，且該篇文章發布時間早於 2026Q1 財報公布</td></tr>
+    </table>
+    <p class="rule-body">
+      工商時報引述的法人在<b>法說會後上修目標價至 40.5 元</b>，但緊接著公布的 2026Q1 財報顯示 EPS 僅 <b class="negv">0.2 元、年減 20%</b>，明顯不如樂觀預期，股價目前也僅在 29~31 元附近，離 40.5 元的目標價有相當距離。<b>這代表該公司過去至少出現過一次法人預估與實際結果明顯脫節的紀錄</b>，看待任何目標價或 EPS 預估時都應該打折扣，不要單憑一份樂觀報告就做出投資判斷。<br><br>
+      關於 2027 年（N+2）EPS 預估：本次查詢<b>未找到清楚可靠的次二年度預估數字</b>，如實告知，不強行湊數。
+    </p>
+    <div class="tblnote">來源：<a href="https://www.istock.tw/stock/2352" target="_blank">愛玩股－佳世達目標價／合理價頁</a>（含Fintel與工商時報引述）。</div>
+  </div>
+
+</section>
+
+<section id="step6">
+  <div class="stepmark">【第 6 步／共 6 步】投資決策推理</div>
+  <h2>進場／續抱／賣出的推理（非投資建議）</h2>
+
+  <div class="callout">
+    <b>聲明：</b>以下是根據前五步分析所做的<b>推理與觀點</b>，不是專業投資建議，我不是持牌理財顧問。任何買賣決定都應該綜合你自己的風險承受度、資金配置與其他資訊來源，自行判斷。
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">🅰</div>
+      <div class="rule-title">
+        <h3>若尚未持有：會不會進場？</h3>
+        <div class="rule-tag">傾向觀望，等待訊號確認</div>
+      </div>
+    </div>
+    <p class="rule-body">
+      呼應第一步結論：現金流體質評分僅 48%，屬「需觀察」等級，核心疑慮是<b>本業現金流六年間大起大落，且六年中有一半年度 A 不敵 D，尤其2021~2022兩年淨利有業外收益撐高的痕跡</b>。第五步又看到法人預估分歧達 38%、且過去有過度樂觀的紀錄。這種組合——體質面偏弱＋估值面沒有共識——通常不是急著進場的時機。<br><br>
+      <b>觀察訊號（滿足任一項再考慮進場，而非模糊的「看情況」）：</b><br>
+      • 2026Q2、Q3 單季 A（營業活動現金流）轉正且較 2026Q1（-45.2億）明顯改善<br>
+      • 明基材料由虧轉盈，或至少虧損幅度較 2026Q1 收斂（法說會已提及是主要拖累獲利的因素）<br>
+      • 2026 全年舉債投資模式（B負值同時C為正）沒有進一步惡化，尤其留意 120 億元 ESG 聯貸的動用與還款狀況
+    </p>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-head">
+      <div class="rule-num">🅱</div>
+      <div class="rule-title">
+        <h3>若已持有：續抱還是賣出？</h3>
+        <div class="rule-tag">可續抱觀察，設定停損／檢核點</div>
+      </div>
+    </div>
+    <p class="rule-body">
+      營收面相對穩定（第四步：近12季箱型盤整），公司高層也明確表態<b>「2025年是12年獲利谷底、2026年將回升」</b>，且 BSG、醫療等高附加價值事業占比<b>已過半</b>，轉型方向具體，不是無憑無據的口號。這些因素不足以支撐「立即加碼」，但也還不到「立即出場」的程度。<br><br>
+      <b>建議續抱者留意的檢核點：</b><br>
+      • 若 2026Q2 財報（預計8月公布）EPS 仍年減，且明基材料虧損未收斂，需重新評估轉型是否真的兌現<br>
+      • 若期末現金餘額（第一步規則六）跌破 2023 年低點（255億）且未回升，代表現金流體質可能真的在惡化，而非單季波動<br>
+      • 若舉債投資（B負值+C正值或小幅負值）在 2026 全年重複出現超過一次，且伴隨 A 轉負，代表落入「A為負＋重度投資＋C為正（疑似舉債）」的最高警戒訊號（2026Q1單季已完全符合），屆時應考慮減碼
+    </p>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  報告版本 v2.2｜生成時間：2026-07-25（Asia/Taipei）｜第一步：使用者提供之財報彙整截圖；第二步：HiStock、Yahoo股市、財報狗、WantGoo、CMoney、Win投資、FindBillion、Anue鉅亨、MarketScreener；第三步：富果直送法說會摘要；第四步：HiStock損益表季度資料；第五步：CMoney讀新聞、FindBillion、愛玩股(Fintel/工商時報引述)。第六步為推理與觀點，非專業投資建議。建議仍以官方財報／MOPS 公開資訊觀測站數字為準進行最終覆核。
+</footer>
+
+<script>
+  document.querySelectorAll('nav.stepnav a').forEach(a=>{
+    a.addEventListener('click', function(e){
+      if(this.classList.contains('disabled')){ e.preventDefault(); }
+    });
+  });
+</script>
+</body>
+</html>

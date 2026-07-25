@@ -48,7 +48,10 @@
   nav.stepnav{
     position:sticky; top:0; z-index:50; background:rgba(250,246,238,.97);
     backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
-    display:flex; overflow-x:auto; gap:2px; padding:0 12px;
+  }
+  nav.stepnav .stepnav-inner{
+    max-width:980px; margin:0 auto; padding:0 24px;
+    display:flex; overflow-x:auto; gap:2px;
   }
   nav.stepnav a{
     color:var(--ink-dim); text-decoration:none; font-size:13px;
@@ -138,12 +141,14 @@
 </header>
 
 <nav class="stepnav" id="stepnav">
+  <div class="stepnav-inner">
   <a href="#step1" class="active">① 現金流六大規則</a>
   <a href="#step2">② 基本資訊</a>
   <a href="#step3">③ 法說會</a>
   <a href="#step4">④ 營收趨勢</a>
   <a href="#step5">⑤ 本益比/EPS</a>
   <a href="#step6">⑥ 投資決策</a>
+  </div>
 </nav>
 
 <main>
@@ -637,11 +642,38 @@
 </footer>
 
 <script>
-  document.querySelectorAll('nav.stepnav a').forEach(a=>{
+  var navLinks = document.querySelectorAll('nav.stepnav a');
+
+  navLinks.forEach(function(a){
     a.addEventListener('click', function(e){
-      if(this.classList.contains('disabled')){ e.preventDefault(); }
+      if(this.classList.contains('disabled')){ e.preventDefault(); return; }
+      navLinks.forEach(function(link){ link.classList.remove('active'); });
+      this.classList.add('active');
     });
   });
+
+  var sections = [];
+  navLinks.forEach(function(a){
+    var id = a.getAttribute('href').replace('#','');
+    var el = document.getElementById(id);
+    if(el){ sections.push({id:id, el:el, link:a}); }
+  });
+
+  if('IntersectionObserver' in window && sections.length){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var match = sections.find(function(s){ return s.el === entry.target; });
+          if(match){
+            navLinks.forEach(function(link){ link.classList.remove('active'); });
+            match.link.classList.add('active');
+          }
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(function(s){ observer.observe(s.el); });
+  }
 </script>
 </body>
 </html>

@@ -141,8 +141,8 @@
     <div class="pad active" data-step="2"><div class="dot"></div><div class="lbl">02 基本資訊</div></div>
     <div class="wire lit"></div>
     <div class="pad active" data-step="3"><div class="dot"></div><div class="lbl">03 法說會</div></div>
-    <div class="wire"></div>
-    <div class="pad locked" data-step="4"><div class="dot"></div><div class="lbl">04 營收趨勢</div></div>
+    <div class="wire lit"></div>
+    <div class="pad active" data-step="4"><div class="dot"></div><div class="lbl">04 營收趨勢</div></div>
     <div class="wire"></div>
     <div class="pad locked" data-step="5"><div class="dot"></div><div class="lbl">05 本益比</div></div>
     <div class="wire"></div>
@@ -513,6 +513,80 @@
   <footer>
     <div class="meta-line">報告版本：v1.2（累加第 3 步）｜生成時間：2026-07-27</div>
     <div class="meta-line">資料來源：本步驟內容整理自多篇財經媒體對 2026/05/06 法說會的報導，皆非我直接讀取官方 PDF／逐字稿得出；官方原始 PDF 與直播連結已於第 2 步附上，供你自行核對細節。</div>
+  </footer>
+
+</section>
+
+<section class="step" id="step4">
+  <div class="step-tag">【第 4 步／共 6 步：營收趨勢視覺化】</div>
+  <h2>近 12 個月月營收：連續改寫歷史新高</h2>
+
+  <div class="callout">
+    <b>先講結論：</b> 月營收從 2025/07 的 42.6 億元一路成長到 2026/06 的 146.6 億元，成長超過 3 倍，其中 2026 年 3 月至 6 月連續 4 個月刷新歷史新高。唯一的例外是 <b>2026/02</b>，單月月減 14.84%（71.64 億元），但年增率仍高達 114.3%，屬於短期回落而非趨勢反轉。</p>
+  </div>
+
+  <div class="chart-card">
+    <svg viewBox="0 0 920 280" width="100%">
+      <line x1="50" y1="235" x2="900" y2="235" class="zline"/>
+      <rect x="63.5" y="172.5" width="43.9" height="62.5" fill="var(--c-trough)" rx="2"/>
+      <rect x="134.3" y="161.9" width="43.9" height="73.1" fill="#8b93a1" opacity="0.6" rx="2"/>
+      <rect x="205.1" y="158.1" width="43.9" height="76.9" fill="#8b93a1" opacity="0.6" rx="2"/>
+      <rect x="276.0" y="169.5" width="43.9" height="65.5" fill="#8b93a1" opacity="0.6" rx="2"/>
+      <rect x="346.8" y="152.9" width="43.9" height="82.1" fill="#8b93a1" opacity="0.6" rx="2"/>
+      <rect x="417.6" y="149.8" width="43.9" height="85.2" fill="#8b93a1" opacity="0.6" rx="2"/>
+      <rect x="488.5" y="111.6" width="43.9" height="123.4" fill="#8b93a1" opacity="0.75" rx="2"/>
+      <rect x="559.3" y="129.9" width="43.9" height="105.1" fill="var(--negv)" opacity="0.55" rx="2"/>
+      <rect x="630.1" y="80.4" width="43.9" height="154.6" fill="#8b93a1" opacity="0.85" rx="2"/>
+      <rect x="701.0" y="80.1" width="43.9" height="154.9" fill="#8b93a1" opacity="0.85" rx="2"/>
+      <rect x="771.8" y="45.2" width="43.9" height="189.8" fill="var(--c-peak)" opacity="0.85" rx="2"/>
+      <rect x="842.6" y="20.0" width="43.9" height="215.0" fill="var(--c-peak)" rx="2"/>
+
+      <text x="85" y="167" text-anchor="middle" fill="var(--text-primary)" font-size="11">42.6</text>
+      <text x="156" y="156" text-anchor="middle" fill="var(--text-primary)" font-size="11">49.8</text>
+      <text x="227" y="152" text-anchor="middle" fill="var(--text-primary)" font-size="11">52.4</text>
+      <text x="298" y="164" text-anchor="middle" fill="var(--text-primary)" font-size="11">44.6</text>
+      <text x="369" y="147" text-anchor="middle" fill="var(--text-primary)" font-size="11">56.0</text>
+      <text x="439" y="144" text-anchor="middle" fill="var(--text-primary)" font-size="11">58.1</text>
+      <text x="510" y="106" text-anchor="middle" fill="var(--text-primary)" font-size="11">84.1</text>
+      <text x="581" y="124" text-anchor="middle" fill="var(--negv)" font-size="11">71.6</text>
+      <text x="652" y="75" text-anchor="middle" fill="var(--text-primary)" font-size="11">105.4</text>
+      <text x="723" y="75" text-anchor="middle" fill="var(--text-primary)" font-size="11">105.6</text>
+      <text x="793" y="40" text-anchor="middle" fill="var(--text-primary)" font-size="11">129.4</text>
+      <text x="864" y="14" text-anchor="middle" fill="var(--text-primary)" font-size="12" font-weight="700">146.6</text>
+
+      <text x="85" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">25/07</text>
+      <text x="156" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">25/08</text>
+      <text x="227" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">25/09</text>
+      <text x="298" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">25/10</text>
+      <text x="369" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">25/11</text>
+      <text x="439" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">25/12</text>
+      <text x="510" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">26/01</text>
+      <text x="581" y="250" text-anchor="middle" fill="var(--negv)" font-size="11">26/02</text>
+      <text x="652" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">26/03</text>
+      <text x="723" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">26/04</text>
+      <text x="793" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">26/05</text>
+      <text x="864" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">26/06</text>
+    </svg>
+    <div class="legend"><span><i style="background:var(--c-peak)"></i>連續創高區間（26/03～26/06）</span><span><i style="background:var(--negv)"></i>唯一回落月（26/02）</span></div>
+    <p class="chart-cap">單位：億元新台幣。資料來源：使用者提供之 Goodinfo 月營收走勢圖截圖（非本次搜尋所得）。</p>
+  </div>
+
+  <h3>波動原因對照</h3>
+  <table>
+    <tr><th>期間</th><th>營收(億)</th><th>月增</th><th>年增</th><th>備註</th></tr>
+    <tr><td>2026/02</td><td class="num neg">71.64</td><td class="num neg">-14.84%</td><td class="num pos">+114.3%</td><td>近2個月新低，公司備註為記憶體售價上漲帶動基期較高，非需求轉弱；2月天數少、農曆春節落在此月附近，也是台股電子業常見的季節性因素之一（此點為一般產業慣例推測，非公司法說會逐字確認）</td></tr>
+    <tr><td>2026/03</td><td class="num pos">105.4</td><td class="num pos">+47.1%</td><td class="num pos">+181.5%</td><td>單月站上百億元，創40個月新高</td></tr>
+    <tr><td>2026/04</td><td class="num pos">105.6</td><td class="num pos">+0.17%</td><td class="num pos">+169.5%</td><td>與3月持平，呼應法說會提到的「惜售、價格導向」出貨策略</td></tr>
+    <tr><td>2026/05</td><td class="num pos">129.4</td><td class="num pos">+22.6%</td><td class="num pos">+210.4%</td><td>記憶體合約漲價效應持續發酵</td></tr>
+    <tr><td>2026/06</td><td class="num pos">146.6</td><td class="num pos">+13.3%</td><td class="num pos">+212%</td><td>連續第4個月創高，上半年營收已超越去年全年</td></tr>
+  </table>
+  <p class="chart-cap">資料來源：使用者提供之截圖；文字備註交叉參考 <a class="src" href="https://cmnews.com.tw/article/cmoneyaicurator-5a6d55c3-1862-11f1-9c12-3c7f0b792921" target="_blank">CMoney（2月營收公告）</a>、<a class="src" href="https://winvest.tw/News/Detail/79873" target="_blank">Win投資（2月營收備註）</a>。</p>
+
+  <p>要不要接著看第 5 步（前瞻本益比／EPS 預估）？</p>
+
+  <footer>
+    <div class="meta-line">報告版本：v1.3（累加第 4 步）｜生成時間：2026-07-27</div>
+    <div class="meta-line">資料來源：月營收原始數字為使用者提供之 Goodinfo 截圖，非本次搜尋所得；波動原因說明的新聞引用已個別附上連結。</div>
   </footer>
 
 </section>

@@ -666,18 +666,46 @@
 </main>
 
 <footer>
-  報告版本 v2.1（修正第6步營收訊號邏輯錯誤；補上使用者提供之月K棒完整對照表）｜生成時間：2026-07-26｜台股個股初步分析框架 第 6 步／共 6 步（完成）
+  報告版本 v2.2（修正頂部導覽列高亮邏輯，改用捲動動態偵測目前區塊）｜生成時間：2026-07-26｜台股個股初步分析框架 第 6 步／共 6 步（完成）
 </footer>
 
 <script>
-document.querySelectorAll('nav.stepnav a').forEach(a=>{
-  if(!a.classList.contains('disabled')){
-    a.addEventListener('click', e=>{
-      e.preventDefault();
-      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+(function(){
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.stepnav a[href^="#"]'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+
+  function setActive(id){
+    navLinks.forEach(function(a){
+      if(a.getAttribute('href') === '#' + id){
+        a.classList.add('active');
+      } else {
+        a.classList.remove('active');
+      }
     });
   }
-});
+
+  navLinks.forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.querySelector(a.getAttribute('href'));
+      if(target){
+        target.scrollIntoView({behavior:'smooth'});
+        setActive(target.id);
+      }
+    });
+  });
+
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          setActive(entry.target.id);
+        }
+      });
+    }, { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    sections.forEach(function(sec){ if(sec) observer.observe(sec); });
+  }
+})();
 </script>
 </body>
 </html>

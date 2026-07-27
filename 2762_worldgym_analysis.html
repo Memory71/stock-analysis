@@ -118,6 +118,14 @@
   .dualbar .b1{background:var(--steel);}
   .dualbar .b2{background:var(--accent);}
   .dualbar div{width:14px;border-radius:2px 2px 0 0;position:relative;}
+  .divchart{display:flex;gap:10px;height:250px;position:relative;margin:18px 0 6px;}
+  .divchart .zeroline{position:absolute;left:0;right:0;top:130px;border-top:2px solid var(--ink);z-index:1;}
+  .col3{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;}
+  .upzone{height:130px;width:100%;display:flex;align-items:flex-end;justify-content:center;}
+  .downzone{height:100px;width:100%;display:flex;align-items:flex-start;justify-content:center;gap:5px;padding-top:2px;}
+  .ubar{width:34%;border-radius:3px 3px 0 0;}
+  .dbar{width:15px;border-radius:0 0 3px 3px;}
+  .col3 .bar-year{margin-top:8px;}
   .legend{display:flex;gap:16px;font-size:12.5px;margin-bottom:6px;}
   .legend span{display:flex;align-items:center;gap:5px;}
   .swatch{width:12px;height:12px;border-radius:2px;display:inline-block;}
@@ -238,20 +246,73 @@
     </div>
     <span class="tag">個性標籤：不靠舉債過日子型</span>
     <p>C 每年皆為負值（持續還債／資金流出，非舉債），且 A 每年都是正值，<b>完全未出現「A 為負＋C 為正或小幅負值」的最高警戒訊號</b>。2023 年 C 達 -21 億（六年最大），但同年 A=23.8 仍健康為正，屬主動去化融資／還款行為，而非本業造血不足被迫借錢，應正面看待。</p>
+    <p>釐清一下：<b>B（投資活動）與 C（融資活動）這兩欄，逐年的原始數值本來就都是負數</b>（例如 2023 年 B=-6.4、C=-21，皆為現金流出），前一版圖表用絕對值高度呈現是為了方便比較規模大小，但容易讓人誤以為數字經過轉換。下方改用 <b>A、B、C 三數列的真實正負值</b>直接呈現，A（營業活動）一律為正值向上、B與C為負值向下，不做絕對值處理：</p>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--steel)"></span>B 投資活動</span>
-      <span><span class="swatch" style="background:var(--accent)"></span>C 融資活動</span>
+      <span><span class="swatch" style="background:var(--pos)"></span>A 營業活動（皆為正值）</span>
+      <span><span class="swatch" style="background:var(--steel)"></span>B 投資活動（皆為負值）</span>
+      <span><span class="swatch" style="background:var(--accent)"></span>C 融資活動（皆為負值）</span>
     </div>
-    <div class="barchart">
-      <div class="zero" style="bottom:0"></div>
-      <div class="bar-col"><div class="dualbar"><div class="b1" style="height:90%" title="B -19"></div><div class="b2" style="height:53%" title="C -11.2"></div></div><div class="bar-year">2020</div></div>
-      <div class="bar-col"><div class="dualbar"><div class="b1" style="height:55%" title="B -11.5"></div><div class="b2" style="height:30%" title="C -6.39"></div></div><div class="bar-year">2021</div></div>
-      <div class="bar-col"><div class="dualbar"><div class="b1" style="height:73%" title="B -15.3"></div><div class="b2" style="height:72%" title="C -15.1"></div></div><div class="bar-year">2022</div></div>
-      <div class="bar-col"><div class="dualbar"><div class="b1" style="height:30%" title="B -6.4"></div><div class="b2" style="height:100%" title="C -21"></div></div><div class="bar-year">2023</div></div>
-      <div class="bar-col"><div class="dualbar"><div class="b1" style="height:76%" title="B -15.9"></div><div class="b2" style="height:46%" title="C -9.73"></div></div><div class="bar-year">2024</div></div>
-      <div class="bar-col"><div class="dualbar"><div class="b1" style="height:68%" title="B -14.2"></div><div class="b2" style="height:65%" title="C -13.7"></div></div><div class="bar-year">2025</div></div>
+    <div class="divchart">
+      <div class="zeroline"></div>
+      <div class="col3">
+        <div class="upzone"><div class="ubar" style="height:129.6px;background:var(--pos);" title="A +32.4"></div></div>
+        <div class="downzone">
+          <div class="dbar" style="height:76px;background:var(--steel);" title="B -19"></div>
+          <div class="dbar" style="height:44.8px;background:var(--accent);" title="C -11.2"></div>
+        </div>
+        <div class="bar-year">2020</div>
+      </div>
+      <div class="col3">
+        <div class="upzone"><div class="ubar" style="height:84.4px;background:var(--pos);" title="A +21.1"></div></div>
+        <div class="downzone">
+          <div class="dbar" style="height:46px;background:var(--steel);" title="B -11.5"></div>
+          <div class="dbar" style="height:25.6px;background:var(--accent);" title="C -6.39"></div>
+        </div>
+        <div class="bar-year">2021</div>
+      </div>
+      <div class="col3">
+        <div class="upzone"><div class="ubar" style="height:92.4px;background:var(--pos);" title="A +23.1"></div></div>
+        <div class="downzone">
+          <div class="dbar" style="height:61.2px;background:var(--steel);" title="B -15.3"></div>
+          <div class="dbar" style="height:60.4px;background:var(--accent);" title="C -15.1"></div>
+        </div>
+        <div class="bar-year">2022</div>
+      </div>
+      <div class="col3">
+        <div class="upzone"><div class="ubar" style="height:95.2px;background:var(--pos);" title="A +23.8"></div></div>
+        <div class="downzone">
+          <div class="dbar" style="height:25.6px;background:var(--steel);" title="B -6.4"></div>
+          <div class="dbar" style="height:84px;background:var(--accent);" title="C -21"></div>
+        </div>
+        <div class="bar-year">2023</div>
+      </div>
+      <div class="col3">
+        <div class="upzone"><div class="ubar" style="height:108.4px;background:var(--pos);" title="A +27.1"></div></div>
+        <div class="downzone">
+          <div class="dbar" style="height:63.6px;background:var(--steel);" title="B -15.9"></div>
+          <div class="dbar" style="height:38.9px;background:var(--accent);" title="C -9.73"></div>
+        </div>
+        <div class="bar-year">2024</div>
+      </div>
+      <div class="col3">
+        <div class="upzone"><div class="ubar" style="height:129.2px;background:var(--pos);" title="A +32.3"></div></div>
+        <div class="downzone">
+          <div class="dbar" style="height:56.8px;background:var(--steel);" title="B -14.2"></div>
+          <div class="dbar" style="height:54.8px;background:var(--accent);" title="C -13.7"></div>
+        </div>
+        <div class="bar-year">2025</div>
+      </div>
     </div>
-    <p class="note">高度為 |B|、|C| 絕對值，兩者皆為現金流出。未見「B 大幅負值同時 C 正值」的借錢投資組合。</p>
+    <table>
+      <tr><th>年度</th><th>A（正值）</th><th>B（負值）</th><th>C（負值）</th><th>A為負＋C為正/小幅負？</th></tr>
+      <tr><td>2020</td><td class="pos">+32.4</td><td class="neg">-19</td><td class="neg">-11.2</td><td class="pos">否，A為正</td></tr>
+      <tr><td>2021</td><td class="pos">+21.1</td><td class="neg">-11.5</td><td class="neg">-6.39</td><td class="pos">否，A為正</td></tr>
+      <tr><td>2022</td><td class="pos">+23.1</td><td class="neg">-15.3</td><td class="neg">-15.1</td><td class="pos">否，A為正</td></tr>
+      <tr><td>2023</td><td class="pos">+23.8</td><td class="neg">-6.4</td><td class="neg">-21</td><td class="pos">否，A為正</td></tr>
+      <tr><td>2024</td><td class="pos">+27.1</td><td class="neg">-15.9</td><td class="neg">-9.73</td><td class="pos">否，A為正</td></tr>
+      <tr><td>2025</td><td class="pos">+32.3</td><td class="neg">-14.2</td><td class="neg">-13.7</td><td class="pos">否，A為正</td></tr>
+    </table>
+    <p class="note">六年間 A 每年皆為正值，最高警戒訊號（A為負＋C為正或小幅負值）從未出現過。</p>
   </div>
 
   <!-- Rule 5 -->

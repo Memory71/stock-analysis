@@ -118,14 +118,17 @@
   .dualbar .b1{background:var(--steel);}
   .dualbar .b2{background:var(--accent);}
   .dualbar div{width:14px;border-radius:2px 2px 0 0;position:relative;}
-  .divchart{display:flex;gap:10px;height:250px;position:relative;margin:18px 0 6px;}
-  .divchart .zeroline{position:absolute;left:0;right:0;top:130px;border-top:2px solid var(--ink);z-index:1;}
-  .col3{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;}
-  .upzone{height:130px;width:100%;display:flex;align-items:flex-end;justify-content:center;}
-  .downzone{height:100px;width:100%;display:flex;align-items:flex-start;justify-content:center;gap:5px;padding-top:2px;}
-  .ubar{width:34%;border-radius:3px 3px 0 0;}
-  .dbar{width:15px;border-radius:0 0 3px 3px;}
-  .col3 .bar-year{margin-top:8px;}
+  .divchart{display:flex;gap:10px;height:290px;position:relative;margin:18px 0 6px;}
+  .divchart .zeroline{position:absolute;left:0;right:0;top:140px;border-top:2px solid var(--ink);z-index:1;}
+  .col3{flex:1;display:flex;flex-direction:column;align-items:center;}
+  .upzone{height:140px;width:100%;display:flex;align-items:flex-end;justify-content:center;}
+  .downzone{height:110px;width:100%;display:flex;align-items:flex-start;justify-content:center;gap:6px;padding-top:2px;}
+  .ubar{width:38%;border-radius:3px 3px 0 0;position:relative;}
+  .dbar{width:16px;border-radius:0 0 3px 3px;position:relative;}
+  .vlabel{position:absolute;left:50%;transform:translateX(-50%);font-size:11px;font-weight:700;white-space:nowrap;}
+  .ubar .vlabel{bottom:calc(100% + 3px);color:var(--pos);}
+  .dbar .vlabel{top:calc(100% + 3px);}
+  .col3 .bar-year{margin-top:14px;font-size:12.5px;color:var(--muted);}
   .legend{display:flex;gap:16px;font-size:12.5px;margin-bottom:6px;}
   .legend span{display:flex;align-items:center;gap:5px;}
   .swatch{width:12px;height:12px;border-radius:2px;display:inline-block;}
@@ -255,54 +258,55 @@
     <div class="divchart">
       <div class="zeroline"></div>
       <div class="col3">
-        <div class="upzone"><div class="ubar" style="height:129.6px;background:var(--pos);" title="A +32.4"></div></div>
+        <div class="upzone"><div class="ubar" style="height:140px;background:var(--pos);"><span class="vlabel">+32.4</span></div></div>
         <div class="downzone">
-          <div class="dbar" style="height:76px;background:var(--steel);" title="B -19"></div>
-          <div class="dbar" style="height:44.8px;background:var(--accent);" title="C -11.2"></div>
+          <div class="dbar" style="height:82px;background:var(--steel);"><span class="vlabel">-19</span></div>
+          <div class="dbar" style="height:48.4px;background:var(--accent);"><span class="vlabel">-11.2</span></div>
         </div>
         <div class="bar-year">2020</div>
       </div>
       <div class="col3">
-        <div class="upzone"><div class="ubar" style="height:84.4px;background:var(--pos);" title="A +21.1"></div></div>
+        <div class="upzone"><div class="ubar" style="height:91.2px;background:var(--pos);"><span class="vlabel">+21.1</span></div></div>
         <div class="downzone">
-          <div class="dbar" style="height:46px;background:var(--steel);" title="B -11.5"></div>
-          <div class="dbar" style="height:25.6px;background:var(--accent);" title="C -6.39"></div>
+          <div class="dbar" style="height:49.7px;background:var(--steel);"><span class="vlabel">-11.5</span></div>
+          <div class="dbar" style="height:27.6px;background:var(--accent);"><span class="vlabel">-6.39</span></div>
         </div>
         <div class="bar-year">2021</div>
       </div>
       <div class="col3">
-        <div class="upzone"><div class="ubar" style="height:92.4px;background:var(--pos);" title="A +23.1"></div></div>
+        <div class="upzone"><div class="ubar" style="height:99.8px;background:var(--pos);"><span class="vlabel">+23.1</span></div></div>
         <div class="downzone">
-          <div class="dbar" style="height:61.2px;background:var(--steel);" title="B -15.3"></div>
-          <div class="dbar" style="height:60.4px;background:var(--accent);" title="C -15.1"></div>
+          <div class="dbar" style="height:66.1px;background:var(--steel);"><span class="vlabel">-15.3</span></div>
+          <div class="dbar" style="height:65.2px;background:var(--accent);"><span class="vlabel">-15.1</span></div>
         </div>
         <div class="bar-year">2022</div>
       </div>
       <div class="col3">
-        <div class="upzone"><div class="ubar" style="height:95.2px;background:var(--pos);" title="A +23.8"></div></div>
+        <div class="upzone"><div class="ubar" style="height:102.8px;background:var(--pos);"><span class="vlabel">+23.8</span></div></div>
         <div class="downzone">
-          <div class="dbar" style="height:25.6px;background:var(--steel);" title="B -6.4"></div>
-          <div class="dbar" style="height:84px;background:var(--accent);" title="C -21"></div>
+          <div class="dbar" style="height:27.6px;background:var(--steel);"><span class="vlabel">-6.4</span></div>
+          <div class="dbar" style="height:90.7px;background:var(--accent);"><span class="vlabel">-21</span></div>
         </div>
         <div class="bar-year">2023</div>
       </div>
       <div class="col3">
-        <div class="upzone"><div class="ubar" style="height:108.4px;background:var(--pos);" title="A +27.1"></div></div>
+        <div class="upzone"><div class="ubar" style="height:117px;background:var(--pos);"><span class="vlabel">+27.1</span></div></div>
         <div class="downzone">
-          <div class="dbar" style="height:63.6px;background:var(--steel);" title="B -15.9"></div>
-          <div class="dbar" style="height:38.9px;background:var(--accent);" title="C -9.73"></div>
+          <div class="dbar" style="height:68.7px;background:var(--steel);"><span class="vlabel">-15.9</span></div>
+          <div class="dbar" style="height:42px;background:var(--accent);"><span class="vlabel">-9.73</span></div>
         </div>
         <div class="bar-year">2024</div>
       </div>
       <div class="col3">
-        <div class="upzone"><div class="ubar" style="height:129.2px;background:var(--pos);" title="A +32.3"></div></div>
+        <div class="upzone"><div class="ubar" style="height:139.5px;background:var(--pos);"><span class="vlabel">+32.3</span></div></div>
         <div class="downzone">
-          <div class="dbar" style="height:56.8px;background:var(--steel);" title="B -14.2"></div>
-          <div class="dbar" style="height:54.8px;background:var(--accent);" title="C -13.7"></div>
+          <div class="dbar" style="height:61.3px;background:var(--steel);"><span class="vlabel">-14.2</span></div>
+          <div class="dbar" style="height:59.2px;background:var(--accent);"><span class="vlabel">-13.7</span></div>
         </div>
         <div class="bar-year">2025</div>
       </div>
     </div>
+    <p class="note">三色長條的高度採同一比例尺（每單位約4.3px），可直接比較 A、B、C 三者的相對大小；數值已標示在每根長條上方/下方。</p>
     <table>
       <tr><th>年度</th><th>A（正值）</th><th>B（負值）</th><th>C（負值）</th><th>A為負＋C為正/小幅負？</th></tr>
       <tr><td>2020</td><td class="pos">+32.4</td><td class="neg">-19</td><td class="neg">-11.2</td><td class="pos">否，A為正</td></tr>

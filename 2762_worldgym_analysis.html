@@ -118,19 +118,12 @@
   .dualbar .b1{background:var(--steel);}
   .dualbar .b2{background:var(--accent);}
   .dualbar div{width:14px;border-radius:2px 2px 0 0;position:relative;}
-  .divchart{display:flex;gap:16px;height:320px;position:relative;margin:18px 0 6px;}
-  .divchart .zeroline{position:absolute;left:0;right:0;top:140px;border-top:2px solid var(--ink);z-index:1;}
-  .col3{flex:1;position:relative;}
-  .tribar{position:absolute;width:26px;left:50%;transform:translateX(-50%);border-radius:3px;}
-  .tribar.a{left:18%;bottom:180px;border-radius:3px 3px 0 0;background:var(--pos);}
-  .tribar.b{left:50%;top:140px;border-radius:0 0 3px 3px;background:var(--steel);}
-  .tribar.c{left:82%;top:140px;border-radius:0 0 3px 3px;background:var(--accent);}
-  .vlabel{position:absolute;left:50%;transform:translateX(-50%);font-size:12px;font-weight:700;white-space:nowrap;}
-  .tribar.a .vlabel{bottom:calc(100% + 4px);color:var(--pos);}
-  .tribar.b .vlabel,.tribar.c .vlabel{top:calc(100% + 4px);}
-  .tribar.b .vlabel{color:var(--steel);}
-  .tribar.c .vlabel{color:var(--accent-dark);}
-  .col3 .bar-year{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:12.5px;color:var(--muted);}
+  .divchart{display:flex;gap:16px;height:190px;margin:18px 0 6px;}
+  .col2{flex:1;display:flex;flex-direction:column;align-items:center;}
+  .bcrow{display:flex;justify-content:center;align-items:flex-start;gap:14px;height:132px;width:100%;border-top:2px solid var(--ink);}
+  .bar2{width:32px;border-radius:0 0 4px 4px;position:relative;}
+  .vlabel2{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:5px;font-size:12.5px;font-weight:700;white-space:nowrap;}
+  .col2 .bar-year{margin-top:30px;font-size:12.5px;color:var(--muted);}
   .legend{display:flex;gap:16px;font-size:12.5px;margin-bottom:6px;}
   .legend span{display:flex;align-items:center;gap:5px;}
   .swatch{width:12px;height:12px;border-radius:2px;display:inline-block;}
@@ -251,52 +244,56 @@
     </div>
     <span class="tag">個性標籤：不靠舉債過日子型</span>
     <p>C 每年皆為負值（持續還債／資金流出，非舉債），且 A 每年都是正值，<b>完全未出現「A 為負＋C 為正或小幅負值」的最高警戒訊號</b>。2023 年 C 達 -21 億（六年最大），但同年 A=23.8 仍健康為正，屬主動去化融資／還款行為，而非本業造血不足被迫借錢，應正面看待。</p>
-    <p>釐清一下：<b>B（投資活動）與 C（融資活動）這兩欄，逐年的原始數值本來就都是負數</b>（例如 2023 年 B=-6.4、C=-21，皆為現金流出），前一版圖表用絕對值高度呈現是為了方便比較規模大小，但容易讓人誤以為數字經過轉換。下方改用 <b>A、B、C 三數列的真實正負值</b>直接呈現，A（營業活動）一律為正值向上、B與C為負值向下，不做絕對值處理：</p>
+    <p>釐清一下：<b>B（投資活動）與 C（融資活動）這兩欄，逐年的原始數值本來就都是負數</b>（例如 2023 年 B=-6.4、C=-21，皆為現金流出），下方直接呈現兩者的真實負值，不做絕對值處理：</p>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--pos)"></span>A 營業活動（皆為正值）</span>
       <span><span class="swatch" style="background:var(--steel)"></span>B 投資活動（皆為負值）</span>
       <span><span class="swatch" style="background:var(--accent)"></span>C 融資活動（皆為負值）</span>
     </div>
     <div class="divchart">
-      <div class="zeroline"></div>
-      <div class="col3">
-        <div class="tribar a" style="height:140px;"><span class="vlabel">+32.4</span></div>
-        <div class="tribar b" style="height:82px;"><span class="vlabel">-19</span></div>
-        <div class="tribar c" style="height:48.4px;"><span class="vlabel">-11.2</span></div>
+      <div class="col2">
+        <div class="bcrow">
+          <div class="bar2" style="height:117.6px;background:var(--steel);"><span class="vlabel2">-19</span></div>
+          <div class="bar2" style="height:69.3px;background:var(--accent);"><span class="vlabel2">-11.2</span></div>
+        </div>
         <div class="bar-year">2020</div>
       </div>
-      <div class="col3">
-        <div class="tribar a" style="height:91.2px;"><span class="vlabel">+21.1</span></div>
-        <div class="tribar b" style="height:49.7px;"><span class="vlabel">-11.5</span></div>
-        <div class="tribar c" style="height:27.6px;"><span class="vlabel">-6.39</span></div>
+      <div class="col2">
+        <div class="bcrow">
+          <div class="bar2" style="height:71.2px;background:var(--steel);"><span class="vlabel2">-11.5</span></div>
+          <div class="bar2" style="height:39.6px;background:var(--accent);"><span class="vlabel2">-6.39</span></div>
+        </div>
         <div class="bar-year">2021</div>
       </div>
-      <div class="col3">
-        <div class="tribar a" style="height:99.8px;"><span class="vlabel">+23.1</span></div>
-        <div class="tribar b" style="height:66.1px;"><span class="vlabel">-15.3</span></div>
-        <div class="tribar c" style="height:65.2px;"><span class="vlabel">-15.1</span></div>
+      <div class="col2">
+        <div class="bcrow">
+          <div class="bar2" style="height:94.7px;background:var(--steel);"><span class="vlabel2">-15.3</span></div>
+          <div class="bar2" style="height:93.5px;background:var(--accent);"><span class="vlabel2">-15.1</span></div>
+        </div>
         <div class="bar-year">2022</div>
       </div>
-      <div class="col3">
-        <div class="tribar a" style="height:102.8px;"><span class="vlabel">+23.8</span></div>
-        <div class="tribar b" style="height:27.6px;"><span class="vlabel">-6.4</span></div>
-        <div class="tribar c" style="height:90.7px;"><span class="vlabel">-21</span></div>
+      <div class="col2">
+        <div class="bcrow">
+          <div class="bar2" style="height:39.6px;background:var(--steel);"><span class="vlabel2">-6.4</span></div>
+          <div class="bar2" style="height:130px;background:var(--accent);"><span class="vlabel2">-21</span></div>
+        </div>
         <div class="bar-year">2023</div>
       </div>
-      <div class="col3">
-        <div class="tribar a" style="height:117px;"><span class="vlabel">+27.1</span></div>
-        <div class="tribar b" style="height:68.7px;"><span class="vlabel">-15.9</span></div>
-        <div class="tribar c" style="height:42px;"><span class="vlabel">-9.73</span></div>
+      <div class="col2">
+        <div class="bcrow">
+          <div class="bar2" style="height:98.4px;background:var(--steel);"><span class="vlabel2">-15.9</span></div>
+          <div class="bar2" style="height:60.2px;background:var(--accent);"><span class="vlabel2">-9.73</span></div>
+        </div>
         <div class="bar-year">2024</div>
       </div>
-      <div class="col3">
-        <div class="tribar a" style="height:139.5px;"><span class="vlabel">+32.3</span></div>
-        <div class="tribar b" style="height:61.3px;"><span class="vlabel">-14.2</span></div>
-        <div class="tribar c" style="height:59.2px;"><span class="vlabel">-13.7</span></div>
+      <div class="col2">
+        <div class="bcrow">
+          <div class="bar2" style="height:87.9px;background:var(--steel);"><span class="vlabel2">-14.2</span></div>
+          <div class="bar2" style="height:84.8px;background:var(--accent);"><span class="vlabel2">-13.7</span></div>
+        </div>
         <div class="bar-year">2025</div>
       </div>
     </div>
-    <p class="note">每年份左／中／右分別為 A（營業）、B（投資）、C（融資）三根獨立長條，皆以同一比例尺（每單位約4.3px）從共同的零基準線出發，數值直接標示於長條旁。</p>
+    <p class="note">B、C 皆以真實負值呈現（同一比例尺，每單位約6.2px），未經絕對值轉換。A（營業活動）已依需求移除，A逐年是否為正值請參考下方表格。</p>
     <table>
       <tr><th>年度</th><th>A（正值）</th><th>B（負值）</th><th>C（負值）</th><th>A為負＋C為正/小幅負？</th></tr>
       <tr><td>2020</td><td class="pos">+32.4</td><td class="neg">-19</td><td class="neg">-11.2</td><td class="pos">否，A為正</td></tr>

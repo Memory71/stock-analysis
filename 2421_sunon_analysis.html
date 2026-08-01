@@ -115,7 +115,7 @@ td.hl{background:#FCEFD8;border-radius:3px}
 .b-peak{fill:var(--peak);stroke:#C9AE6E;stroke-width:1}
 .b-trough{fill:var(--trough);stroke:#D08C9E;stroke-width:1}
 .b-q{fill:#FFF;stroke:var(--muted);stroke-width:1.3;stroke-dasharray:3 2}
-.b-b{fill:#5A8FA8} .b-c{fill:#C58B4A}
+.b-b{fill:#5A8FA8} .b-c{fill:#C58B4A} .b-sub{fill:#A8C6D6}
 .band{fill:#FCEFD8}
 .vlab{font-family:var(--mono);font-size:12px;fill:var(--ink)}
 .vlab-s{font-size:10.5px;fill:var(--ink2)}
@@ -153,7 +153,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
 
 <header class="top">
   <div class="wrap">
-    <p class="eyebrow">台股個股初步分析 · 已完成第 1–2 步／共 6 步</p>
+    <p class="eyebrow">台股個股初步分析 · 已完成第 1–3 步／共 6 步</p>
     <h1 class="title"><span class="code">2421</span>建準 <span class="en">SUNON</span></h1>
     <p class="subtitle">現金流量表六大規則盲測分析。本步驟刻意<b>不查詢股價、EPS、產業地位或任何新聞背景</b>，
       只用現金流量表本身的數字做判斷，避免被公司故事影響對財務數據的解讀。公司全名與基本面留待第 2 步補上。</p>
@@ -164,7 +164,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
   <div class="inner">
     <a class="pad active" href="#step1"><span class="k">01</span>現金流六大規則</a>
     <a class="pad" href="#step2"><span class="k">02</span>基本資訊查詢</a>
-    <a class="pad locked" href="#step3" aria-disabled="true"><span class="k">03</span>法說會討論</a>
+    <a class="pad" href="#step3"><span class="k">03</span>法說會討論</a>
     <a class="pad locked" href="#step4" aria-disabled="true"><span class="k">04</span>營收趨勢</a>
     <a class="pad locked" href="#step5" aria-disabled="true"><span class="k">05</span>前瞻本益比</a>
     <a class="pad locked" href="#step6" aria-disabled="true"><span class="k">06</span>投資決策推理</a>
@@ -372,12 +372,13 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
       <tr><th scope="row">2026/05/12 13:30</th><td class="n">149.0</td><td class="n">18.44</td><td>web_fetch 走勢圖頁</td></tr>
       <tr><th scope="row">2026/06/24 14:30</th><td class="n">150.0</td><td class="n">17.89</td><td>搜尋結果快照</td></tr>
       <tr><th scope="row">2026/07/21 14:30</th><td class="n">128.5</td><td class="n">15.32</td><td>web_fetch 基本資料頁</td></tr>
+      <tr class="sumrow"><th scope="row">2026/07/31 收盤</th><td class="n">131.0</td><td class="n">15.3 <span class="qtag">推算</span></td><td><b>使用者提供</b></td></tr>
     </tbody>
   </table></div>
   <div class="keybox alarm">
     <span class="kt">請注意這不是價格區間</span>
     <p>上表是<b>同一個欄位在三個不同時間點的快照</b>，不是頁面公布的區間，也不是 52 週高低。三筆都早於今天（2026/08/01），最接近的一筆也落後 11 天。Yahoo 的頁面快取在這次查詢中明顯不穩定——走勢圖頁回傳的時間點甚至比基本資料頁更舊。</p>
-    <p><b>建議你直接看券商 App 的即時報價</b>，或把當前股價告訴我，我再重算下面的估值指標。第 5 步的前瞻本益比會直接依賴這個數字。</p>
+    <p><b>已由使用者補上最新價：2026/07/31 收盤 131 元</b>（前一週約在 120 附近，7/31 台股大漲帶動）。下方估值以此為主，Yahoo 快照僅保留供對照。</p>
   </div>
 
   <h3>每股盈餘與獲利能力</h3>
@@ -408,14 +409,14 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
   <h3>股利與估值指標</h3>
   <p>2025 年度盈餘配發<b>現金股利 5.2404 元</b>（無股票股利），除息日 2026/06/10，已於 <b>2026/07/02 發放完畢</b>。以 2025 年 EPS 7.94 元計算，配發率約 <b>66%</b>（推算）。</p>
   <div class="tw"><table>
-    <thead><tr><th>估值指標（皆為推算）</th><th style="text-align:right">用 128.5 元計算</th><th style="text-align:right">用 149.0 元計算</th></tr></thead>
+    <thead><tr><th>估值指標（皆為推算）</th><th style="text-align:right">用 131 元（7/31 收盤）</th><th style="text-align:right">用 120 元（前一週約略價位）</th></tr></thead>
     <tbody>
-      <tr><th scope="row">本益比（÷ 近四季 EPS 8.57）</th><td class="n">15.0 倍</td><td class="n">17.4 倍</td></tr>
-      <tr><th scope="row">現金殖利率（÷ 股利 5.2404）</th><td class="n posv">4.08%</td><td class="n">3.52%</td></tr>
-      <tr><th scope="row">股價淨值比（÷ 每股淨值 39.59）</th><td class="n">3.25 倍</td><td class="n">3.76 倍</td></tr>
+      <tr class="sumrow"><th scope="row">本益比（÷ 近四季 EPS 8.57）</th><td class="n"><b>15.3 倍</b></td><td class="n">14.0 倍</td></tr>
+      <tr><th scope="row">現金殖利率（÷ 股利 5.2404）</th><td class="n posv"><b>4.00%</b></td><td class="n posv">4.37%</td></tr>
+      <tr><th scope="row">股價淨值比（÷ 每股淨值 39.59）</th><td class="n">3.31 倍</td><td class="n">3.03 倍</td></tr>
     </tbody>
   </table></div>
-  <p class="tnote">兩欄分別對應 2026/07/21 與 2026/05/12 的快照價，<b>都不是現價</b>。列兩組是為了讓你看到股價變動對估值的影響幅度，不是說合理值落在這個區間。</p>
+  <p class="tnote">左欄為 <b>2026/07/31 收盤 131 元</b>（使用者提供），右欄為前一週約略價位 120 元，用來呈現股價變動對估值的影響幅度，<b>不是說合理值落在 120–131 這個區間</b>。131 元的本益比 15.3 倍與 Yahoo 頁面 7/21 顯示的 15.32 倍接近，屬巧合——當時股價 128.5 元、採用的近四季 EPS 也略低。</p>
 
   <h3>近期月營收</h3>
   <div class="tw"><table>
@@ -457,13 +458,71 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
     <b>推算數字標示：</b>近四季 EPS 8.57、本益比、現金殖利率、股價淨值比、股利配發率 66% 均為推算，計算方式已於各表下方註明；其餘為頁面直接顯示之數字。
   </p>
 </section>
-<section id="step3" class="pending"><span class="stepmark">第 3 步／共 6 步</span><h2>法說會資料深入討論</h2><p class="muted">待執行。</p></section>
+<section id="step3">
+  <span class="stepmark">第 3 步／共 6 步：法說會資料深入討論</span>
+  <h2>2026Q1 法說會：訂單遞延，還是需求轉弱？</h2>
+  <p class="lede">以 2026-05-08 線上法說會為主要依據，輔以 6 月券商產業分析。</p>
+
+  <div class="keybox">
+    <span class="kt">重點提示</span>
+    <p>這場法說會最值得追問的一句話是：<b>AI 伺服器營收 11.1 億、佔比 22.6%，較上季減少</b>。乍看是壞消息，但公司給的理由是<b>客戶產品轉換與零組件缺料造成專案遞延</b>，不是訂單流失——差別在於，遞延的訂單會回來，流失的不會。</p>
+    <p>結果是 2026Q1 出現一個少見的結構：<b>傳統伺服器 24.7% 反而高於 AI 伺服器 22.6%</b>。通用伺服器的報復性回升補上了 AI 的缺口，這是今年上半年成長的真正支撐。</p>
+  </div>
+
+  <h3>2026Q1 應用別營收結構</h3>
+  <svg viewBox="0 0 900 344" xmlns="http://www.w3.org/2000/svg" class="bars" role="img"><text x="140" y="41" class="xlab" text-anchor="end">網通＋伺服器</text><rect x="150" y="29" width="660.0" height="20" rx="2" class="b-peak"/><text x="818.0" y="41" class="vlab">60.6%</text><text x="868" y="41" class="unit" text-anchor="end">+24.5%</text><text x="140" y="75" class="xlab" text-anchor="end">　└ 伺服器小計</text><rect x="150" y="63" width="515.1" height="20" rx="2" class="b-sub"/><text x="673.1" y="75" class="vlab">47.3%</text><text x="868" y="75" class="unit" text-anchor="end">—</text><text x="140" y="109" class="xlab" text-anchor="end">　　　└ 傳統伺服器</text><rect x="150" y="97" width="269.0" height="20" rx="2" class="b-sub"/><text x="427.0" y="109" class="vlab">24.7%</text><text x="868" y="109" class="unit" text-anchor="end">—</text><text x="140" y="143" class="xlab" text-anchor="end">　　　└ AI 伺服器</text><rect x="150" y="131" width="246.1" height="20" rx="2" class="b-sub"/><text x="404.1" y="143" class="vlab">22.6%</text><text x="868" y="143" class="unit" text-anchor="end">較上季減少</text><text x="140" y="177" class="xlab" text-anchor="end">IT 筆電</text><rect x="150" y="165" width="169.9" height="20" rx="2" class="b-pos"/><text x="327.9" y="177" class="vlab">15.6%</text><text x="868" y="177" class="unit" text-anchor="end">+31.9%</text><text x="140" y="211" class="xlab" text-anchor="end">工業醫療</text><rect x="150" y="199" width="95.8" height="20" rx="2" class="b-pos"/><text x="253.8" y="211" class="vlab">8.8%</text><text x="868" y="211" class="unit" text-anchor="end">+12.1%</text><text x="140" y="245" class="xlab" text-anchor="end">車用</text><rect x="150" y="233" width="89.3" height="20" rx="2" class="b-pos"/><text x="247.3" y="245" class="vlab">8.2%</text><text x="868" y="245" class="unit" text-anchor="end">+1.8%</text><text x="140" y="279" class="xlab" text-anchor="end">通路</text><rect x="150" y="267" width="43.6" height="20" rx="2" class="b-pos"/><text x="201.6" y="279" class="vlab">4.0%</text><text x="868" y="279" class="unit" text-anchor="end">+16.1%</text><text x="140" y="313" class="xlab" text-anchor="end">家電</text><rect x="150" y="301" width="25.0" height="20" rx="2" class="b-pos"/><text x="183.0" y="313" class="vlab">2.3%</text><text x="868" y="313" class="unit" text-anchor="end">−11.9%</text><text x="150" y="16" class="unit">佔營收比重</text><text x="868" y="16" class="unit" text-anchor="end">年增率</text></svg>
+  <p class="tnote">伺服器小計 23.29 億元（佔 47.3%），其中 AI 伺服器 11.1 億元。深色為主要類別，淺色為其下的細分項目，兩者不可相加。家電是唯一衰退的應用。</p>
+
+  <h3>三條值得追蹤的線</h3>
+
+  <h4 class="sub">一、AI 缺口是遞延還是流失</h4>
+  <p>公司與券商的說法一致：<b>2026Q1 的 AI 伺服器訂單遞延到下半年</b>，原因是記憶體、PCB 及晶片等零組件供應不順，部分專案延後出貨。同時 CPU 推理運算需求升溫，帶動 CPU 散熱產品拉貨。</p>
+  <p><b>這條線的驗證點很明確：</b>如果是遞延，2026Q3 的 AI 伺服器營收與佔比應該明顯回升；如果 Q3 佔比還在 22% 附近打轉，那「遞延」的說法就要重新評估。7 月營收通常在 8 月 10 日前公布，Q3 財報則要等到 11 月——這是接下來三個月最關鍵的觀察窗口。</p>
+
+  <h4 class="sub">二、雙軌結構降低了單一題材依賴，但也稀釋了成長品質</h4>
+  <p>通用伺服器復甦是 2026 年的意外支撐。好處是營收不必單押 AI，抗波動能力較強；但要留意的是，<b>傳統伺服器的毛利率排序低於 AI／伺服器</b>（法說會揭露的毛利率排名依序為 AI／伺服器、通路、工業能源、IT 筆電與汽車、家電）。也就是說，上半年 18.27% 的營收成長，其產品組合含金量不如去年由 AI 主導時來得高。</p>
+  <p>2026Q1 毛利率 31.66% 仍守住 31% 以上，代表組合變化的影響尚未顯現在毛利率上。但如果下半年 AI 沒有如預期回來、繼續靠通用伺服器撐，毛利率就是第一個會鬆動的地方。</p>
+
+  <h4 class="sub">三、液冷與 800V EC 風扇：2027 年的故事，不是 2026 年的</h4>
+  <div class="tw"><table>
+    <thead><tr><th>新產品線</th><th>目前進度</th><th>2026 營收貢獻</th><th>2027 預估貢獻</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">水冷板（液冷）</th><td>2026Q1 完成首批出貨，Q3 新專案量產</td><td>低個位數</td><td>高個位數（若進展順利）</td></tr>
+      <tr><th scope="row">800V 大型 EC 風扇</th><td>宣稱為首家生產廠商，可省去 AI 伺服器降壓設備</td><td>低個位數</td><td>高個位數</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote">「低個位數」「高個位數」是券商報告的原始用語，指佔整體營收的百分比級距，非精確數字。</p>
+  <p>公司目前仍是<b>氣冷為主、液冷為輔</b>。這點很重要——市場常把建準當「液冷概念股」在看，但液冷今年的實際營收貢獻只是低個位數百分比。<b>真正撐住 2026 年獲利的還是氣冷風扇</b>，液冷是 2027 年以後才會有實質份量的故事。法人指出 HGX 及 ASIC 等平台仍大量採用氣冷架構，單一機櫃風扇需求可達 300 顆以上，且隨 AI 伺服器功耗提高，氣冷需求並未被液冷取代。</p>
+
+  <div class="keybox good">
+    <span class="kt">與第 1 步現金流的接點</span>
+    <p>第 1 步留下兩個懸念，這一步剛好給出答案的輪廓：</p>
+    <p><b>①「2025 年那筆 9.53 億固定資產支出花在哪？」</b>——時間軸對得上 2026Q3 新一代 ASIC 專案的水冷板與大型 EC 風扇量產。資本支出在 2024 年翻倍、2025 年再翻近一倍，對應的正是這批新產品線的產能佈建。</p>
+    <p><b>②「2026Q1 的 C ＋9.52 億是為了什麼？」</b>——若擴產與新專案備料同時進行，營運資金需求會在量產前先行放大。這與第 5 步規則診斷出的「收現慢半拍」體質疊加，就會出現 Q1 那種「營業現金流只有 0.64 億、卻同時舉債 9.52 億」的組合。<b>這是合理的解釋，但仍是推論，不是公司揭露的說法。</b></p>
+  </div>
+
+  <div class="keybox alarm">
+    <span class="kt">兩個要保持警覺的地方</span>
+    <p><b>「下半年優於上半年」是公司與法人的共識預期，不是已發生的事實。</b>整個 2026 年的成長論述都押在 Q3 的跳躍性成長上——AI 訂單回歸、新 ASIC 水冷板出貨、大型 EC 放量三件事要同時發生。若 Q3 營收沒有明顯跳升，這條推論鏈就得整個重估。</p>
+    <p><b>券商報告有立場。</b>本節引用的產業分析出自德信投顧，其結論明確看多（「目前評價偏低」）。這類報告的產業資訊通常可靠，但對「評價偏低／偏高」的判斷屬於投顧觀點，不應直接當成事實採用。第 5 步會回頭檢視這些預估數字的可信度。</p>
+  </div>
+
+  <p class="snap-note">
+    <b>本節資料來源（皆為本次搜尋所得）：</b><br>
+    · 2026Q1 應用別佔比、各應用年增率、毛利率排名、AI 伺服器 11.1 億／22.6% —— <a href="https://finance.biggo.com.tw/quote/2421.TW/earnings-call/TW_2421.TW_2026-05-08" target="_blank" rel="noopener">BigGo 財經 2026-05-08 法說會整理</a><br>
+    · 零組件缺料致專案遞延、CPU 推理需求升溫、Q3 新 ASIC 平台量產、氣冷為主液冷為輔、單機櫃 300 顆風扇 —— <a href="https://tw.stock.yahoo.com/news/%E5%BB%BA%E6%BA%96h1%E7%87%9F%E6%94%B6%E5%A2%9E18-h2%E8%BF%8Eai%E4%BC%BA%E6%9C%8D%E5%99%A8%E8%A8%82%E5%96%AE%E5%8B%95%E8%83%BD-030500743.html" target="_blank" rel="noopener">MoneyDJ 2026/07/08</a><br>
+    · 傳統伺服器比重 24.7%、水冷板與 800V EC 風扇之 2026／2027 貢獻級距、Q3 跳躍性成長研判 —— <a href="https://blog.fugle.tw/post/sunonwealth-analysi" target="_blank" rel="noopener">德信投顧〈建準：通用與 AI 伺服器雙軌助攻〉2026/06/17</a>（投顧報告，立場看多）<br>
+    · 法說會場次與日期 —— <a href="https://agdstock.club/iic/2421-%E5%BB%BA%E6%BA%96" target="_blank" rel="noopener">2421 建準法說會一覽</a>（整理自 MOPS）<br>
+    <b>誠實區分：</b>2026-05-08 法說會官方簡報 PDF 位於 mopsov.twse.com.tw，受 robots.txt 限制<b>無法讀取，我沒有讀過原始簡報或影音</b>。本節所有法說會內容均來自上述財經媒體與券商的整理文章。<br>
+    <b>推論標示：</b>「資本支出對應 Q3 新專案產能」與「Q1 舉債為擴產備料」兩段為我依時間軸所做的<b>推論</b>，公司並未如此揭露。
+  </p>
+</section>
 <section id="step4" class="pending"><span class="stepmark">第 4 步／共 6 步</span><h2>營收趨勢視覺化</h2><p class="muted">待執行。</p></section>
 <section id="step5" class="pending"><span class="stepmark">第 5 步／共 6 步</span><h2>前瞻本益比／EPS 預估</h2><p class="muted">待執行。</p></section>
 <section id="step6" class="pending"><span class="stepmark">第 6 步／共 6 步</span><h2>投資決策推理</h2><p class="muted">僅在使用者主動詢問時才執行。</p></section>
 
 <footer>
-  報告版本 v2.0（第 1–2 步完成；第 2 步訂正第 1 步「從未稀釋股東」之結論）　·　更新時間 2026-08-01<br>
+  報告版本 v3.0（第 1–3 步完成；第 2 步訂正第 1 步「從未稀釋股東」之結論）　·　更新時間 2026-08-01<br>
   本報告為財務數據的結構化整理與推理，非投資建議。所有數字以公司正式財報公告為準。
 </footer>
 </div>

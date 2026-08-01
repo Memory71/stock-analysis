@@ -153,7 +153,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
 
 <header class="top">
   <div class="wrap">
-    <p class="eyebrow">台股個股初步分析 · 已完成第 1–3 步／共 6 步</p>
+    <p class="eyebrow">台股個股初步分析 · 已完成第 1–4 步／共 6 步</p>
     <h1 class="title"><span class="code">2421</span>建準 <span class="en">SUNON</span></h1>
     <p class="subtitle">現金流量表六大規則盲測分析。本步驟刻意<b>不查詢股價、EPS、產業地位或任何新聞背景</b>，
       只用現金流量表本身的數字做判斷，避免被公司故事影響對財務數據的解讀。公司全名與基本面留待第 2 步補上。</p>
@@ -165,7 +165,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
     <a class="pad active" href="#step1"><span class="k">01</span>現金流六大規則</a>
     <a class="pad" href="#step2"><span class="k">02</span>基本資訊查詢</a>
     <a class="pad" href="#step3"><span class="k">03</span>法說會討論</a>
-    <a class="pad locked" href="#step4" aria-disabled="true"><span class="k">04</span>營收趨勢</a>
+    <a class="pad" href="#step4"><span class="k">04</span>營收趨勢</a>
     <a class="pad locked" href="#step5" aria-disabled="true"><span class="k">05</span>前瞻本益比</a>
     <a class="pad locked" href="#step6" aria-disabled="true"><span class="k">06</span>投資決策推理</a>
   </div>
@@ -517,12 +517,70 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
     <b>推論標示：</b>「資本支出對應 Q3 新專案產能」與「Q1 舉債為擴產備料」兩段為我依時間軸所做的<b>推論</b>，公司並未如此揭露。
   </p>
 </section>
-<section id="step4" class="pending"><span class="stepmark">第 4 步／共 6 步</span><h2>營收趨勢視覺化</h2><p class="muted">待執行。</p></section>
+<section id="step4">
+  <span class="stepmark">第 4 步／共 6 步：營收趨勢視覺化</span>
+  <h2>近 18 期月營收：規模持續墊高，但成長率已明顯降速</h2>
+  <p class="lede">2025 年 1 月～2026 年 6 月，資料由使用者提供之 Goodinfo 截圖。</p>
+
+  <div class="keybox">
+    <span class="kt">重點提示</span>
+    <p><b>絕對規模一路往上</b>：2025 上半年月均 14.71 億 → 下半年月均 16.42 億 → 2026 上半年月均 <b>17.40 億</b>。18 期裡沒有出現過趨勢性的下滑段。</p>
+    <p><b>但成長率在降速</b>：2025 全年年增 <b>27.7%</b>，2026 上半年降到 <b>18.3%</b>。這不必然是壞事——基期已經墊高，18% 的年增建立在比去年大得多的分母上——但它確實說明「爆發期」的斜率正在收斂。</p>
+  </div>
+
+  <h3>月營收（億元）</h3>
+  <svg viewBox="0 0 900 278" xmlns="http://www.w3.org/2000/svg" class="bars" role="img"><line x1="20" y1="232.0" x2="880" y2="232.0" class="axis"/><rect x="29.1" y="96.1" width="29.6" height="135.9" rx="2" class="b-pos"/><text x="43.9" y="89.1" class="vlab" text-anchor="middle">13.03</text><text x="43.9" y="252.0" class="xlab" text-anchor="middle">25/01</text><rect x="76.9" y="97.2" width="29.6" height="134.8" rx="2" class="b-trough"/><text x="91.7" y="90.2" class="vlab" text-anchor="middle">12.93</text><text x="91.7" y="252.0" class="xlab" text-anchor="middle">25/02</text><rect x="124.6" y="68.7" width="29.6" height="163.3" rx="2" class="b-pos"/><text x="139.4" y="61.7" class="vlab" text-anchor="middle">15.66</text><text x="139.4" y="252.0" class="xlab" text-anchor="middle">25/03</text><rect x="172.4" y="62.2" width="29.6" height="169.8" rx="2" class="b-pos"/><text x="187.2" y="55.2" class="vlab" text-anchor="middle">16.28</text><text x="187.2" y="252.0" class="xlab" text-anchor="middle">25/04</text><rect x="220.2" y="78.5" width="29.6" height="153.5" rx="2" class="b-pos"/><text x="235.0" y="71.5" class="vlab" text-anchor="middle">14.72</text><text x="235.0" y="252.0" class="xlab" text-anchor="middle">25/05</text><rect x="268.0" y="69.0" width="29.6" height="163.0" rx="2" class="b-pos"/><text x="282.8" y="62.0" class="vlab" text-anchor="middle">15.63</text><text x="282.8" y="252.0" class="xlab" text-anchor="middle">25/06</text><rect x="315.7" y="64.1" width="29.6" height="167.9" rx="2" class="b-pos"/><text x="330.6" y="57.1" class="vlab" text-anchor="middle">16.1</text><text x="330.6" y="252.0" class="xlab" text-anchor="middle">25/07</text><rect x="363.5" y="68.7" width="29.6" height="163.3" rx="2" class="b-pos"/><text x="378.3" y="61.7" class="vlab" text-anchor="middle">15.66</text><text x="378.3" y="252.0" class="xlab" text-anchor="middle">25/08</text><rect x="411.3" y="48.7" width="29.6" height="183.3" rx="2" class="b-pos"/><text x="426.1" y="41.7" class="vlab" text-anchor="middle">17.58</text><text x="426.1" y="252.0" class="xlab" text-anchor="middle">25/09</text><rect x="459.1" y="65.8" width="29.6" height="166.2" rx="2" class="b-pos"/><text x="473.9" y="58.8" class="vlab" text-anchor="middle">15.94</text><text x="473.9" y="252.0" class="xlab" text-anchor="middle">25/10</text><rect x="506.9" y="72.0" width="29.6" height="160.0" rx="2" class="b-pos"/><text x="521.7" y="65.0" class="vlab" text-anchor="middle">15.34</text><text x="521.7" y="252.0" class="xlab" text-anchor="middle">25/11</text><rect x="554.6" y="45.2" width="29.6" height="186.8" rx="2" class="b-pos"/><text x="569.4" y="38.2" class="vlab" text-anchor="middle">17.91</text><text x="569.4" y="252.0" class="xlab" text-anchor="middle">25/12</text><rect x="602.4" y="46.6" width="29.6" height="185.4" rx="2" class="b-pos"/><text x="617.2" y="39.6" class="vlab" text-anchor="middle">17.78</text><text x="617.2" y="252.0" class="xlab" text-anchor="middle">26/01</text><rect x="650.2" y="94.0" width="29.6" height="138.0" rx="2" class="b-pos"/><text x="665.0" y="87.0" class="vlab" text-anchor="middle">13.23</text><text x="665.0" y="252.0" class="xlab" text-anchor="middle">26/02</text><rect x="698.0" y="32.0" width="29.6" height="200.0" rx="2" class="b-peak"/><text x="712.8" y="25.0" class="vlab" text-anchor="middle">19.18</text><text x="712.8" y="252.0" class="xlab" text-anchor="middle">26/03</text><rect x="745.7" y="36.9" width="29.6" height="195.1" rx="2" class="b-pos"/><text x="760.6" y="29.9" class="vlab" text-anchor="middle">18.71</text><text x="760.6" y="252.0" class="xlab" text-anchor="middle">26/04</text><rect x="793.5" y="55.6" width="29.6" height="176.4" rx="2" class="b-pos"/><text x="808.3" y="48.6" class="vlab" text-anchor="middle">16.92</text><text x="808.3" y="252.0" class="xlab" text-anchor="middle">26/05</text><rect x="841.3" y="38.6" width="29.6" height="193.4" rx="2" class="b-pos"/><text x="856.1" y="31.6" class="vlab" text-anchor="middle">18.55</text><text x="856.1" y="252.0" class="xlab" text-anchor="middle">26/06</text><text x="20" y="18.0" class="unit">單位：億元</text></svg>
+  <p class="legend"><span class="chip" style="background:var(--peak)"></span>18 期高峰　2026/03　19.18 億
+    <span class="chip" style="background:var(--trough);margin-left:14px"></span>18 期谷底　2025/02　12.93 億</p>
+  <p>月營收在 <b>12.93～19.18 億</b>之間震盪，區間本身逐步上移。<b>2 月一律是全年低點</b>（2025/02 為 12.93 億、2026/02 為 13.23 億），這是農曆年工作天數效應，不是需求問題——2026/03 緊接著月增 44.9% 衝上 19.18 億就是證明。</p>
+
+  <h3>單月營收年增率（%）</h3>
+  <svg viewBox="0 0 900 258" xmlns="http://www.w3.org/2000/svg" class="bars" role="img"><line x1="20" y1="212.0" x2="880" y2="212.0" class="axis"/><rect x="29.1" y="196.4" width="29.6" height="15.6" rx="2" class="b-pos"/><text x="43.9" y="189.4" class="vlab" text-anchor="middle">6.7</text><text x="43.9" y="232.0" class="xlab" text-anchor="middle">25/01</text><rect x="76.9" y="32.0" width="29.6" height="180.0" rx="2" class="b-peak"/><text x="91.7" y="25.0" class="vlab" text-anchor="middle">78</text><text x="91.7" y="232.0" class="xlab" text-anchor="middle">25/02</text><rect x="124.6" y="118.1" width="29.6" height="93.9" rx="2" class="b-pos"/><text x="139.4" y="111.1" class="vlab" text-anchor="middle">40.7</text><text x="139.4" y="232.0" class="xlab" text-anchor="middle">25/03</text><rect x="172.4" y="135.2" width="29.6" height="76.8" rx="2" class="b-pos"/><text x="187.2" y="128.2" class="vlab" text-anchor="middle">33.3</text><text x="187.2" y="232.0" class="xlab" text-anchor="middle">25/04</text><rect x="220.2" y="175.1" width="29.6" height="36.9" rx="2" class="b-pos"/><text x="235.0" y="168.1" class="vlab" text-anchor="middle">16</text><text x="235.0" y="232.0" class="xlab" text-anchor="middle">25/05</text><rect x="268.0" y="138.8" width="29.6" height="73.2" rx="2" class="b-pos"/><text x="282.8" y="131.8" class="vlab" text-anchor="middle">31.7</text><text x="282.8" y="232.0" class="xlab" text-anchor="middle">25/06</text><rect x="315.7" y="176.7" width="29.6" height="35.3" rx="2" class="b-pos"/><text x="330.6" y="169.7" class="vlab" text-anchor="middle">15.3</text><text x="330.6" y="232.0" class="xlab" text-anchor="middle">25/07</text><rect x="363.5" y="177.2" width="29.6" height="34.8" rx="2" class="b-pos"/><text x="378.3" y="170.2" class="vlab" text-anchor="middle">15.1</text><text x="378.3" y="232.0" class="xlab" text-anchor="middle">25/08</text><rect x="411.3" y="124.3" width="29.6" height="87.7" rx="2" class="b-pos"/><text x="426.1" y="117.3" class="vlab" text-anchor="middle">38</text><text x="426.1" y="232.0" class="xlab" text-anchor="middle">25/09</text><rect x="459.1" y="129.8" width="29.6" height="82.2" rx="2" class="b-pos"/><text x="473.9" y="122.8" class="vlab" text-anchor="middle">35.6</text><text x="473.9" y="232.0" class="xlab" text-anchor="middle">25/10</text><rect x="506.9" y="171.4" width="29.6" height="40.6" rx="2" class="b-pos"/><text x="521.7" y="164.4" class="vlab" text-anchor="middle">17.6</text><text x="521.7" y="232.0" class="xlab" text-anchor="middle">25/11</text><rect x="554.6" y="142.5" width="29.6" height="69.5" rx="2" class="b-pos"/><text x="569.4" y="135.5" class="vlab" text-anchor="middle">30.1</text><text x="569.4" y="232.0" class="xlab" text-anchor="middle">25/12</text><rect x="602.4" y="127.8" width="29.6" height="84.2" rx="2" class="b-pos"/><text x="617.2" y="120.8" class="vlab" text-anchor="middle">36.5</text><text x="617.2" y="232.0" class="xlab" text-anchor="middle">26/01</text><rect x="650.2" y="206.6" width="29.6" height="5.4" rx="2" class="b-trough"/><text x="665.0" y="199.6" class="vlab" text-anchor="middle">2.3</text><text x="665.0" y="232.0" class="xlab" text-anchor="middle">26/02</text><rect x="698.0" y="160.1" width="29.6" height="51.9" rx="2" class="b-pos"/><text x="712.8" y="153.1" class="vlab" text-anchor="middle">22.5</text><text x="712.8" y="232.0" class="xlab" text-anchor="middle">26/03</text><rect x="745.7" y="177.4" width="29.6" height="34.6" rx="2" class="b-pos"/><text x="760.6" y="170.4" class="vlab" text-anchor="middle">15</text><text x="760.6" y="232.0" class="xlab" text-anchor="middle">26/04</text><rect x="793.5" y="177.6" width="29.6" height="34.4" rx="2" class="b-pos"/><text x="808.3" y="170.6" class="vlab" text-anchor="middle">14.9</text><text x="808.3" y="232.0" class="xlab" text-anchor="middle">26/05</text><rect x="841.3" y="169.1" width="29.6" height="42.9" rx="2" class="b-pos"/><text x="856.1" y="162.1" class="vlab" text-anchor="middle">18.6</text><text x="856.1" y="232.0" class="xlab" text-anchor="middle">26/06</text><text x="20" y="18.0" class="unit">單位：%（年增率）</text></svg>
+  <p class="legend"><span class="chip" style="background:var(--peak)"></span>最高　2025/02　+78%
+    <span class="chip" style="background:var(--trough);margin-left:14px"></span>最低　2026/02　+2.33%</p>
+
+  <div class="keybox alarm">
+    <span class="kt">兩個容易誤讀的月份，要一起看才對</span>
+    <p>圖上最刺眼的兩根就是 2025/02 的 <b>+78%</b> 與 2026/02 的 <b>+2.33%</b>——而這兩根其實是同一件事。</p>
+    <p>2025 年 2 月因為 2024 年同期基期極低，年增衝到 78%；一年後輪到 2026 年 2 月要用這個被墊高的基期來比，年增自然只剩 2.33%。<b>但 2026/02 的營收 13.23 億其實仍高於 2025/02 的 12.93 億，是正成長，不是衰退。</b></p>
+    <p>如果只看「年增率掉到 2.33%」就判斷公司失速，會完全誤讀。這是高基期效應的典型案例。</p>
+  </div>
+
+  <p>撇開 2 月的基期干擾，年增率的走勢仍然清楚：<b>2025 年多數月份落在 15%～40% 的寬幅區間，2026 年則收斂到 15%～22.5%</b>。成長還在，但已經從「爆發」轉為「穩健」。</p>
+
+  <h3>季營收：Q3 是接下來的關鍵驗證點</h3>
+  <div class="tw"><table>
+    <thead><tr><th>季別</th><th scope="row">2025Q1</th><th scope="row">2025Q2</th><th scope="row">2025Q3</th><th scope="row">2025Q4</th><th scope="row">2026Q1</th><th scope="row">2026Q2</th></tr></thead>
+    <tbody><tr><th scope="row">季營收（億元）</th><td class="n ">41.62</td><td class="n posv">46.63</td><td class="n posv">49.34</td><td class="n negv">49.19</td><td class="n posv">50.19</td><td class="n posv">54.18</td></tr></tbody>
+  </table></div>
+  <p class="tnote">綠字為較前一季成長、紅字為下滑。2025Q4 是唯一微幅回落的一季（49.34 → 49.19）。</p>
+  <p>第 3 步提到，公司與券商都預期<b>下半年優於上半年、Q3 有跳躍性成長</b>。把它換算成可驗證的數字就清楚多了：</p>
+  <ul>
+    <li>2026Q2 已達 <b>54.18 億</b>，2025Q3 的基期是 <b>49.34 億</b></li>
+    <li>若 Q3 只是季持平（約 54 億），年增約 <b>+10%</b>，反而比上半年的 18.3% 更慢——這稱不上「跳躍」</li>
+    <li>要撐得起「跳躍性成長」的說法，Q3 大概要落在 <b>60 億以上</b>（季增逾 10%、年增逾 20%）</li>
+  </ul>
+  <p><b>7 月營收通常在 8 月 10 日前公布</b>，是第一個檢查點。若 7 月營收沒有站上 19～20 億，Q3 要衝到 60 億就有難度。</p>
+
+  <div class="keybox good">
+    <span class="kt">回頭對照第 1 步：營收成長，現金卻沒同步進來</span>
+    <p>2026 上半年營收 104.38 億、年增 18.3%，看起來很健康。但第 1 步的現金流量表顯示，<b>2026Q1 營業活動現金流只有 0.64 億</b>，而同期稅前淨利有 8.05 億。</p>
+    <p>營收在成長、獲利也有，錢卻沒進到口袋——這正是規則 5 診斷的「<b>帳面漂亮、收現慢半拍</b>」在最新一季的具體表現。營收規模每往上墊一階，卡在應收帳款與存貨裡的錢就更多，這也解釋了同一季為何要舉債 9.52 億。</p>
+    <p><b>所以看建準的月營收，不能只看營收本身。</b>下一季財報出來時，要同步確認營業現金流有沒有跟上——這是這家公司最需要盯的一個落差。</p>
+  </div>
+
+  <p class="snap-note">
+    <b>本節資料來源：</b>近 18 期（2025/01–2026/06）單月營收、月增率、年增率、累計營收 —— <b>使用者提供之 Goodinfo 月營收走勢頁截圖</b>（<a href="https://goodinfo.tw/tw/ShowSaleMonChart.asp?STOCK_ID=2421" target="_blank" rel="noopener">頁面連結</a>，供覆核用，非本次抓取）。<br>
+    <b>交叉驗證：</b>該批數字已與第 2 步搜尋所得的 <a href="https://www.nstock.tw/stock_info?stock_id=2421&status=2" target="_blank" rel="noopener">nStock 月營收表</a>、<a href="https://tw.stock.yahoo.com/quote/2421.TW/revenue" target="_blank" rel="noopener">Yahoo 股市營收表</a> 逐月比對<b>完全一致</b>，三方來源相符。<br>
+    <b>推算數字：</b>各季營收（2025Q1 41.62 億～2026Q2 54.18 億）為<b>三個月單月營收加總推算</b>，非公司公告之季報數字；上下半年月均值、「Q3 需達 60 億以上」之門檻亦為推算，計算基礎已於文中說明。<br>
+    <b>非事實部分：</b>「Q3 跳躍性成長」為公司與券商的預期，截至報告更新時尚未發生。
+  </p>
+</section>
 <section id="step5" class="pending"><span class="stepmark">第 5 步／共 6 步</span><h2>前瞻本益比／EPS 預估</h2><p class="muted">待執行。</p></section>
 <section id="step6" class="pending"><span class="stepmark">第 6 步／共 6 步</span><h2>投資決策推理</h2><p class="muted">僅在使用者主動詢問時才執行。</p></section>
 
 <footer>
-  報告版本 v3.0（第 1–3 步完成；第 2 步訂正第 1 步「從未稀釋股東」之結論）　·　更新時間 2026-08-01<br>
+  報告版本 v4.0（第 1–4 步完成；第 2 步訂正第 1 步「從未稀釋股東」之結論）　·　更新時間 2026-08-01<br>
   本報告為財務數據的結構化整理與推理，非投資建議。所有數字以公司正式財報公告為準。
 </footer>
 </div>

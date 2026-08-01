@@ -153,7 +153,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
 
 <header class="top">
   <div class="wrap">
-    <p class="eyebrow">台股個股初步分析 · 已完成第 1–4 步／共 6 步</p>
+    <p class="eyebrow">台股個股初步分析 · 已完成第 1–5 步／共 6 步</p>
     <h1 class="title"><span class="code">2421</span>建準 <span class="en">SUNON</span></h1>
     <p class="subtitle">現金流量表六大規則盲測分析。本步驟刻意<b>不查詢股價、EPS、產業地位或任何新聞背景</b>，
       只用現金流量表本身的數字做判斷，避免被公司故事影響對財務數據的解讀。公司全名與基本面留待第 2 步補上。</p>
@@ -166,7 +166,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
     <a class="pad" href="#step2"><span class="k">02</span>基本資訊查詢</a>
     <a class="pad" href="#step3"><span class="k">03</span>法說會討論</a>
     <a class="pad" href="#step4"><span class="k">04</span>營收趨勢</a>
-    <a class="pad locked" href="#step5" aria-disabled="true"><span class="k">05</span>前瞻本益比</a>
+    <a class="pad" href="#step5"><span class="k">05</span>前瞻本益比</a>
     <a class="pad locked" href="#step6" aria-disabled="true"><span class="k">06</span>投資決策推理</a>
   </div>
 </nav>
@@ -576,11 +576,107 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
     <b>非事實部分：</b>「Q3 跳躍性成長」為公司與券商的預期，截至報告更新時尚未發生。
   </p>
 </section>
-<section id="step5" class="pending"><span class="stepmark">第 5 步／共 6 步</span><h2>前瞻本益比／EPS 預估</h2><p class="muted">待執行。</p></section>
+<section id="step5">
+  <span class="stepmark">第 5 步／共 6 步：前瞻本益比／EPS 預估</span>
+  <h2>估值：便宜與否，完全取決於你信哪一組預估</h2>
+  <p class="lede">以 2026/07/31 收盤 131 元為基準。</p>
+
+  <div class="keybox">
+    <span class="kt">重點提示</span>
+    <p>市場對 2026 年 EPS 的預估從 <b>7.5 元到 10.95 元</b>都有，對應的前瞻本益比落在 <b>12.0 倍到 17.5 倍</b>——這個分歧本身就是重點，代表市場對「下半年會不會跳躍成長」沒有共識。</p>
+    <p>更值得警惕的是：<b>過去 15 個月裡，分析師先大幅低估、又大幅高估，兩個方向都錯過。</b>細節見下方「預估可信度」一節。</p>
+  </div>
+
+  <h3>市場預估彙整</h3>
+  <div class="tw"><table>
+    <thead><tr><th>來源</th><th>發布時間</th><th style="text-align:right">2026E EPS</th><th style="text-align:right">2027E EPS</th><th>目標價／評等</th></tr></thead>
+    <tbody>
+      <tr class="sumrow"><th scope="row">德信投顧</th><td>2026/06/17</td><td class="n">9.6 元</td><td class="n">12.16 元</td><td>評價偏低（看多）</td></tr>
+      <tr><th scope="row">某投顧（媒體轉述）</th><td>2025/11/07</td><td class="n">10.95 元</td><td class="n muted">—</td><td>買進，目標價 169→186 元</td></tr>
+      <tr><th scope="row">另一家金控投顧</th><td>2025/11/07</td><td class="n muted">—</td><td class="n muted">—</td><td>目標價 150→200 元</td></tr>
+      <tr><th scope="row">摩根士丹利</th><td>2025/11/07</td><td class="n muted">—</td><td class="n muted">—</td><td>中立，目標價 113→162→175 元</td></tr>
+      <tr><th scope="row">FactSet（6 位分析師）</th><td>2025/11/07</td><td class="n muted">—</td><td class="n muted">—</td><td>目標價中位數調升至 159 元</td></tr>
+      <tr><th scope="row">FindBillion（量化模型）</th><td>2026/06 前後</td><td class="n negv">7.5 元</td><td class="n muted">—</td><td>合理價 128.24 元</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote">德信是唯一同時提供 2026 與 2027 兩個年度預估、且時間點在 2026 年下半年之後的來源，因此下方以其為主要基準。2025/11 那批預估發布時股價與產業環境都與現在不同，僅供對照。<b>未能取得 2028 年（N+2）的清楚預估，不硬湊數字。</b></p>
+
+  <h3>前瞻本益比：現在貴不貴</h3>
+  <p>公式是「<b>現在股價 ÷ 預估 EPS</b>」，已知股價、求隱含倍數，回答的是「以目前價格買進，等於用幾倍的未來獲利在買」。</p>
+  <div class="tw"><table>
+    <thead><tr><th>採用的 EPS 預估</th><th style="text-align:right">數值</th><th style="text-align:right">前瞻本益比（÷131 元）</th><th>解讀</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">2026E — 樂觀（2025/11 投顧）</th><td class="n">10.95 元</td><td class="n posv">12.0 倍</td><td>明顯偏低</td></tr>
+      <tr class="sumrow"><th scope="row">2026E — 德信（主要基準）</th><td class="n">9.6 元</td><td class="n">13.6 倍</td><td>低於近四季本益比 15.3 倍</td></tr>
+      <tr><th scope="row">2026E — 保守（量化模型）</th><td class="n">7.5 元</td><td class="n negv">17.5 倍</td><td>反而比現在更貴</td></tr>
+      <tr><th scope="row">2027E — 德信</th><td class="n">12.16 元</td><td class="n posv">10.8 倍</td><td>若成長兌現，倍數確實不高</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote">對照組：以近四季實際 EPS 8.57 元計算的本益比為 <b>15.3 倍</b>（推算）。</p>
+
+  <div class="keybox good">
+    <span class="kt">哪一組 EPS 比較合理？用已知數字反推看看</span>
+    <p>2026Q1 EPS 已公布為 <b>2.36 元</b>。Q2 財報尚未公布，但 Q2 營收 54.18 億已知——若沿用 Q1 的稅後淨利率 12.9%，<b>Q2 EPS 約 2.44 元</b>（推算），上半年合計約 <b>4.80 元</b>。以此反推下半年需要交出的成績：</p>
+    <div class="tw"><table>
+      <thead><tr><th>要達成的 2026 全年 EPS</th><th style="text-align:right">下半年需貢獻</th><th>相當於</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">10.95 元（樂觀）</th><td class="n">6.15 元</td><td>下半年比上半年高 <b>28%</b></td></tr>
+        <tr class="sumrow"><th scope="row">9.60 元（德信）</th><td class="n">4.80 元</td><td>下半年與上半年<b>持平</b>即可</td></tr>
+        <tr><th scope="row">7.50 元（量化模型）</th><td class="n negv">2.70 元</td><td>下半年比上半年<b>衰退 44%</b></td></tr>
+      </tbody>
+    </table></div>
+    <p><b>這樣一擺就清楚了。</b>量化模型的 7.5 元隱含下半年大幅衰退，與公司、券商、月營收趨勢全都不符，明顯過度保守——它多半是純粹外推歷史數字、沒有納入 Q3 新專案的模型輸出。而 10.95 元則需要下半年比上半年成長 28%，等於第 3 步說的「跳躍性成長」要完全兌現。</p>
+    <p><b>德信的 9.6 元只需要下半年與上半年持平</b>，在三組裡是門檻最低、也最不需要賭 Q3 大爆發的一組。這也是我把它當主要基準的原因。</p>
+  </div>
+
+  <h3>目標本益比法：合理價可能落在哪</h3>
+  <div class="keybox alarm">
+    <span class="kt">這和前瞻本益比不是同一件事</span>
+    <p>前瞻本益比是<b>已知股價、求倍數</b>；目標本益比法是<b>已知倍數、求價格</b>。兩者是同一條公式的不同用法，方向相反，不要混用。</p>
+    <p>而且要先講清楚：<b>目標本益比法算出來的價格，對「倍數怎麼選」極度敏感，沒有標準答案。</b>下表只是敏感度試算，不是預測，更不是目標價。</p>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>假設倍數</th><th style="text-align:right">× 2026E 9.6 元</th><th style="text-align:right">× 2027E 12.16 元</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">15 倍（貼近近四季實際水準）</th><td class="n">144 元</td><td class="n">182 元</td></tr>
+      <tr class="sumrow"><th scope="row">18 倍</th><td class="n">173 元</td><td class="n">219 元</td></tr>
+      <tr><th scope="row">22 倍</th><td class="n">211 元</td><td class="n">268 元</td></tr>
+      <tr><th scope="row">12 倍（悲觀，成長失速）</th><td class="n negv">115 元</td><td class="n">146 元</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote">全部為推算。倍數上下差 10 倍，算出來的價格就差近一倍——這正是為什麼目標價這種數字要當作參考而非依據。</p>
+
+  <h3>預估可信度：這些法人過去準嗎？</h3>
+  <div class="keybox alarm">
+    <span class="kt">15 個月內，兩個方向都錯過</span>
+    <p><b>先大幅低估。</b>2025/05/10 FactSet 調查 6 位分析師，目標價中位數由 116 元下修至 <b>112.5 元</b>，最高估值也只有 145 元。而依使用者提供的月股價資料，建準在 2026 年 6 月當月最高曾達 <b>178 元</b>——遠遠超出當時所有分析師的估值上緣。</p>
+    <p><b>再大幅高估。</b>2025/11/07 那一批，目標價集體上修：FactSet 中位數升至 159 元，某投顧喊 186 元，另一家金控投顧喊 200 元，連給「中立」評等的大摩都在一週內兩度上修至 175 元。而 2026/07/31 收盤是 <b>131 元</b>——比這些目標價低了 <b>18%～35%</b>。</p>
+    <p><b>唯一準的是短天期的 EPS 預估。</b>2025/11 某投顧估 2025 年 EPS 8.11 元，實際結果 7.94 元，誤差僅約 2%。</p>
+    <p><b>結論：對這檔股票，法人的年度 EPS 預估（尤其是接近年底、當年度數字已大致底定時）參考價值不低；但目標價的參考價值很低</b>——它更像是當下股價動能的追認，而不是對價值的獨立判斷。上表的目標本益比試算請用同樣的態度看待。</p>
+  </div>
+
+  <div class="keybox">
+    <span class="kt">股價位置的補充</span>
+    <p>依使用者提供的月股價資料：建準 2026 年 5 月收 159 元、6 月開 161 元、<b>當月最高 178 元</b>、收在 142 元；7/31 收盤 <b>131 元</b>。也就是說<b>目前價位距 6 月高點約下跌 26%</b>。</p>
+    <p>這段回檔發生在營收持續創高、法人預估尚未下修的期間——可能反映的是市場對「Q3 到底會不會跳躍」提前投票，也可能只是散熱類股整體評價的修正。<b>這點無法從財報判讀，也不在本流程能回答的範圍內。</b></p>
+  </div>
+
+  <p class="snap-note">
+    <b>本節資料來源：</b><br>
+    · 2026E EPS 9.6 元、2027E EPS 12.16 元、「目前評價偏低」 —— <a href="https://blog.fugle.tw/post/sunonwealth-analysi" target="_blank" rel="noopener">德信投顧〈建準：通用與 AI 伺服器雙軌助攻〉2026/06/17</a><br>
+    · 2025E EPS 8.11 元、2026E EPS 10.95 元、目標價 169→186 元、另一家投顧 150→200 元、大摩 113→162→175 元 —— <a href="https://wantrich.chinatimes.com/news/20251107900375-420101" target="_blank" rel="noopener">旺得富理財網 2025/11/07</a><br>
+    · FactSet 6 位分析師目標價中位數 116→112.5 元、最高 145／最低 100 元 —— <a href="https://news.cnyes.com/news/id/5972615" target="_blank" rel="noopener">鉅亨網 2025/05/10</a><br>
+    · FactSet 目標價中位數調升至 159 元 —— <a href="https://news.cnyes.com/news/id/6223400" target="_blank" rel="noopener">鉅亨網 2025/11/07</a><br>
+    · 預估 EPS 7.5 元、合理價 128.24 元 —— <a href="https://www.findbillion.com/twstock/2421/eps" target="_blank" rel="noopener">FindBillion</a>（量化模型推估，非分析師預估）<br>
+    · 2026/06 月最高 178 元、月收盤 142 元、7/31 收盤 131 元 —— <b>使用者提供</b>（Goodinfo 月股價截圖與對話中告知）<br>
+    <b>推算數字：</b>所有前瞻本益比、目標本益比試算價格、2026Q2 EPS 約 2.44 元、上半年 EPS 約 4.80 元、下半年所需貢獻、距高點跌幅 26%，皆為<b>推算</b>，計算方式已於各表下方說明。2026Q2 財報尚未公布。<br>
+    <b>未能取得：</b>2028 年（N+2）EPS 之明確法人預估，不臆測。
+  </p>
+</section>
 <section id="step6" class="pending"><span class="stepmark">第 6 步／共 6 步</span><h2>投資決策推理</h2><p class="muted">僅在使用者主動詢問時才執行。</p></section>
 
 <footer>
-  報告版本 v4.0（第 1–4 步完成；第 2 步訂正第 1 步「從未稀釋股東」之結論）　·　更新時間 2026-08-01<br>
+  報告版本 v5.0（第 1–5 步完成；第 6 步投資決策推理僅在使用者主動詢問時執行）　·　更新時間 2026-08-01<br>
   本報告為財務數據的結構化整理與推理，非投資建議。所有數字以公司正式財報公告為準。
 </footer>
 </div>

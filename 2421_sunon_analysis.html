@@ -26,6 +26,7 @@ header.top .wrap{padding-bottom:0}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;
   color:#8FB6C9;text-transform:uppercase;margin:0 0 10px}
 h1.title{margin:0;font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.en{font-size:.5em;color:#7FC6D9;font-weight:600;letter-spacing:.06em}
 h1.title .code{font-family:var(--mono);color:#7FC6D9;font-weight:600;margin-right:14px}
 .subtitle{margin:12px 0 0;color:#A9C3CF;font-size:15px;max-width:64ch}
 
@@ -100,6 +101,9 @@ tr.ratiorow{background:#FAFCFD;font-size:13px}
 tr.ratiorow td{color:var(--ink2)}
 tr.zerorow td{font-size:13px}
 td.hl{background:#FCEFD8;border-radius:3px}
+.corr{background:#FFF6E8;border-left:4px solid var(--warn);padding:12px 15px;
+  border-radius:0 8px 8px 0;font-size:14.5px;color:var(--ink2);margin:14px 0}
+.corr b{color:var(--ink)}
 .jy{color:var(--pos);font-weight:700}
 .jn{color:var(--neg);font-weight:700}
 .jx{color:var(--muted)}
@@ -149,8 +153,8 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
 
 <header class="top">
   <div class="wrap">
-    <p class="eyebrow">台股個股初步分析 · 第 1 步／共 6 步</p>
-    <h1 class="title"><span class="code">2421</span>建準</h1>
+    <p class="eyebrow">台股個股初步分析 · 已完成第 1–2 步／共 6 步</p>
+    <h1 class="title"><span class="code">2421</span>建準 <span class="en">SUNON</span></h1>
     <p class="subtitle">現金流量表六大規則盲測分析。本步驟刻意<b>不查詢股價、EPS、產業地位或任何新聞背景</b>，
       只用現金流量表本身的數字做判斷，避免被公司故事影響對財務數據的解讀。公司全名與基本面留待第 2 步補上。</p>
   </div>
@@ -159,7 +163,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
 <nav class="stepnav" aria-label="分析步驟導覽">
   <div class="inner">
     <a class="pad active" href="#step1"><span class="k">01</span>現金流六大規則</a>
-    <a class="pad locked" href="#step2" aria-disabled="true"><span class="k">02</span>基本資訊查詢</a>
+    <a class="pad" href="#step2"><span class="k">02</span>基本資訊查詢</a>
     <a class="pad locked" href="#step3" aria-disabled="true"><span class="k">03</span>法說會討論</a>
     <a class="pad locked" href="#step4" aria-disabled="true"><span class="k">04</span>營收趨勢</a>
     <a class="pad locked" href="#step5" aria-disabled="true"><span class="k">05</span>前瞻本益比</a>
@@ -268,6 +272,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
     <span class="kt">缺口已補：判斷需要下修</span>
     <p><b>2021 年的 +5.85 億，100% 來自舉債，而且是最脆弱的那一種。</b>拆開來看：短期借款一年之內暴增 <span class="negv">+12.79 億</span>（八年來唯一一次雙位數），長期借款 +0.4 億，扣掉租賃本金 −1.28 億與現金股利 −6.02 億，才湊出 +5.85 億的淨額。</p>
     <p><b>八年之間完全沒有現金增資</b>——一毛股權募資都沒有。對既有股東是好事（從未稀釋），但也代表<b>擴產與週轉的資金缺口，全部只能靠負債承接，沒有股權緩衝</b>。原先「不確定是借款還是增資」時給的 85 分偏樂觀，<b>下修至 80 分</b>。</p>
+    <p class="corr">⚠️ <b>此段結論已於第 2 步訂正：</b>現金流量表上確實沒有「現金增資」科目，但 2023 年那筆公司債是<b>可轉換公司債（建準三，24213）</b>，後續大量轉換為普通股，股本因此由 25.1 億增至 28.69 億。「從未稀釋股東」的說法不成立——稀釋確實發生了，只是可轉債轉換屬非現金交易，不會出現在融資活動現金流裡。<a href="#step2">詳見第 2 步</a>。<b>依盲測獨立性原則，第 1 步的 80 分不回頭更動</b>（那是依當時可得資料做出的判斷）。</p>
   </div>
 
   <div class="keybox">
@@ -330,14 +335,135 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 0 0;li
   </div>
 </div>
 
-<section id="step2" class="pending"><span class="stepmark">第 2 步／共 6 步</span><h2>基本資訊查詢</h2><p class="muted">待執行：股價、EPS、本益比、殖利率、近期營收、法說會連結（全部附出處）。</p></section>
+<section id="step2">
+  <span class="stepmark">第 2 步／共 6 步：基本資訊查詢</span>
+  <h2>建準電機工業股份有限公司（SUNON）</h2>
+  <p class="lede">SUNONWEALTH ELECTRIC MACHINE INDUSTRY CO., LTD.　·　散熱風扇與馬達製造　·　電子零組件類股</p>
+
+  <div class="keybox">
+    <span class="kt">重點提示</span>
+    <p>本業是<b>散熱風扇</b>，近兩年成長引擎是 <b>AI 伺服器</b>。2026 上半年營收 <b>104.38 億元、年增 18.27%</b>，2026Q1 單季營收 <b>50.2 億創新高</b>，毛利率 <b>31.7%</b>、EPS <b>2.36 元</b>，三率三升。這正好對上第 1 步看到的現象——2024 年起資本支出翻倍、2025 年營業現金流創高，背後是這條 AI 散熱需求線。</p>
+    <p><b>但股價無法確定。</b>Yahoo 股市三次查詢回傳三個不同時點的快取快照（見下方表格），最新一筆仍停在 2026/07/21，落後今天 11 天。本節的估值數字全部標明是用哪一個價格算的，<b>不代表現價</b>。</p>
+  </div>
+
+  <div class="keybox alarm">
+    <span class="kt">訂正第 1 步的一個結論</span>
+    <p>第 1 步規則 4 我寫過「八年之間完全沒有現金增資、從未稀釋股東」。<b>這句話需要訂正。</b></p>
+    <p>2023 年融資活動裡那筆 13.81 億的「公司債」，查證後是<b>可轉換公司債「建準三」（債券代號 24213）</b>，發行總額 12 億元、轉換價 <b>53.30 元</b>、到期日 2028/05/24，2023/08/24 起可申請轉換。以目前股價計算早已深度價內，實際上已大量轉換為普通股。</p>
+    <p>對照股本變化即可印證：2018–2022 年平均股本穩定在 <b>25.1 億</b>，2023 年起升到 25.9 億，2024–2025 年 27.3 億，2026Q1 已達 <b>28.7 億</b>——累計稀釋約 <b>14%</b>。</p>
+    <p><b>為什麼現金流量表看不出來：</b>可轉債「轉換」是債轉股的非現金交易，不會出現在融資活動現金流的任何一列。當初發行時收到的現金記在「公司債之發行」，之後轉成股票的過程則完全不經過現金流量表。這是只看現金流量表會漏掉的一種股東稀釋。</p>
+    <p><b>但第 1 步的 80 分不回頭更動</b>——那是盲測階段依當時可得資料做出的獨立判斷，事後用新資訊回頭改分數會破壞盲測的意義。這裡誠實揭露落差即可。</p>
+  </div>
+
+  <h3>公司基本資料</h3>
+  <div class="tw"><table>
+    <tbody>
+      <tr><th scope="row">英文簡稱</th><td>SUNON</td><th scope="row">產業類別</th><td>電子零組件</td></tr>
+      <tr><th scope="row">成立／掛牌</th><td>1980/10/25　·　2000/09/11 上市</td><th scope="row">董事長兼總經理</th><td>洪慶昇</td></tr>
+      <tr><th scope="row">股本</th><td class="n">2,869,436,690 元</td><th scope="row">已發行普通股</th><td class="n">286,943,669 股</td></tr>
+      <tr><th scope="row">董監持股比例</th><td class="n">6.97%</td><th scope="row">市值</th><td class="n">360.1 億元 <span class="muted">（2026/07/21 頁面）</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>股價：三個互相矛盾的快照</h3>
+  <div class="tw"><table>
+    <thead><tr><th>快照時間</th><th style="text-align:right">收盤價</th><th style="text-align:right">頁面顯示本益比</th><th>取得方式</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">2026/05/12 13:30</th><td class="n">149.0</td><td class="n">18.44</td><td>web_fetch 走勢圖頁</td></tr>
+      <tr><th scope="row">2026/06/24 14:30</th><td class="n">150.0</td><td class="n">17.89</td><td>搜尋結果快照</td></tr>
+      <tr><th scope="row">2026/07/21 14:30</th><td class="n">128.5</td><td class="n">15.32</td><td>web_fetch 基本資料頁</td></tr>
+    </tbody>
+  </table></div>
+  <div class="keybox alarm">
+    <span class="kt">請注意這不是價格區間</span>
+    <p>上表是<b>同一個欄位在三個不同時間點的快照</b>，不是頁面公布的區間，也不是 52 週高低。三筆都早於今天（2026/08/01），最接近的一筆也落後 11 天。Yahoo 的頁面快取在這次查詢中明顯不穩定——走勢圖頁回傳的時間點甚至比基本資料頁更舊。</p>
+    <p><b>建議你直接看券商 App 的即時報價</b>，或把當前股價告訴我，我再重算下面的估值指標。第 5 步的前瞻本益比會直接依賴這個數字。</p>
+  </div>
+
+  <h3>每股盈餘與獲利能力</h3>
+  <div class="tw"><table>
+    <thead><tr><th>期別</th><th style="text-align:right">2025Q2</th><th style="text-align:right">2025Q3</th><th style="text-align:right">2025Q4</th><th style="text-align:right">2026Q1</th><th style="text-align:right">近四季合計</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">EPS（元）</th><td class="n">1.37</td><td class="n">2.55</td><td class="n">2.29</td><td class="n posv">2.36</td><td class="n"><b>8.57</b> <span class="qtag">推算</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="tw"><table>
+    <thead><tr><th>年度</th><th style="text-align:right">2020</th><th style="text-align:right">2021</th><th style="text-align:right">2022</th><th style="text-align:right">2023</th><th style="text-align:right">2024</th><th style="text-align:right">2025</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">年度 EPS（元）</th><td class="n">3.39</td><td class="n negv">1.71</td><td class="n">4.34</td><td class="n">5.16</td><td class="n">5.46</td><td class="n posv"><b>7.94</b></td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote">2021 年 EPS 掉到 1.71 元，正是第 1 步規則 1、4、5 同時出問題的那一年——營業現金流崩到 1.91 億、短期借款暴增 12.79 億。損益表與現金流量表在這一年講的是同一個故事。</p>
+  <p class="tnote"><b>一點誤差要說明：</b>Yahoo 頁面 2026/07/21 顯示本益比 15.32、股價 128.5，反推其採用的近四季 EPS 約 8.39 元，與我把四個季度相加得到的 <b>8.57</b> 元有 0.18 元落差，可能來自歸屬母公司與否或加權股數口徑差異。下方估值一律採用 8.57 自行推算，並標明推算來源。</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>2026Q1 獲利能力</th><th style="text-align:right">數值</th><th>2026Q1 獲利能力</th><th style="text-align:right">數值</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">營業毛利率</th><td class="n">31.66%</td><th scope="row">稅前淨利率</th><td class="n">16.03%</td></tr>
+      <tr><th scope="row">營業利益率</th><td class="n">15.71%</td><th scope="row">股東權益報酬率</th><td class="n">6.42%</td></tr>
+      <tr><th scope="row">資產報酬率</th><td class="n">3.56%</td><th scope="row">每股淨值</th><td class="n">39.59 元</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>股利與估值指標</h3>
+  <p>2025 年度盈餘配發<b>現金股利 5.2404 元</b>（無股票股利），除息日 2026/06/10，已於 <b>2026/07/02 發放完畢</b>。以 2025 年 EPS 7.94 元計算，配發率約 <b>66%</b>（推算）。</p>
+  <div class="tw"><table>
+    <thead><tr><th>估值指標（皆為推算）</th><th style="text-align:right">用 128.5 元計算</th><th style="text-align:right">用 149.0 元計算</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">本益比（÷ 近四季 EPS 8.57）</th><td class="n">15.0 倍</td><td class="n">17.4 倍</td></tr>
+      <tr><th scope="row">現金殖利率（÷ 股利 5.2404）</th><td class="n posv">4.08%</td><td class="n">3.52%</td></tr>
+      <tr><th scope="row">股價淨值比（÷ 每股淨值 39.59）</th><td class="n">3.25 倍</td><td class="n">3.76 倍</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote">兩欄分別對應 2026/07/21 與 2026/05/12 的快照價，<b>都不是現價</b>。列兩組是為了讓你看到股價變動對估值的影響幅度，不是說合理值落在這個區間。</p>
+
+  <h3>近期月營收</h3>
+  <div class="tw"><table>
+    <thead><tr><th>2026 年</th><th style="text-align:right">1 月</th><th style="text-align:right">2 月</th><th style="text-align:right">3 月</th><th style="text-align:right">4 月</th><th style="text-align:right">5 月</th><th style="text-align:right">6 月</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">月營收（億元）</th><td class="n">17.78</td><td class="n">13.23</td><td class="n">19.18</td><td class="n">18.71</td><td class="n">16.92</td><td class="n">18.55</td></tr>
+      <tr class="ratiorow"><th scope="row">年增率</th><td class="n posv">+36.5%</td><td class="n">+2.3%</td><td class="n posv">+22.5%</td><td class="n posv">+15.0%</td><td class="n posv">+14.9%</td><td class="n posv">+18.7%</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote">上半年累計 <b>104.38 億元、年增 18.27%</b>；2026Q1 營收 50.19 億（年增 20.6%）、Q2 營收 54.18 億（年增 16.2%、季增 7.95%）。2 月年增僅 2.3% 是農曆年工作天數效應，其餘月份都維持雙位數成長。完整趨勢圖留到第 4 步。</p>
+
+  <h3>法說會場次與簡報</h3>
+  <div class="tw"><table>
+    <thead><tr><th>日期</th><th>場合</th><th>內容</th><th>資料</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">2026-06-02</th><td>高盛 GS Taiwan Computex &amp; Corporate Day（台北 W 飯店）</td><td>說明營運狀況</td><td>中英文簡報，無影音</td></tr>
+      <tr><th scope="row">2026-05-21</th><td>證交所「璞玉指數」主題式業績發表會（台北 101）</td><td>說明營運狀況</td><td>簡報＋影音</td></tr>
+      <tr class="sumrow"><th scope="row">2026-05-08</th><td>線上法說會</td><td><b>115 年第 1 季營運說明（資訊量最完整）</b></td><td>簡報＋YouTube</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote">依 skill 原則，第 3 步若要深入討論，會以 <b>2026-05-08 的 Q1 法說會</b>為主要依據——後兩場是受邀參加券商論壇與交易所活動，內容多為既有財報數字的重述，5/08 那場才有完整的季度營運說明與展望。</p>
+
+  <div class="keybox">
+    <span class="kt">法說會透露的營運輪廓（來自財經媒體整理，非我讀取原始 PDF）</span>
+    <p><b>2026Q1 應用別佔比：</b>網通與伺服器合計約 <b>60.6%</b>（年增 24.5%），其中伺服器營收 23.29 億、佔 47.3%；<b>AI 伺服器 11.1 億、佔 22.6%，較上季減少</b>，原因是客戶產品轉換與零組件缺料。傳統／通用伺服器需求強勁，補上了 AI 的缺口。IT 筆電 15.6%（年增 31.9%）、工業醫療 8.8%、車用 8.2%、通路 4%、家電 2.3%（年減 11.9%）。</p>
+    <p><b>液冷佈局：</b>2026Q1 已完成首批水冷板出貨，今年營收貢獻仍是低個位數，公司預期 Q4 放量、明年比重提升。目前仍是<b>氣冷為主、液冷為輔</b>，整體毛利率維持 31% 以上。</p>
+    <p><b>下半年動能：</b>供應鏈恢復正常後，Q3 起新 ASIC 平台專案陸續量產，法人預期下半年迎來 AI 伺服器訂單。</p>
+  </div>
+
+  <p class="snap-note">
+    <b>本節資料來源（皆為本次搜尋所得，非使用者提供）：</b><br>
+    · 公司基本資料、股本、股利、EPS、獲利能力、股價快照 —— <a href="https://tw.stock.yahoo.com/quote/2421.TW/profile" target="_blank" rel="noopener">Yahoo 股市 2421 基本資料</a>（頁面標示資料時間 2026/07/21）與 <a href="https://tw.stock.yahoo.com/quote/2421.TW" target="_blank" rel="noopener">Yahoo 股市 2421 走勢圖</a>（頁面標示資料時間 2026/05/12）<br>
+    · 可轉債「建準三」發行總額 12 億、轉換價 53.30 元、到期 2028/05/24 —— <a href="https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E5%BB%BA%E6%BA%96%E5%8F%AF%E8%BD%89%E6%8F%9B%E5%85%AC%E5%8F%B8%E5%82%B5%E5%BB%BA%E6%BA%96%E4%B8%89-%E4%BB%A3%E8%99%9F-24213-%E8%BF%91%E6%9C%9F%E9%81%94%E5%85%AC%E5%B8%83%E6%B3%A8%E6%84%8F%E4%BA%A4%E6%98%93%E8%B3%87%E8%A8%8A%E6%A8%99%E6%BA%96-102052901.html" target="_blank" rel="noopener">2023/07/20 公司重大訊息公告</a><br>
+    · 2026 年 6 月營收 18.55 億、上半年 104.38 億年增 18.27%、Q2 營收 54.18 億、液冷與下半年展望 —— <a href="https://tw.stock.yahoo.com/news/%E5%BB%BA%E6%BA%96h1%E7%87%9F%E6%94%B6%E5%A2%9E18-h2%E8%BF%8Eai%E4%BC%BA%E6%9C%8D%E5%99%A8%E8%A8%82%E5%96%AE%E5%8B%95%E8%83%BD-030500743.html" target="_blank" rel="noopener">MoneyDJ 2026/07/08</a>；官方營收公告原始數字見 <a href="https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E5%BB%BA%E6%BA%96-2026%E5%B9%B46%E6%9C%88%E5%90%88%E4%BD%B5%E7%87%9F%E6%94%B618-55%E5%84%84%E5%85%83-%E5%B9%B4%E5%A2%9E18-085351935.html" target="_blank" rel="noopener">2026/07/07 公司營收公告</a><br>
+    · 2026 年 1–5 月各月營收與年增率 —— <a href="https://www.nstock.tw/stock_info?stock_id=2421&status=2" target="_blank" rel="noopener">nStock 月營收表</a>，並與 <a href="https://tw.stock.yahoo.com/quote/2421.TW/revenue" target="_blank" rel="noopener">Yahoo 股市營收表</a> 交叉核對一致<br>
+    · 2026Q1 應用別佔比、毛利率、AI 伺服器營收 —— <a href="https://finance.biggo.com.tw/quote/2421.TW/earnings-call/TW_2421.TW_2026-05-08" target="_blank" rel="noopener">BigGo 財經 2026-05-08 法說會整理</a><br>
+    · 法說會場次、日期、地點與簡報連結 —— <a href="https://agdstock.club/iic/2421-%E5%BB%BA%E6%BA%96" target="_blank" rel="noopener">2421 建準法說會一覽</a>（整理自 MOPS 公告）；2026/04/30 線上法說會召開公告見 <a href="https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E5%BB%BA%E6%BA%96%E5%8F%AC%E9%96%8B%E7%B7%9A%E4%B8%8A%E6%B3%95%E8%AA%AA%E6%9C%83%E7%9B%B8%E9%97%9C%E8%B3%87%E8%A8%8A-063417754.html" target="_blank" rel="noopener">公司公告</a><br>
+    <b>誠實區分：</b>MOPS 官方簡報 PDF（mopsov.twse.com.tw）受 robots.txt 限制無法讀取，<b>我沒有讀過原始簡報</b>。上方「法說會透露的營運輪廓」全部來自財經媒體的整理文章，不是我解析 PDF 得出的。<br>
+    <b>推算數字標示：</b>近四季 EPS 8.57、本益比、現金殖利率、股價淨值比、股利配發率 66% 均為推算，計算方式已於各表下方註明；其餘為頁面直接顯示之數字。
+  </p>
+</section>
 <section id="step3" class="pending"><span class="stepmark">第 3 步／共 6 步</span><h2>法說會資料深入討論</h2><p class="muted">待執行。</p></section>
 <section id="step4" class="pending"><span class="stepmark">第 4 步／共 6 步</span><h2>營收趨勢視覺化</h2><p class="muted">待執行。</p></section>
 <section id="step5" class="pending"><span class="stepmark">第 5 步／共 6 步</span><h2>前瞻本益比／EPS 預估</h2><p class="muted">待執行。</p></section>
 <section id="step6" class="pending"><span class="stepmark">第 6 步／共 6 步</span><h2>投資決策推理</h2><p class="muted">僅在使用者主動詢問時才執行。</p></section>
 
 <footer>
-  報告版本 v1.1（第 1 步完成，補入投資／融資細項，規則 2 上調 88→90、規則 4 下修 85→80）　·　更新時間 2026-08-01<br>
+  報告版本 v2.0（第 1–2 步完成；第 2 步訂正第 1 步「從未稀釋股東」之結論）　·　更新時間 2026-08-01<br>
   本報告為財務數據的結構化整理與推理，非投資建議。所有數字以公司正式財報公告為準。
 </footer>
 </div>

@@ -153,8 +153,8 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">6690</span>安碁資訊</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、EPS、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。</p>
   <div class="meta">
-    <span>報告版本 v3.1</span><span>生成時間 2026-08-05</span>
-    <span>目前進度：第 3 步／共 6 步</span><span>計分視窗 2016–2025</span>
+    <span>報告版本 v4.0</span><span>生成時間 2026-08-05</span>
+    <span>目前進度：第 4 步／共 6 步</span><span>計分視窗 2016–2025</span>
   </div>
 </header>
 
@@ -162,7 +162,7 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button>
   <button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button>
   <button class="pad" data-t="step3"><span class="k">03</span>法說會</button>
-  <button class="pad locked" data-t="step4"><span class="k">04</span>營收趨勢</button>
+  <button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button>
   <button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button>
   <button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button>
 </nav>
@@ -732,12 +732,206 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   </div>
 </section>
 
-<section id="step4"><div class="steptag">第 4 步／共 6 步</div><h2>營收趨勢視覺化</h2><div class="pending">尚未執行。第 1–3 步已完成，此區塊將在後續步驟完成後補上。</div></section>
+
+<section id="step4">
+  <div class="steptag">第 4 步／共 6 步</div>
+  <h2>營收趨勢視覺化</h2>
+
+  <div class="key">
+    <div class="kt">本步驟重點</div>
+    <p><b>十八個月、每一個月的年增率都是正的</b>，範圍 +7.24% 到 +24.9%，沒有任何一個月衰退。這種一致性在台股中並不常見，呼應法說會說的「資安是剛性需求」。</p>
+    <p><b>但成長正在降速，而且是連續的。</b>單月年增率從 2026/03 的 +24.9% 一路滑到 <span class="negv-t">2026/06 的 +7.24%——十八個月來最低</span>。分季看更清楚：<b>26Q1 年增 20.9%、26Q2 年增只剩 10.4%</b>，一個季度掉了十個百分點。</p>
+    <p><b>不過還撐得住法說會的目標。</b>公司說 2026 年要維持雙位數成長；以 H1 已達 12.84 億推算，<b>下半年只需年增 5.6% 就能讓全年成長達 10%</b>——門檻不高，但以 6 月的 +7.24% 來看，也不算寬裕。</p>
+  </div>
+
+  <h3>近 18 期單月營收</h3>
+  <div class="chartbox"><svg class="bars" viewBox="0 0 980 210" preserveAspectRatio="xMidYMid meet" role="img">
+<line x1="8" y1="168.0" x2="972" y2="168.0" class="axis"/>
+<rect x="20.7" y="87.1" width="32.0" height="80.9" rx="2" class="b-trough"/>
+<text x="36.7" y="80.1" class="bval">1.51</text>
+<text x="36.7" y="202" class="blab">25/01</text>
+<rect x="74.0" y="82.8" width="32.0" height="85.2" rx="2" class="b-normal"/>
+<text x="90.0" y="75.8" class="bval">1.59</text>
+<text x="90.0" y="202" class="blab">25/02</text>
+<rect x="127.3" y="57.6" width="32.0" height="110.4" rx="2" class="b-normal"/>
+<text x="143.3" y="50.6" class="bval">2.06</text>
+<text x="143.3" y="202" class="blab">25/03</text>
+<rect x="180.7" y="68.9" width="32.0" height="99.1" rx="2" class="b-normal"/>
+<text x="196.7" y="61.9" class="bval">1.85</text>
+<text x="196.7" y="202" class="blab">25/04</text>
+<rect x="234.0" y="66.7" width="32.0" height="101.3" rx="2" class="b-normal"/>
+<text x="250.0" y="59.7" class="bval">1.89</text>
+<text x="250.0" y="202" class="blab">25/05</text>
+<rect x="287.3" y="48.5" width="32.0" height="119.5" rx="2" class="b-normal"/>
+<text x="303.3" y="41.5" class="bval">2.23</text>
+<text x="303.3" y="202" class="blab">25/06</text>
+<rect x="340.7" y="64.0" width="32.0" height="104.0" rx="2" class="b-normal"/>
+<text x="356.7" y="57.0" class="bval">1.94</text>
+<text x="356.7" y="202" class="blab">25/07</text>
+<rect x="394.0" y="59.2" width="32.0" height="108.8" rx="2" class="b-normal"/>
+<text x="410.0" y="52.2" class="bval">2.03</text>
+<text x="410.0" y="202" class="blab">25/08</text>
+<rect x="447.3" y="45.3" width="32.0" height="122.7" rx="2" class="b-normal"/>
+<text x="463.3" y="38.3" class="bval">2.29</text>
+<text x="463.3" y="202" class="blab">25/09</text>
+<rect x="500.7" y="64.0" width="32.0" height="104.0" rx="2" class="b-normal"/>
+<text x="516.7" y="57.0" class="bval">1.94</text>
+<text x="516.7" y="202" class="blab">25/10</text>
+<rect x="554.0" y="43.7" width="32.0" height="124.3" rx="2" class="b-normal"/>
+<text x="570.0" y="36.7" class="bval">2.32</text>
+<text x="570.0" y="202" class="blab">25/11</text>
+<rect x="607.3" y="26.0" width="32.0" height="142.0" rx="2" class="b-peak"/>
+<text x="623.3" y="19.0" class="bval">2.65</text>
+<text x="623.3" y="202" class="blab">25/12</text>
+<rect x="660.7" y="67.8" width="32.0" height="100.2" rx="2" class="b-normal"/>
+<text x="676.7" y="60.8" class="bval">1.87</text>
+<text x="676.7" y="202" class="blab">26/01</text>
+<rect x="714.0" y="71.5" width="32.0" height="96.5" rx="2" class="b-normal"/>
+<text x="730.0" y="64.5" class="bval">1.8</text>
+<text x="730.0" y="202" class="blab">26/02</text>
+<rect x="767.3" y="30.3" width="32.0" height="137.7" rx="2" class="b-normal"/>
+<text x="783.3" y="23.3" class="bval">2.57</text>
+<text x="783.3" y="202" class="blab">26/03</text>
+<rect x="820.7" y="54.4" width="32.0" height="113.6" rx="2" class="b-normal"/>
+<text x="836.7" y="47.4" class="bval">2.12</text>
+<text x="836.7" y="202" class="blab">26/04</text>
+<rect x="874.0" y="56.5" width="32.0" height="111.5" rx="2" class="b-normal"/>
+<text x="890.0" y="49.5" class="bval">2.08</text>
+<text x="890.0" y="202" class="blab">26/05</text>
+<rect x="927.3" y="39.9" width="32.0" height="128.1" rx="2" class="b-normal"/>
+<text x="943.3" y="32.9" class="bval">2.39</text>
+<text x="943.3" y="202" class="blab">26/06</text>
+</svg></div>
+  <p class="cap">米色為高峰（2025/12，2.65 億），粉色為谷底（2025/01，1.51 億）。</p>
+  <p><b>季節性非常規律：每年 1–2 月是谷底、12 月是高峰。</b>2025/01 的 1.51 億與 2026/01 的 1.87 億都是各自年度的最低點，而 2025/12 的 2.65 億是十八個月最高。這符合政府與金融客戶的預算年度節奏——年底結案驗收、年初重新招標。<b>因此看單月月增率意義有限</b>（2026/03 月增 +42.8%、2026/01 月增 −29.5%，都是季節性而非營運變化），<b>年增率才是有效指標</b>。</p>
+
+  <h3>單月營收年增率</h3>
+  <div class="chartbox"><svg class="bars" viewBox="0 0 980 210" preserveAspectRatio="xMidYMid meet" role="img">
+<line x1="8" y1="168.0" x2="972" y2="168.0" class="axis"/>
+<rect x="20.7" y="96.7" width="32.0" height="71.3" rx="2" class="b-normal"/>
+<text x="36.7" y="89.7" class="bval">12.5</text>
+<text x="36.7" y="202" class="blab">25/01</text>
+<rect x="74.0" y="46.5" width="32.0" height="121.5" rx="2" class="b-normal"/>
+<text x="90.0" y="39.5" class="bval">21.3</text>
+<text x="90.0" y="202" class="blab">25/02</text>
+<rect x="127.3" y="107.0" width="32.0" height="61.0" rx="2" class="b-normal"/>
+<text x="143.3" y="100.0" class="bval">10.7</text>
+<text x="143.3" y="202" class="blab">25/03</text>
+<rect x="180.7" y="56.8" width="32.0" height="111.2" rx="2" class="b-normal"/>
+<text x="196.7" y="49.8" class="bval">19.5</text>
+<text x="196.7" y="202" class="blab">25/04</text>
+<rect x="234.0" y="105.8" width="32.0" height="62.2" rx="2" class="b-normal"/>
+<text x="250.0" y="98.8" class="bval">10.9</text>
+<text x="250.0" y="202" class="blab">25/05</text>
+<rect x="287.3" y="114.6" width="32.0" height="53.4" rx="2" class="b-normal"/>
+<text x="303.3" y="107.6" class="bval">9.37</text>
+<text x="303.3" y="202" class="blab">25/06</text>
+<rect x="340.7" y="118.0" width="32.0" height="50.0" rx="2" class="b-normal"/>
+<text x="356.7" y="111.0" class="bval">8.76</text>
+<text x="356.7" y="202" class="blab">25/07</text>
+<rect x="394.0" y="105.3" width="32.0" height="62.7" rx="2" class="b-normal"/>
+<text x="410.0" y="98.3" class="bval">11</text>
+<text x="410.0" y="202" class="blab">25/08</text>
+<rect x="447.3" y="85.3" width="32.0" height="82.7" rx="2" class="b-normal"/>
+<text x="463.3" y="78.3" class="bval">14.5</text>
+<text x="463.3" y="202" class="blab">25/09</text>
+<rect x="500.7" y="65.9" width="32.0" height="102.1" rx="2" class="b-normal"/>
+<text x="516.7" y="58.9" class="bval">17.9</text>
+<text x="516.7" y="202" class="blab">25/10</text>
+<rect x="554.0" y="100.7" width="32.0" height="67.3" rx="2" class="b-normal"/>
+<text x="570.0" y="93.7" class="bval">11.8</text>
+<text x="570.0" y="202" class="blab">25/11</text>
+<rect x="607.3" y="83.6" width="32.0" height="84.4" rx="2" class="b-normal"/>
+<text x="623.3" y="76.6" class="bval">14.8</text>
+<text x="623.3" y="202" class="blab">25/12</text>
+<rect x="660.7" y="32.3" width="32.0" height="135.7" rx="2" class="b-normal"/>
+<text x="676.7" y="25.3" class="bval">23.8</text>
+<text x="676.7" y="202" class="blab">26/01</text>
+<rect x="714.0" y="92.2" width="32.0" height="75.8" rx="2" class="b-normal"/>
+<text x="730.0" y="85.2" class="bval">13.3</text>
+<text x="730.0" y="202" class="blab">26/02</text>
+<rect x="767.3" y="26.0" width="32.0" height="142.0" rx="2" class="b-peak"/>
+<text x="783.3" y="19.0" class="bval">24.9</text>
+<text x="783.3" y="202" class="blab">26/03</text>
+<rect x="820.7" y="85.9" width="32.0" height="82.1" rx="2" class="b-normal"/>
+<text x="836.7" y="78.9" class="bval">14.4</text>
+<text x="836.7" y="202" class="blab">26/04</text>
+<rect x="874.0" y="111.0" width="32.0" height="57.0" rx="2" class="b-normal"/>
+<text x="890.0" y="104.0" class="bval">10</text>
+<text x="890.0" y="202" class="blab">26/05</text>
+<rect x="927.3" y="126.7" width="32.0" height="41.3" rx="2" class="b-trough"/>
+<text x="943.3" y="119.7" class="bval">7.24</text>
+<text x="943.3" y="202" class="blab">26/06</text>
+</svg></div>
+  <p class="cap">米色為最高（2026/03，+24.9%），粉色為最低（2026/06，+7.24%）。全部十八期皆為正值，零軸以下無資料點。</p>
+  <p>把年增率單獨拉出來看，2025 年全年在 <b>+8.76% 至 +21.3%</b> 之間震盪、沒有明顯方向；<b>2026 年開高走低</b>：1 月 +23.8%、3 月 +24.9% 兩度衝上二字頭後，4 月 +14.4%、5 月 +10.0%、6 月 <span class="negv-t">+7.24%</span>，<b>連續三個月遞減</b>。這是本步驟最需要記住的訊號。</p>
+
+  <h3>季營收與成長率</h3>
+  <div class="chartbox"><svg class="bars" viewBox="0 0 980 200" preserveAspectRatio="xMidYMid meet" role="img">
+<line x1="8" y1="158.0" x2="972" y2="158.0" class="axis"/>
+<rect x="42.0" y="59.4" width="96.0" height="98.6" rx="2" class="b-trough"/>
+<text x="90.0" y="52.4" class="bval">5.16</text>
+<text x="90.0" y="192" class="blab">25Q1</text>
+<rect x="202.0" y="44.0" width="96.0" height="114.0" rx="2" class="b-normal"/>
+<text x="250.0" y="37.0" class="bval">5.97</text>
+<text x="250.0" y="192" class="blab">25Q2</text>
+<rect x="362.0" y="38.4" width="96.0" height="119.6" rx="2" class="b-normal"/>
+<text x="410.0" y="31.4" class="bval">6.26</text>
+<text x="410.0" y="192" class="blab">25Q3</text>
+<rect x="522.0" y="26.0" width="96.0" height="132.0" rx="2" class="b-peak"/>
+<text x="570.0" y="19.0" class="bval">6.91</text>
+<text x="570.0" y="192" class="blab">25Q4</text>
+<rect x="682.0" y="38.8" width="96.0" height="119.2" rx="2" class="b-normal"/>
+<text x="730.0" y="31.8" class="bval">6.24</text>
+<text x="730.0" y="192" class="blab">26Q1</text>
+<rect x="842.0" y="32.1" width="96.0" height="125.9" rx="2" class="b-normal"/>
+<text x="890.0" y="25.1" class="bval">6.59</text>
+<text x="890.0" y="192" class="blab">26Q2</text>
+</svg></div>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">季度</th><th>營收</th><th>年增率</th><th class="rh">說明</th></tr></thead><tbody>
+  <tr><th class="rh">25Q1</th><td class="n posv">5.16 億</td><td class="n muted">—</td><td class="l">淡季</td></tr>
+  <tr><th class="rh">25Q2</th><td class="n posv">5.97 億</td><td class="n muted">—</td><td class="l">—</td></tr>
+  <tr><th class="rh">25Q3</th><td class="n posv">6.26 億</td><td class="n muted">—</td><td class="l">—</td></tr>
+  <tr><th class="rh">25Q4</th><td class="n posv">6.91 億</td><td class="n muted">—</td><td class="l">旺季，十八個月中單季最高</td></tr>
+  <tr class="hlrow"><th class="rh">26Q1</th><td class="n posv">6.24 億</td><td class="n posv">+20.9%<span class="tagq">推算</span></td><td class="l">高速成長</td></tr>
+  <tr class="hlrow"><th class="rh">26Q2</th><td class="n posv">6.59 億</td><td class="n">+10.4%<span class="tagq">推算</span></td><td class="l"><b>單季年增率一個季度掉了十個百分點</b>（與 Q2 財報新聞稿揭露的「年增 10%」一致）</td></tr>
+  </tbody></table></div>
+  <p class="cap">季營收為單月數字加總的推算值；年增率為自行計算。26Q2 的 6.59 億與時報資訊報導的 Q2 合併營收 6.59 億完全吻合，可交叉驗證加總無誤。</p>
+
+  <h3>下半年壓力測試</h3>
+  <div class="tw"><table class="grid wide"><thead><tr><th class="rh">情境</th><th>2026 全年營收</th><th>H2 需達成</th><th>H2 年增率門檻</th><th class="rh">評估</th></tr></thead><tbody>
+  <tr><th class="rh">全年 +10%（守住雙位數）</th><td class="n">26.75 億</td><td class="n">13.91 億</td><td class="n posv">+5.6%</td><td class="l">門檻低於 6 月的 +7.24%，<b>可達成</b></td></tr>
+  <tr class="hlrow"><th class="rh">全年 +13%（比照 2025 年）</th><td class="n">27.48 億</td><td class="n">14.64 億</td><td class="n">+11.2%</td><td class="l">需要成長率回升，<b>以目前降速趨勢有難度</b></td></tr>
+  <tr><th class="rh">全年 +15%（比照 H1）</th><td class="n">27.97 億</td><td class="n">15.13 億</td><td class="n negv">+14.9%</td><td class="l">需 H2 維持 H1 的成長力道，<b>不易</b></td></tr>
+  </tbody></table></div>
+  <p class="cap">2025 年全年營收 24.32 億、H2 為 13.17 億（25Q3 6.26＋25Q4 6.91）。上表全為推算數字。</p>
+  <p><b>關鍵在基期。</b>2025 年下半年（13.17 億）比上半年（11.14 億）高出 18%，<b>2026 下半年面對的是明顯墊高的比較基準</b>。這就是為什麼同樣的絕對成長金額，換算成年增率會愈來愈難看——法說會 Q&amp;A 中公司自己也是這樣回答的：成長並未趨緩，是基數逐年擴大導致百分比看似下降。</p>
+
+  <h3>一個重要的對照：簽約成長遠快於營收成長</h3>
+  <div class="key">
+    <div class="kt">這解釋了第三步發現的合約資產膨脹</div>
+    <p>Q2 財報揭露<b>上半年新簽約合約總額年成長 31%</b>，但同期<b>營收只成長 15.3%</b>——<b>簽約速度是認列速度的兩倍</b>。</p>
+    <p>這正好對上第三步的發現：<b>合約資產六季增加 1.70 億</b>（服務已提供、帳單未開）。簽的約多、做的事多，但收入與收款都排在後面。<b>換句話說，營業現金流的短期壓力與未來營收的能見度，是同一件事的兩面</b>——這也是為什麼我在第三步把合約資產膨脹判定為「成長期的自然現象，不是壞帳風險」。</p>
+  </div>
+  <p class="lead">但要公平地標出反面：<b>簽約總額年增 31% 這個數字目前只有公司自行揭露、沒有第三方可驗證</b>，也沒有揭露在手訂單餘額（backlog）的絕對金額。如果後續幾季營收年增率繼續往下掉、而合約資產持續累積，就要重新檢視這個「先做後收」到底是成長的前奏，還是認列與收款效率的退步。</p>
+
+  <h3>近 18 期完整數據</h3>
+  <div class="tw"><table class="grid wide"><thead><tr><th class="rh">單位：億元</th><th>25/01</th><th>25/02</th><th>25/03</th><th>25/04</th><th>25/05</th><th>25/06</th><th>25/07</th><th>25/08</th><th>25/09</th><th>25/10</th><th>25/11</th><th>25/12</th><th>26/01</th><th>26/02</th><th>26/03</th><th>26/04</th><th>26/05</th><th>26/06</th></tr></thead><tbody><tr><th class="rh">單月營收</th><td class="n posv">1.51</td><td class="n posv">1.59</td><td class="n posv">2.06</td><td class="n posv">1.85</td><td class="n posv">1.89</td><td class="n posv">2.23</td><td class="n posv">1.94</td><td class="n posv">2.03</td><td class="n posv">2.29</td><td class="n posv">1.94</td><td class="n posv">2.32</td><td class="n posv">2.65</td><td class="n posv">1.87</td><td class="n posv">1.8</td><td class="n posv">2.57</td><td class="n posv">2.12</td><td class="n posv">2.08</td><td class="n posv">2.39</td></tr><tr class="hlrow"><th class="rh">年增率 %</th><td class="n posv">+12.5</td><td class="n posv">+21.3</td><td class="n posv">+10.7</td><td class="n posv">+19.5</td><td class="n posv">+10.9</td><td class="n posv">+9.37</td><td class="n posv">+8.76</td><td class="n posv">+11</td><td class="n posv">+14.5</td><td class="n posv">+17.9</td><td class="n posv">+11.8</td><td class="n posv">+14.8</td><td class="n posv">+23.8</td><td class="n posv">+13.3</td><td class="n posv">+24.9</td><td class="n posv">+14.4</td><td class="n posv">+10</td><td class="n posv">+7.24</td></tr><tr><th class="rh">月增率 %</th><td class="n negv">-34.6</td><td class="n posv">+5.31</td><td class="n posv">+29.4</td><td class="n negv">-10.2</td><td class="n posv">+2.26</td><td class="n posv">+18</td><td class="n negv">-13.3</td><td class="n posv">+4.87</td><td class="n posv">+12.9</td><td class="n negv">-15.4</td><td class="n posv">+19.8</td><td class="n posv">+14.2</td><td class="n negv">-29.5</td><td class="n negv">-3.64</td><td class="n posv">+42.8</td><td class="n negv">-17.8</td><td class="n negv">-1.62</td><td class="n posv">+15</td></tr></tbody></table></div>
+  <p class="cap">正值綠、負值紅。年增率全期為正故均以綠色呈現。</p>
+
+  <div class="snap">
+    <b>資料來源：</b>本節所有月營收、月增率、年增率數字，皆為<b>使用者於本次對話提供的 Goodinfo 月營收截圖</b>（<a href="https://goodinfo.tw/tw/ShowSaleMonChart.asp?STOCK_ID=6690">goodinfo.tw／6690 月營收走勢</a>），非本次搜尋所得，Claude 未自行擷取該頁面。截圖中另含當月股價欄位，本節未使用。<br>
+    • 「上半年新簽約合約總額年成長 31%」與 Q2 合併營收 6.59 億：<a href="https://www.chinatimes.com/realtimenews/20260731001453-260410">時報資訊 Q2 財報報導</a><br>
+    • 「成長並未趨緩、是基數擴大」的公司說法：<a href="https://vocus.cc/article/69d63d54fd897800010befd5">vocus 法說會整理</a>（第三方 AI 輔助整理，未經官方文件核實）<br>
+    <b>推算數字：</b>各季營收（由單月加總）、26Q1 年增 20.9%、26Q2 年增 10.4%、下半年三組情境的營收門檻與年增率門檻。皆為自行計算，非公告值。26Q2 加總值 6.59 億與媒體報導的官方數字一致，可作為加總正確性的交叉驗證。
+  </div>
+</section>
+
 <section id="step5"><div class="steptag">第 5 步／共 6 步</div><h2>前瞻本益比／EPS 預估</h2><div class="pending">尚未執行。第 1–3 步已完成，此區塊將在後續步驟完成後補上。</div></section>
 <section id="step6"><div class="steptag">第 6 步／共 6 步</div><h2>投資決策推理</h2><div class="pending">尚未執行。第 1–3 步已完成，此區塊將在後續步驟完成後補上。</div></section>
 
 <footer>
-  6690 安碁資訊 · 個股初步分析報告 v3.1 · 生成於 2026-08-05 · 計分視窗 2016–2025（10 個完整年度）<br>
+  6690 安碁資訊 · 個股初步分析報告 v4.0 · 生成於 2026-08-05 · 計分視窗 2016–2025（10 個完整年度）<br>
   本報告為財務數據推理與整理，不構成投資建議。
 </footer>
 

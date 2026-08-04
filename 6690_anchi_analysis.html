@@ -153,8 +153,8 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">6690</span>安碁資訊</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、EPS、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。</p>
   <div class="meta">
-    <span>報告版本 v4.0</span><span>生成時間 2026-08-05</span>
-    <span>目前進度：第 4 步／共 6 步</span><span>計分視窗 2016–2025</span>
+    <span>報告版本 v5.0</span><span>生成時間 2026-08-05</span>
+    <span>目前進度：第 5 步／共 6 步</span><span>計分視窗 2016–2025</span>
   </div>
 </header>
 
@@ -163,7 +163,7 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button>
   <button class="pad" data-t="step3"><span class="k">03</span>法說會</button>
   <button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button>
-  <button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button>
+  <button class="pad" data-t="step5"><span class="k">05</span>前瞻本益比</button>
   <button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button>
 </nav>
 
@@ -927,11 +927,144 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   </div>
 </section>
 
-<section id="step5"><div class="steptag">第 5 步／共 6 步</div><h2>前瞻本益比／EPS 預估</h2><div class="pending">尚未執行。第 1–3 步已完成，此區塊將在後續步驟完成後補上。</div></section>
+
+<section id="step5">
+  <div class="steptag">第 5 步／共 6 步</div>
+  <h2>前瞻本益比／EPS 預估</h2>
+
+  <div class="key">
+    <div class="kt">本步驟重點</div>
+    <p><b>先講最重要的發現：市場沒有給這檔股票成長溢價。</b>近一年本益比從 <b>22 倍壓縮到 15.21 倍</b>，但同期股價只從 174 元跌到 161.5 元（−7%）。<b>倍數縮水的主因是 EPS 長大，不是股價崩跌</b>——獲利成長了，市場願意付的倍數卻同步縮小。</p>
+    <p><b>法人預估極度稀少，這件事本身就是重要資訊。</b>我只找到一筆：MoneyDJ 2025/12/31 引述法人預估 2026 年營收 27 億、EPS「衝上 10 元之上」。<b>找不到任何 2027 年（N+2）的預估</b>，鉅亨的券商評等區塊也沒有內容。這檔季均量僅 138 張、市值 48 億，法人覆蓋度接近零。</p>
+    <p><b>我自行推算 2026 全年 EPS 落在 10.9～11.9 元</b>（以上半年實績 5.10 元推估下半年），對應前瞻本益比 <b>13.6～14.8 倍</b>。</p>
+  </div>
+
+  <h3>估值起點：目前股價與每股淨值</h3>
+  <div class="key warn">
+    <div class="kt">股價快照，不是區間</div>
+    <p>本節以<b>鉅亨網 2026/08/04 收盤 161.50 元</b>為基準（最新一筆）。另外兩個時點分別是 Yahoo 股市 07/29 收盤 156.0 元、鉅亨 07/22 的 165.50 元。<b>這是三個時點的單一數字，不是頁面顯示的區間</b>。實際交易請以你的看盤軟體為準。</p>
+  </div>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">項目</th><th>數值</th><th class="rh">說明</th></tr></thead><tbody>
+  <tr class="hlrow"><th class="rh">收盤價</th><td class="n">161.50 元</td><td class="l">鉅亨網，2026/08/04 收盤</td></tr>
+  <tr><th class="rh">本益比</th><td class="n">15.21 倍</td><td class="l">同上，網站顯示值</td></tr>
+  <tr><th class="rh">市值</th><td class="n">48.45 億</td><td class="l">同上</td></tr>
+  <tr><th class="rh">52 週高／低</th><td class="n">193.50／155.00</td><td class="l">同上</td></tr>
+  <tr><th class="rh">每股淨值</th><td class="n">100.76 元</td><td class="l">26Q2。<b>已自行驗證</b>：(總資產 48.06 − 負債總額 17.83) ÷ 0.3 億股 ＝ 100.77 元，與網站值一致</td></tr>
+  <tr><th class="rh">股價淨值比</th><td class="n">1.60 倍</td><td class="l">161.50 ÷ 100.76</td></tr>
+  <tr><th class="rh">近四季 EPS</th><td class="n">10.97 元<span class="tagq">推算</span></td><td class="l">25H2（5.87）＋26H1（5.10）。<b>網站顯示 10.62 元，但該欄未隨 Q2 財報更新</b>，詳見下方揭露</td></tr>
+  <tr><th class="rh">季均量</th><td class="n">138 張</td><td class="l">鉅亨網，2026/08/04</td></tr>
+  </tbody></table></div>
+
+  <h3>本益比一年來的壓縮軌跡</h3>
+  <div class="chartbox"><svg class="bars" viewBox="0 0 980 200" preserveAspectRatio="xMidYMid meet" role="img">
+<line x1="8" y1="158.0" x2="972" y2="158.0" class="axis"/>
+<rect x="37.4" y="26.0" width="82.3" height="132.0" rx="2" class="b-peak"/>
+<text x="78.6" y="19.0" class="bval">22</text>
+<text x="78.6" y="192" class="blab">25/06/30</text>
+<rect x="174.6" y="35.9" width="82.3" height="122.1" rx="2" class="b-normal"/>
+<text x="215.7" y="28.9" class="bval">20.35</text>
+<text x="215.7" y="192" class="blab">25/10/23</text>
+<rect x="311.7" y="60.0" width="82.3" height="98.0" rx="2" class="b-normal"/>
+<text x="352.9" y="53.0" class="bval">16.34</text>
+<text x="352.9" y="192" class="blab">26/04/23</text>
+<rect x="448.9" y="61.9" width="82.3" height="96.1" rx="2" class="b-normal"/>
+<text x="490.0" y="54.9" class="bval">16.01</text>
+<text x="490.0" y="192" class="blab">26/05/08</text>
+<rect x="586.0" y="64.5" width="82.3" height="93.5" rx="2" class="b-normal"/>
+<text x="627.1" y="57.5" class="bval">15.58</text>
+<text x="627.1" y="192" class="blab">26/07/22</text>
+<rect x="723.1" y="67.9" width="82.3" height="90.1" rx="2" class="b-trough"/>
+<text x="764.3" y="60.9" class="bval">15.02</text>
+<text x="764.3" y="192" class="blab">26/07/29</text>
+<rect x="860.3" y="66.7" width="82.3" height="91.3" rx="2" class="b-normal"/>
+<text x="901.4" y="59.7" class="bval">15.21</text>
+<text x="901.4" y="192" class="blab">26/08/04</text>
+</svg></div>
+  <p class="cap"><b>各長條為不同時間點的單一快照，時間間隔不等距</b>，不可視為連續走勢。米色為最高（2025/06/30，22 倍），粉色為最低（2026/07/29，15.02 倍）。</p>
+  <div class="tw"><table class="grid wide"><thead><tr><th class="rh">日期</th><th>本益比</th><th>當時股價</th><th class="rh">來源</th></tr></thead><tbody>
+  <tr><th class="rh">2025/06/30</th><td class="n">22 倍</td><td class="n">174.0</td><td class="l">玩股網</td></tr>
+  <tr><th class="rh">2025/10/23</th><td class="n">20.35 倍</td><td class="n">174.0</td><td class="l">Yahoo 股市</td></tr>
+  <tr><th class="rh">2026/04/23</th><td class="n">16.34 倍</td><td class="n">167.0</td><td class="l">鉅亨網</td></tr>
+  <tr><th class="rh">2026/05/08</th><td class="n">16.01 倍</td><td class="n">170.0</td><td class="l">Yahoo 股市</td></tr>
+  <tr><th class="rh">2026/07/22</th><td class="n">15.58 倍</td><td class="n">165.5</td><td class="l">鉅亨網</td></tr>
+  <tr><th class="rh">2026/07/29</th><td class="n">15.02 倍</td><td class="n">156.0</td><td class="l">Yahoo 股市</td></tr>
+  <tr class="hlrow"><th class="rh">2026/08/04</th><td class="n">15.21 倍</td><td class="n">161.5</td><td class="l">鉅亨網</td></tr>
+  </tbody></table></div>
+  <p><b>把兩欄放在一起看，故事就很清楚：</b>一年多來股價從 174 元只跌到 161.5 元（<span class="negv-t">−7.2%</span>），但本益比從 22 倍縮到 15.21 倍（<span class="negv-t">−31%</span>）。差額就是 EPS 的成長。<b>換句話說，這一年公司賺得更多，但市場願意付的倍數同步縮小，股價原地踏步。</b></p>
+  <p class="lead">這種「成長被倍數壓縮吃掉」的形態有兩種可能解讀，我不預設哪個對：<b>樂觀版</b>是市場尚未反映基本面，估值處於便宜區間；<b>保守版</b>是市場已經察覺成長降速（第四步：年增率從 24.9% 掉到 7.24%）或現金流品質變化（第三步：淨預收部位翻負），提前反映在倍數上。<b>後續幾季的營收年增率與營業現金流，會決定哪一個版本成立。</b></p>
+
+  <h3>2026 年 EPS 預估</h3>
+  <h4>市場法人預估（僅找到一筆）</h4>
+  <div class="tw"><table class="grid wide"><thead><tr><th class="rh">來源</th><th class="rh">發布時間</th><th class="rh">預估內容</th></tr></thead><tbody>
+  <tr><th class="rh">MoneyDJ 引述法人</th><td class="l">2025/12/31</td><td class="l">2026 年營收有望達 <b>27 億元</b>、再繳出雙位數成長，<b>EPS 衝上 10 元之上</b>。未具名券商，且發布時 2026 年尚無任何實績可參考</td></tr>
+  <tr class="hlrow"><th class="rh">2027 年（N+2）</th><td class="l">—</td><td class="fail">✗ 查無任何預估。不硬湊數字</td></tr>
+  </tbody></table></div>
+  <p class="lead">以現在回頭看，那筆 2025 年底的預估<b>方向是對的</b>：上半年營收已達 12.84 億，全年 27 億只需下半年 14.16 億（年增 7.5%），落在第四步壓力測試的可達成區間。</p>
+
+  <h4>我的推算（不是法人預估）</h4>
+  <p>用上半年實績 EPS 5.10 元往下推。三組情境的差別只在<b>下半年營收年增率</b>與<b>下半年淨利率</b>兩個假設：2025 年下半年淨利率為 13.4%，2026 上半年已降到 11.9%，因此三組情境的下半年淨利率都設在 13.4% 以下。</p>
+  <div class="tw"><table class="grid wide"><thead><tr><th class="rh">情境</th><th>H2 營收年增</th><th>H2 營收</th><th>H2 淨利率</th><th>H2 稅後淨利</th><th>全年稅後淨利</th><th>全年 EPS</th></tr></thead><tbody>
+  <tr><th class="rh">保守</th><td class="n">+5%</td><td class="n">13.83 億</td><td class="n">12.5%</td><td class="n">1.73 億</td><td class="n">3.26 億</td><td class="n posv">10.9 元</td></tr>
+  <tr class="hlrow"><th class="rh">中性</th><td class="n">+10%</td><td class="n">14.49 億</td><td class="n">13.0%</td><td class="n">1.88 億</td><td class="n">3.41 億</td><td class="n posv">11.4 元</td></tr>
+  <tr><th class="rh">樂觀</th><td class="n">+15%</td><td class="n">15.15 億</td><td class="n">13.5%</td><td class="n">2.05 億</td><td class="n">3.58 億</td><td class="n posv">11.9 元</td></tr>
+  </tbody></table></div>
+  <p class="cap">全部為推算數字。基準：2025 年下半年營收 13.17 億、2026 上半年營收 12.84 億與稅後淨利 1.53 億、在外流通股數 3,000 萬股。</p>
+
+  <h3>兩件不一樣的事：前瞻本益比 vs 目標本益比法</h3>
+  <p>這兩個名詞常被混用，但方向相反，我分開講：</p>
+
+  <h4>一、前瞻本益比：現在貴不貴</h4>
+  <p class="lead">公式是<b>「現在股價 ÷ 預估 EPS」</b>——已知股價，求隱含倍數。回答的是「以現在的價格買進，相當於用幾倍今年獲利去買」。</p>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">情境</th><th>預估 EPS</th><th>前瞻本益比<span class="tagq">股價 161.50</span></th></tr></thead><tbody>
+  <tr><th class="rh">保守</th><td class="n">10.9 元</td><td class="n">14.8 倍</td></tr>
+  <tr class="hlrow"><th class="rh">中性</th><td class="n">11.4 元</td><td class="n">14.2 倍</td></tr>
+  <tr><th class="rh">樂觀</th><td class="n">11.9 元</td><td class="n">13.6 倍</td></tr>
+  </tbody></table></div>
+  <p>三種情境都落在 <b>13.6～14.8 倍</b>，全部<b>低於過去一年任何一個時點的實際本益比</b>（最低的一次是 2026/07/29 的 15.02 倍）。單就倍數而言，目前處於近一年來的低檔。</p>
+
+  <h4>二、目標本益比法：合理價可能落在哪</h4>
+  <p class="lead">公式是<b>「預估 EPS × 假設合理倍數」</b>——已知倍數，求目標價。這是<b>敏感度試算，不是預測</b>。倍數怎麼選沒有標準答案，而且結果對這個選擇極度敏感：同樣的 EPS，倍數差 7 倍，目標價就差 80 元。</p>
+  <div class="tw"><table class="grid wide"><thead><tr><th class="rh">預估 EPS</th><th>15 倍<span class="tagq">目前水準</span></th><th>18 倍<span class="tagq">近一年中段</span></th><th>22 倍<span class="tagq">近一年高檔</span></th></tr></thead><tbody>
+  <tr><th class="rh">保守 10.9 元</th><td class="n">164 元</td><td class="n">196 元</td><td class="n">240 元</td></tr>
+  <tr class="hlrow"><th class="rh">中性 11.4 元</th><td class="n">171 元</td><td class="n">205 元</td><td class="n">251 元</td></tr>
+  <tr><th class="rh">樂觀 11.9 元</th><td class="n">178 元</td><td class="n">214 元</td><td class="n">262 元</td></tr>
+  </tbody></table></div>
+  <p class="cap">倍數選擇依據為上表「本益比壓縮軌跡」中實際出現過的水準：15 倍為目前、18 倍約為近一年中段、22 倍為近一年最高。全表皆為推算數字，不是目標價預測。</p>
+  <p><b>怎麼讀這張表：</b>如果市場願意維持目前的 15 倍，目標價落在 <b>164～179 元</b>，也就是<b>現價已經反映得差不多了</b>；要看到 200 元以上，必須<b>同時</b>成立兩件事——EPS 達到中性以上，<b>而且市場願意把倍數拉回 18 倍以上</b>。而過去一年的軌跡顯示，市場正在做的是相反的事。</p>
+
+  <h3>殖利率：今年的 5.6% 不能直接當成常態</h3>
+  <div class="tw"><table class="grid wide"><thead><tr><th class="rh">情境</th><th>假設配息率</th><th>對應 EPS</th><th>現金股利</th><th>殖利率<span class="tagq">股價 161.50</span></th></tr></thead><tbody>
+  <tr class="hlrow"><th class="rh">2026 年實際已發放</th><td class="n">88.1%</td><td class="n">10.22（2025 年）</td><td class="n posv">9.00 元</td><td class="n posv">5.57%</td></tr>
+  <tr><th class="rh">2027 年：維持 88% 配息</th><td class="n">88%</td><td class="n">11.4（中性推估）</td><td class="n">10.0 元</td><td class="n">6.2%</td></tr>
+  <tr><th class="rh">2027 年：回到 60% 配息</th><td class="n">60%</td><td class="n">11.4（中性推估）</td><td class="n">6.8 元</td><td class="n negv">4.2%</td></tr>
+  </tbody></table></div>
+  <p class="cap">全部為推算數字。2026 年實際配發 9.00 元、除息日 2026/06/25 為公告事實；配息率 88% 的官方說法見第三步。</p>
+  <p><b>這張表要傳達的是：5.57% 的殖利率是建立在「88% 配息率」這個非常態水準上的。</b>第三步已經確認，這個高配息率的官方理由是「2024 年增資使帳上現金充足」——換句話說，<b>它是一次性資本結構調整的結果，不是恆常的配息政策</b>。若明年回到歷史的 60%，殖利率會掉到 4.2%。買進時如果把 5.6% 當成可持續的收益率，會高估。</p>
+
+  <h3>誠實揭露：這一節的不確定性比前四步都大</h3>
+  <div class="tw"><table class="grid wide"><thead><tr><th class="rh">項目</th><th class="rh">問題</th></tr></thead><tbody>
+  <tr><th class="rh">法人覆蓋度接近零</th><td class="l">只找到一筆未具名法人預估，且是 2025 年底發布。鉅亨券商評等區塊無內容。季均量 138 張、市值 48 億——<b>沒有分析師持續追蹤的股票，市場預估本身就不存在</b>，這既代表資訊少，也代表股價容易被少量買賣盤推動</td></tr>
+  <tr class="hlrow"><th class="rh">查無 2027 年預估</th><td class="l">依規則<b>不硬湊數字</b>。本節所有 2027 年相關試算（殖利率情境）都明確標示為以我的 2026 中性推估外推，不是市場共識</td></tr>
+  <tr><th class="rh">網站數據內部矛盾</th><td class="l">鉅亨 2026/08/04 頁面「當季 EPS」已更新為 2.83 元（Q2），但「近四季 EPS」仍是 10.62 元——<b>兩者不相容</b>。我改用自行推算的 10.97 元。同頁「殖利率 9.29%」也對不上：9.00 ÷ 161.50 ＝ 5.57%，<b>該欄位不可信</b></td></tr>
+  <tr><th class="rh">EPS 的現金支撐正在變薄</th><td class="l"><b>這是本益比法最大的盲點。</b>第一步規則 5 顯示這家公司十年來 A 皆大於 D、倍數 2.2～5.3 倍，EPS 有極強的現金流背書；但第三步發現淨預收部位六季從 +0.51 億翻轉為 −2.51 億。<b>同樣一塊錢 EPS，現在的現金含金量低於過去</b>——用單純的本益比比較不同年份，會忽略這件事</td></tr>
+  <tr><th class="rh">過去預估準確度無法評估</th><td class="l">找不到足夠的歷史法人預估紀錄，<b>無法判斷市場對這檔股票的預估是否曾大幅偏離實際</b>。這本身就代表不宜對任何單一預估過度信任</td></tr>
+  </tbody></table></div>
+
+  <div class="snap">
+    <b>本節資料來源：</b><br>
+    • 2026/08/04 收盤價 161.50、本益比 15.21、市值 48.45 億、52 週高低 193.50／155.00、每股淨值 100.76、本淨比 1.60、當季 EPS 2.83、近四季 EPS 10.62、季均量 138 張、殖利率欄位 9.29%：<a href="https://www.cnyes.com/twstock/6690/research/finirating">鉅亨網 6690 預估頁</a>（同頁即時報價區）<br>
+    • 2026 年法人預估營收 27 億、EPS 10 元之上：<a href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=388a1c8b-4cf5-40e5-a65e-cf73765f80ec">MoneyDJ：政策動能加持，安碁資訊明年營運續揚（2025/12/31）</a><br>
+    • 歷史本益比快照：2025/06/30 22 倍<a href="https://www.wantgoo.com/stock/6690/dividend-policy/ex-dividend">玩股網</a>；2025/10/23 20.35 倍<a href="https://tw.stock.yahoo.com/quote/6690.TWO/dividend">Yahoo 股市股利頁</a>；2026/04/23 16.34 倍<a href="https://invest.cnyes.com/twstock/tws/6690">鉅亨網</a>；2026/05/08 16.01 倍與 2026/07/29 15.02 倍<a href="https://tw.stock.yahoo.com/quote/6690.TWO">Yahoo 股市</a>；2026/07/22 15.58 倍<a href="https://www.cnyes.com/twstock/6690">鉅亨網</a><br>
+    • 2026 上半年營收 12.84 億、稅後淨利 1.53 億、EPS 5.10 元：<a href="https://www.chinatimes.com/realtimenews/20260731001453-260410">時報資訊 Q2 財報報導</a>；月營收與季營收基期：使用者提供的 Goodinfo 月營收截圖<br>
+    • 每股淨值驗證所用的總資產 48.06 億、負債總額 17.83 億：使用者提供的 Goodinfo 季度資產負債表截圖<br>
+    <b>推算數字：</b>近四季 EPS 10.97、三組 2026 全年 EPS 情境（10.9／11.4／11.9 元）及其下半年營收與淨利率假設、三組前瞻本益比、九格目標價矩陣、三組殖利率情境、股價一年變動 −7.2% 與本益比變動 −31%。皆為自行計算，非公告值也非市場共識。
+  </div>
+</section>
+
 <section id="step6"><div class="steptag">第 6 步／共 6 步</div><h2>投資決策推理</h2><div class="pending">尚未執行。第 1–3 步已完成，此區塊將在後續步驟完成後補上。</div></section>
 
 <footer>
-  6690 安碁資訊 · 個股初步分析報告 v4.0 · 生成於 2026-08-05 · 計分視窗 2016–2025（10 個完整年度）<br>
+  6690 安碁資訊 · 個股初步分析報告 v5.0 · 生成於 2026-08-05 · 計分視窗 2016–2025（10 個完整年度）<br>
   本報告為財務數據推理與整理，不構成投資建議。
 </footer>
 

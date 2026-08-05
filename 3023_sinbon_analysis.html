@@ -183,7 +183,8 @@ footer .v{font-family:"IBM Plex Mono",monospace}
     <p class="sub">在查詢股價、EPS、產業地位與任何新聞背景之前，先只用現金流量表的數字，替這家公司做一次不帶預設立場的體檢。</p>
     <div class="metaline">
       <span>資料年度 <b>2009–2025（17 年）＋ 26H1</b></span>
-      <span>報告版本 <b>v1.0</b></span>
+      <span>已完成步驟 <b>1–2 ／ 6</b></span>
+      <span>報告版本 <b>v1.1</b></span>
       <span>生成日期 <b>2026-08-05</b></span>
     </div>
   </div>
@@ -192,7 +193,7 @@ footer .v{font-family:"IBM Plex Mono",monospace}
 <nav class="stepnav" aria-label="步驟導覽">
   <div class="inner">
     <button class="pad active" data-target="step1"><b>01</b>現金流六大規則</button>
-    <button class="pad locked" data-target="step2" disabled><b>02</b>基本資訊</button>
+    <button class="pad" data-target="step2"><b>02</b>基本資訊</button>
     <button class="pad locked" data-target="step3" disabled><b>03</b>法說會</button>
     <button class="pad locked" data-target="step4" disabled><b>04</b>營收趨勢</button>
     <button class="pad locked" data-target="step5" disabled><b>05</b>前瞻本益比</button>
@@ -349,14 +350,163 @@ footer .v{font-family:"IBM Plex Mono",monospace}
   </ul>
 </section>
 
-<section id="step2"><div class="pending"><p class="steptag">第 2 步 ／ 共 6 步</p><h2>基本資訊查詢</h2><p>尚未執行。將查詢股價、EPS、本益比、殖利率、近期營收與法說會資訊，並逐筆附上來源連結。</p></div></section>
+<section id="step2">
+  <p class="steptag">第 2 步 ／ 共 6 步</p>
+  <h2>基本資訊查詢</h2>
+
+  <div class="key">
+    <span class="kt">本步驟兩個最重要的結論</span>
+    <p>① <b>第 1 步的最高警戒訊號解除了。</b>信邦歷年除息日固定落在 <b>8 月中下旬</b>、現金股利發放日固定在 <b>9 月</b>，26H1（1–6 月）根本還沒發股利，融資活動現金流轉正<b>確認為季節性假警報</b>，不是舉債求生。</p>
+    <p>② 但 <span class="negv">26H1 營業現金流轉負（-0.58 億）不是假警報</span>——原因是營收暴衝帶動的營運資金膨脹（Q2 營收年增 16.58%、7 月營收年增 28.97% 創歷史新高），屬「成長的代價」，但這也讓規則五的 A 與 D 缺口<b>擴大而非收斂</b>。</p>
+  </div>
+
+  <h3>公司與股本基本資料</h3>
+  <table class="grid lean" style="min-width:auto">
+    <tbody>
+      <tr><td class="lft">公司全名</td><td class="lft">信邦電子股份有限公司（SINBON ELECTRONICS）</td></tr>
+      <tr><td class="lft">產業別</td><td class="lft">電子零組件業（上市）</td></tr>
+      <tr><td class="lft">主要業務</td><td class="lft">客製化連接器與連接線組（線組占營收 <b>77.85%</b>、連接器及零組件 <b>22.15%</b>）</td></tr>
+      <tr><td class="lft">成立／上市日</td><td class="lft">1989/12/06 ／ 2002/08/26</td></tr>
+      <tr><td class="lft">董事長／總經理</td><td class="lft">王紹新 ／ 梁偉銘</td></tr>
+      <tr><td class="lft">資本額／發行股數</td><td class="lft">24 億元 ／ 2.40 億股</td></tr>
+      <tr><td class="lft">股本變動查核</td><td class="lft"><b>近年無股票分割、無減資</b>。股本自 2009 年 17.9 億平滑增加至 24 億（詳見第 1 步表格「平均股本」欄），EPS 各期為一致基礎，可直接比較。</td></tr>
+    </tbody>
+  </table>
+  <p class="snap"><b>來源：</b>公司與股本資料 <a href="https://www.cnyes.com/twstock/3023">鉅亨網個股總覽</a>；產品別比重 <a href="https://udn.com/news/story/7252/9670127">聯合新聞網 2026/08/04 營收報導</a>；股本變動查核為搜尋「3023 股票分割／減資」未發現相關事件，並與使用者提供之 Goodinfo 歷年股本欄位交叉比對後判定（<b>推論結論，非單一頁面直接載明</b>）。</p>
+
+  <h3>股價與估值</h3>
+  <div class="key warn">
+    <span class="kt">價格資料的時間差提醒</span>
+    <p>不同來源抓到的是<b>不同時間點的單一快照</b>，不是頁面公布的區間。查詢過程實際遇到兩個時間點：</p>
+  </div>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">來源與時間</th><th>成交價</th><th>本益比</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">鉅亨網，2026/08/05 盤中</td><td class="mono posv">314.50</td><td class="mono">24.63</td><td class="lft">昨收 299.50，當日 +5.01%</td></tr>
+      <tr><td class="lft">Yahoo 股市，頁面顯示 2026/07/28 收盤</td><td class="mono">281.50</td><td class="mono">21.80</td><td class="lft">抓取到的是<b>較舊的快取頁面</b></td></tr>
+    </tbody>
+  </table>
+  <p class="snap">兩者相差約一週、價差約 33 元。<b>以較新的 2026/08/05 盤中數字為準</b>，較舊的 Yahoo 快照一併列出以示透明。無論哪個都只是快照、非即時報價，實際交易請以你的券商 App 為準。<br>
+  <b>來源：</b><a href="https://www.cnyes.com/twstock/3023">鉅亨網個股頁（查詢於 2026/08/05 盤中）</a>、<a href="https://tw.stock.yahoo.com/quote/3023.TW">Yahoo 股市個股頁（頁面標示 2026/07/28 13:30 更新）</a>。</p>
+
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">估值指標（2026/08/05 盤中）</th><th>數值</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">本益比（近四季 EPS 12.77 元）</td><td class="mono">24.63 倍</td></tr>
+      <tr><td class="lft">每股淨值／股價淨值比</td><td class="mono">67.70 元 ／ 4.63 倍</td></tr>
+      <tr><td class="lft">市值</td><td class="mono">753.82 億元</td></tr>
+      <tr><td class="lft">52 週高／低</td><td class="mono">353.50 ／ 185.00</td></tr>
+      <tr><td class="lft">年股利／現金殖利率</td><td class="mono">10.00 元 ／ 3.34%</td></tr>
+    </tbody>
+  </table>
+  <p class="snap"><b>來源：</b><a href="https://www.cnyes.com/twstock/3023">鉅亨網個股頁</a>，查詢於 2026/08/05 盤中。殖利率係以年股利 10 元除以昨收 299.50 元計算（頁面直接顯示 3.34%）。</p>
+
+  <h3>EPS 歷年趨勢與最新一季</h3>
+  <div class="chartbox"><svg class="chart" viewBox="0 0 764 280" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="0" y1="238.0" x2="764" y2="238.0" class="axis"/><rect x="8.0" y="222.7" width="34" height="15.3" rx="2" class="b-trough"/><text x="25.0" y="216.7" class="vlab">1.07</text><text x="25.0" y="272" class="ylab">2009</text><rect x="50.0" y="205.9" width="34" height="32.1" rx="2" class="b-pos"/><text x="67.0" y="199.9" class="vlab">2.25</text><text x="67.0" y="272" class="ylab">2010</text><rect x="92.0" y="202.4" width="34" height="35.6" rx="2" class="b-pos"/><text x="109.0" y="196.4" class="vlab">2.49</text><text x="109.0" y="272" class="ylab">2011</text><rect x="134.0" y="196.1" width="34" height="41.9" rx="2" class="b-pos"/><text x="151.0" y="190.1" class="vlab">2.93</text><text x="151.0" y="272" class="ylab">2012</text><rect x="176.0" y="192.3" width="34" height="45.7" rx="2" class="b-pos"/><text x="193.0" y="186.3" class="vlab">3.2</text><text x="193.0" y="272" class="ylab">2013</text><rect x="218.0" y="183.4" width="34" height="54.6" rx="2" class="b-pos"/><text x="235.0" y="177.4" class="vlab">3.82</text><text x="235.0" y="272" class="ylab">2014</text><rect x="260.0" y="173.3" width="34" height="64.7" rx="2" class="b-pos"/><text x="277.0" y="167.3" class="vlab">4.53</text><text x="277.0" y="272" class="ylab">2015</text><rect x="302.0" y="164.4" width="34" height="73.6" rx="2" class="b-pos"/><text x="319.0" y="158.4" class="vlab">5.15</text><text x="319.0" y="272" class="ylab">2016</text><rect x="344.0" y="160.3" width="34" height="77.7" rx="2" class="b-pos"/><text x="361.0" y="154.3" class="vlab">5.44</text><text x="361.0" y="272" class="ylab">2017</text><rect x="386.0" y="148.6" width="34" height="89.4" rx="2" class="b-pos"/><text x="403.0" y="142.6" class="vlab">6.26</text><text x="403.0" y="272" class="ylab">2018</text><rect x="428.0" y="131.3" width="34" height="106.7" rx="2" class="b-pos"/><text x="445.0" y="125.3" class="vlab">7.47</text><text x="445.0" y="272" class="ylab">2019</text><rect x="470.0" y="108.3" width="34" height="129.7" rx="2" class="b-pos"/><text x="487.0" y="102.3" class="vlab">9.08</text><text x="487.0" y="272" class="ylab">2020</text><rect x="512.0" y="95.1" width="34" height="142.9" rx="2" class="b-pos"/><text x="529.0" y="89.1" class="vlab">10</text><text x="529.0" y="272" class="ylab">2021</text><rect x="554.0" y="63.4" width="34" height="174.6" rx="2" class="b-pos"/><text x="571.0" y="57.4" class="vlab">12.22</text><text x="571.0" y="272" class="ylab">2022</text><rect x="596.0" y="42.1" width="34" height="195.9" rx="2" class="b-pos"/><text x="613.0" y="36.1" class="vlab">13.71</text><text x="613.0" y="272" class="ylab">2023</text><rect x="638.0" y="28.0" width="34" height="210.0" rx="2" class="b-peak"/><text x="655.0" y="22.0" class="vlab">14.7</text><text x="655.0" y="272" class="ylab">2024</text><rect x="680.0" y="52.0" width="34" height="186.0" rx="2" class="b-pos"/><text x="697.0" y="46.0" class="vlab">13.02</text><text x="697.0" y="272" class="ylab">2025</text><rect x="722.0" y="132.7" width="34" height="105.3" rx="2" class="b-pos" opacity="0.55" stroke-dasharray="3 2" stroke-width="1"/><text x="739.0" y="126.7" class="vlab">7.37</text><text x="739.0" y="272" class="ylab partial">26H1</text></svg></div>
+  <p class="snap">米色＝歷史高峰（2024 年 14.7 元）；粉色＝起點低位（2009 年 1.07 元）。虛線半透明柱為 26H1 累計，非全年。</p>
+  <p><b>數字現象：</b>EPS 從 2009 年 1.07 元連續成長到 2024 年 14.7 元（歷史新高，<b>十六年成長 13.7 倍且中間沒有一年衰退</b>），但 <span class="negv">2025 年首度中斷，掉到 13.02 元</span>。</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">期間</th><th>EPS（元）</th><th>年／季變化</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">2024 全年</td><td class="mono">14.70</td><td class="lft">歷史新高</td></tr>
+      <tr><td class="lft">2025 全年</td><td class="mono negv">13.02</td><td class="lft negv">十六年來首度衰退</td></tr>
+      <tr><td class="lft">26Q1</td><td class="mono">3.60</td><td class="lft">季增 21.79%、年減約 6%</td></tr>
+      <tr><td class="lft">26Q2</td><td class="mono posv">3.76</td><td class="lft">季增 4.44%、<b>年增 19.02%</b></td></tr>
+      <tr><td class="lft">26H1 累計</td><td class="mono">7.36</td><td class="lft">稅後純益 17.68 億，年增 5.05%</td></tr>
+      <tr class="totrow"><td class="lft">近四季</td><td class="mono">12.77</td><td class="lft">對應本益比 24.63 倍</td></tr>
+    </tbody>
+  </table>
+  <p>Q2 的關鍵細節：<b>營收 90.19 億元，季增 8.75%、年增 16.58%</b>；毛利率 24.54%（季增 0.03 個百分點、年減 0.17 個百分點）；營業利益 9.39 億元，營益率 10.41%（季減 1.12、年減 0.85 個百分點）。公司說明營益率下滑是因為<b>第二季主動加大策略性投資</b>——調整薪資、拓展市場、推動新產品研發與支付運費，導致費用率上升。</p>
+  <p class="snap"><b>來源：</b>26Q2 與 H1 財報數字 <a href="https://news.cnyes.com/news/id/6543866">鉅亨網 2026/07/23 Q2 財報報導</a>；26Q1 EPS 3.6 元 <a href="https://statementdog.com/analysis/3023/eps">財報狗 EPS 頁</a>；2009–2025 歷年 EPS 為<b>使用者提供之 Goodinfo 截圖</b>（第 1 步同一張表的「稅後 EPS」欄，於盲測階段刻意未使用，本步驟才啟用）；近四季 EPS 12.77 元 <a href="https://www.cnyes.com/twstock/3023">鉅亨網個股頁</a>。<br>
+  <span class="negv">注意：</span>Goodinfo 截圖之 26H1 EPS 為 7.37 元，鉅亨引用公司公告為 7.36 元，差異來自四捨五入口徑，非資料錯誤。</p>
+
+  <h3>股利政策與除息時點（解答第 1 步的關鍵疑問）</h3>
+  <div class="key">
+    <span class="kt">季節性假設獲得證實</span>
+    <p>近四年除息日與現金股利發放日<b>全部落在 8 月與 9 月</b>，也就是完全在下半年。第 1 步觀察到「26H1 融資活動現金流轉正」的三重疊加訊號，<b>確認主要成因是上半年尚未發放股利</b>，而非舉債支應本業。</p>
+  </div>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th>發放年度</th><th>所屬年度</th><th>現金股利（元）</th><th>除息日</th><th>現金股利發放日</th><th>填息天數</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">2022</td><td class="mono">2021</td><td class="mono">6.9583</td><td class="mono">2022/08/19</td><td class="mono">2022/09/16</td><td class="mono">43</td></tr>
+      <tr><td class="mono">2023</td><td class="mono">2022</td><td class="mono">8.4613</td><td class="mono">2023/08/31</td><td class="mono">2023/09/28</td><td class="mono">3</td></tr>
+      <tr><td class="mono">2024</td><td class="mono">2023</td><td class="mono">9.5986</td><td class="mono">2024/08/16</td><td class="mono">2024/09/13</td><td class="mono">12</td></tr>
+      <tr><td class="mono">2025</td><td class="mono">2024</td><td class="mono">10.25</td><td class="mono">2025/08/21</td><td class="mono">2025/09/17</td><td class="mono">—</td></tr>
+      <tr class="prow"><td class="mono">2026</td><td class="mono">2025</td><td class="mono">10.00</td><td class="mono">待公告</td><td class="mono">待公告</td><td class="mono">—</td></tr>
+    </tbody>
+  </table>
+  <p>2026 年配發的 10 元由<b>盈餘分配 9.1 元＋資本公積分配 0.9 元</b>組成，相當於 2025 年 EPS 13.02 元的 <b>70%</b> 配發率。Yahoo 統計信邦<b>已連續 28 年發放股利，合計 102.28 元，近五年平均現金殖利率 3.11%</b>。</p>
+  <p class="snap"><b>來源：</b>除息日、發放日、填息天數、連續配發紀錄 <a href="https://tw.stock.yahoo.com/quote/3023.TW/dividend">Yahoo 股市股利政策頁</a>；2026 年配息 10 元之組成（盈餘 9.1＋資本公積 0.9）與 70% 配發率 <a href="https://www.cmoney.tw/forum/article/177264393">CMoney 股市爆料同學會</a>（<b>第三方論壇整理，非公司公告原文</b>，建議以 MOPS 公告為準）；董事會決議股利分派日期 2026/03/05 見 <a href="https://goodinfo.tw/tw/StockHolderSchedule.asp?STOCK_ID=3023">Goodinfo 公告訊息欄</a>。</p>
+
+  <h3>近期月營收</h3>
+  <p>7 月營收是這次查證中最強的單一訊號：</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">項目</th><th>數值</th><th class="lft">說明</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">2026 年 7 月合併營收</td><td class="mono posv">31.67 億</td><td class="lft">月增 2.41%、<b>年增 28.97%</b>，<b>連續 4 個月創公司成立以來單月新高</b></td></tr>
+      <tr><td class="lft">2026 年 6 月合併營收</td><td class="mono">30.93 億</td><td class="lft">—</td></tr>
+      <tr><td class="lft">2026 年 5 月合併營收</td><td class="mono">30.11 億</td><td class="lft">月增 1.72%、年增 17.53%</td></tr>
+      <tr><td class="lft">2026 年 4 月合併營收</td><td class="mono">29.60 億</td><td class="lft">月增 1.85%、年增 14.97%</td></tr>
+      <tr class="totrow"><td class="lft">前 7 月累計</td><td class="mono">205.54 億</td><td class="lft">年增 <b>11.44%</b>，歷年同期新高</td></tr>
+    </tbody>
+  </table>
+  <p>MAGIC 五大產業前 7 月累計年增率呈現明顯分化：</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th>工業應用</th><th>醫療及健康照護</th><th>汽車</th><th>綠能</th><th>通訊及電子周邊</th></tr></thead>
+    <tbody><tr><td class="mono posv">+30.51%</td><td class="mono posv">+26.28%</td><td class="mono posv">+25.40%</td><td class="mono negv">-8.09%</td><td class="mono negv">-9.41%</td></tr></tbody>
+  </table>
+  <p>三個成長引擎（工業、醫療、汽車）全部維持 25% 以上年增，拖累的是綠能（太陽能微逆變器）與通訊。這與 2025 年營收衰退的原因一致——當年正是太陽能業務大幅衰退拖垮全局，如今其他四項已經補上缺口。</p>
+  <p class="snap"><b>來源：</b>7 月營收、前 7 月累計與 MAGIC 分項年增率 <a href="https://udn.com/news/story/7252/9670127">聯合新聞網 2026/08/04</a>、<a href="https://news.cnyes.com/news/id/6558621">鉅亨網 2026/08/04</a>；5 月與 4 月營收 <a href="https://winvest.tw/News/Detail/83916">Win 投資營收快訊</a>（<b>第三方個股網站，未標示原始出處</b>，與上述通訊社報導的 6 月數字可互相銜接，但建議以 MOPS 公告為準）。</p>
+
+  <h3>重大投資案：53.05 億元擴建兩座新廠</h3>
+  <div class="key warn">
+    <span class="kt">這件事直接衝擊第 1 步的規則二與規則四判斷</span>
+    <p>2026/04/23 董事會一口氣通過兩筆新廠投資計畫，<b>合計 53.05 億元</b>：台中港科技園區廠（2027 年量產）、苗栗銅鑼新廠（2029 年量產），其中<b>銅鑼新廠投資額大幅調高 35%</b>。</p>
+  </div>
+  <p><b>為什麼這很重要：</b>信邦過去八年的年度固定資產支出最高只有 <b>7.62 億元</b>（2025 年）。53.05 億元即使分攤到 2026–2029 四年，年均也要 <b>13 億元以上，是歷史高點的 1.7 倍</b>。同時每年還有 <b>約 25 億元的剛性現金股利</b>要發。</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">未來每年的現金去向（粗估）</th><th>金額</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">現金股利（依 2026 年 10 元 × 2.4 億股）</td><td class="mono neg">約 -24 億</td></tr>
+      <tr><td class="lft">新廠資本支出（53.05 億 ÷ 4 年）</td><td class="mono neg">約 -13 億</td></tr>
+      <tr><td class="lft">既有維持性資本支出（參考歷史水準）</td><td class="mono neg">約 -5 至 -7 億</td></tr>
+      <tr class="totrow"><td class="lft">合計年度現金需求</td><td class="mono negv">約 -42 至 -44 億</td></tr>
+    </tbody>
+  </table>
+  <p class="snap"><b>此為推算數字</b>，非公司公告或任何來源直接載明的數值：以新聞公布之 53.05 億元總額除以 2026–2029 四年平均分攤，加計 2026 年股利 10 元乘以 2.4 億股，再參考第 1 步的歷史固定資產支出區間估算，實際分年金額與節奏未經公司揭露。</p>
+  <p><b>對照現實：</b>信邦近三年營業現金流分別是 51.9 / 26.0 / 33.6 億元。<span class="negv">若 A 維持在 26–34 億元的水準，上表的年度現金需求將明顯超過營業現金流</span>——這正是第 1 步規則四提到的「股利剛性＋持續投資」結構風險，如今有了具體金額。第 1 步規則四給 70 分，事後看是<b>合理甚至略為寬鬆</b>的評價。</p>
+  <p class="snap"><b>來源：</b>53.05 億元投資案、兩廠量產時程與銅鑼廠上調 35% <a href="https://tw.stock.yahoo.com/news/%E4%BF%A1%E9%82%A6%E9%A6%96%E5%AD%A3eps%E5%94%B1%E9%AB%98%E8%AA%BF-%E7%A0%B8%E9%80%BE53%E5%84%84%E6%93%B4%E5%85%A9%E5%BB%A0-201000164.html">工商時報 2026/04/23（Yahoo 轉載）</a>；近三年營業現金流為使用者提供之 Goodinfo 截圖。</p>
+
+  <h3>法說會資訊</h3>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">場次</th><th class="lft">性質</th><th class="lft">可取得內容</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">2026/06/11</td><td class="lft">自辦法說會（採事前預約制）</td><td class="lft">第三方整理有簡報重點與 26Q1 營運數字</td></tr>
+      <tr><td class="lft">2026/06/03</td><td class="lft">受邀出席 Citi's 2026 Taiwan Tech Conference（W Hotel Taipei）</td><td class="lft">券商論壇，僅有公告，無公開簡報</td></tr>
+      <tr><td class="lft">2025/11/04</td><td class="lft">2025Q3 法說會</td><td class="lft">有完整逐字重點整理（含 2026 展望問答）</td></tr>
+    </tbody>
+  </table>
+  <p class="snap"><b>來源與查證等級說明：</b>2026/06/11 場次資訊來自 <a href="https://poorstock.com/earningcall/3023">散戶鬥嘴鼓 3023 法說會頁</a>（整理自 MOPS 官方紀錄）；2026/06/03 Citi 論壇公告見 <a href="https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E4%BF%A1%E9%82%A6%E5%8F%97%E9%82%80%E5%8F%83%E5%8A%A0citis-2026-taiwan-tech-055515221.html">MOPS 公告（Yahoo 轉載）</a>；2025/11/04 法說會重點見 <a href="https://blog.fugle.tw/post/earnings-call-3023-2025-11-04">富果法說會備忘錄</a>。<br>
+  <b>誠實區分：</b>以上皆為<b>財經媒體與第三方整理文章</b>，<b>我並未讀取任何官方簡報 PDF 原檔</b>——MOPS 簡報連結受 robots.txt 限制無法擷取。公司官網為 <a href="http://www.sinbon.com">www.sinbon.com</a>，投資人關係資料請自行前往查看。</p>
+
+  <h3>第 1 步三個查證重點的結案狀態</h3>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">第 1 步列出的查證項目</th><th class="lft">查證結果</th><th>狀態</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">除息時點是否造成 26H1 的 C 轉正</td><td class="lft">是。除息日固定 8 月中下旬、發放日固定 9 月，上半年完全未發股利</td><td class="jud ok">已解除</td></tr>
+      <tr><td class="lft">26H1 營業現金流轉負的組成</td><td class="lft">營收暴衝（Q2 年增 16.58%、7 月年增 28.97% 創新高）帶動應收與存貨膨脹，屬成長的代價；<b>但公司未逐項揭露營運資金變化，此為推論而非公司說明</b></td><td class="jud no">部分解答</td></tr>
+      <tr><td class="lft">A 與 D 的缺口是否收斂</td><td class="lft">未收斂。26H1 為 A -0.58 億 vs D 22 億，<span class="negv">缺口反而擴大</span></td><td class="jud no">仍是警訊</td></tr>
+    </tbody>
+  </table>
+  <p><b>整體判讀：</b>第 1 步最嚇人的那個訊號（三重疊加）被季節性解釋掉了，這是好消息。但<b>換來的是一個更具體的新問題</b>——公司正在同時做三件很花錢的事：衝營收（吃掉營運資金）、蓋兩座新廠（53 億）、維持每年 24 億的股利承諾。這三件事的現金總需求，很可能超過目前的營業現金流水準。</p>
+</section>
 <section id="step3"><div class="pending"><p class="steptag">第 3 步 ／ 共 6 步</p><h2>法說會資料深入討論</h2><p>尚未執行。</p></div></section>
 <section id="step4"><div class="pending"><p class="steptag">第 4 步 ／ 共 6 步</p><h2>營收趨勢視覺化</h2><p>尚未執行。</p></div></section>
 <section id="step5"><div class="pending"><p class="steptag">第 5 步 ／ 共 6 步</p><h2>前瞻本益比／EPS 預估</h2><p>尚未執行。</p></div></section>
 <section id="step6"><div class="pending"><p class="steptag">第 6 步 ／ 共 6 步</p><h2>投資決策推理</h2><p>僅在使用者主動詢問時才執行。</p></div></section>
 
 <footer>
-  <p><b>報告版本</b> <span class="v">v1.0</span>　|　<b>生成時間</b> <span class="v">2026-08-05</span>　|　股票代號 <span class="v">3023</span></p>
+  <p><b>報告版本</b> <span class="v">v1.1</span>　|　<b>生成時間</b> <span class="v">2026-08-05</span>　|　股票代號 <span class="v">3023</span></p>
   <p><b>資料來源：</b>本報告第 1 步全部數據皆為<b>使用者提供之 Goodinfo 截圖</b>（現金流量表年度總表、投資活動細項、融資活動細項），非本次搜尋所得。原始頁面：<a href="https://goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=3023">goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=3023</a></p>
   <p>本報告為現金流量表數據的結構化分析與推理紀錄，不構成任何投資建議，也非理財顧問意見。投資決策請自行判斷並承擔風險。</p>
 </footer>

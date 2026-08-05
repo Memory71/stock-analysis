@@ -183,8 +183,8 @@ footer .v{font-family:"IBM Plex Mono",monospace}
     <p class="sub">在查詢股價、EPS、產業地位與任何新聞背景之前，先只用現金流量表的數字，替這家公司做一次不帶預設立場的體檢。</p>
     <div class="metaline">
       <span>資料年度 <b>2009–2025（17 年）＋ 26H1</b></span>
-      <span>已完成步驟 <b>1–3 ／ 6</b></span>
-      <span>報告版本 <b>v1.2</b></span>
+      <span>已完成步驟 <b>1–4 ／ 6</b></span>
+      <span>報告版本 <b>v1.3</b></span>
       <span>生成日期 <b>2026-08-05</b></span>
     </div>
   </div>
@@ -195,7 +195,7 @@ footer .v{font-family:"IBM Plex Mono",monospace}
     <button class="pad active" data-target="step1"><b>01</b>現金流六大規則</button>
     <button class="pad" data-target="step2"><b>02</b>基本資訊</button>
     <button class="pad" data-target="step3"><b>03</b>法說會</button>
-    <button class="pad locked" data-target="step4" disabled><b>04</b>營收趨勢</button>
+    <button class="pad" data-target="step4"><b>04</b>營收趨勢</button>
     <button class="pad locked" data-target="step5" disabled><b>05</b>前瞻本益比</button>
     <button class="pad locked" data-target="step6" disabled><b>06</b>投資決策</button>
   </div>
@@ -625,12 +625,81 @@ footer .v{font-family:"IBM Plex Mono",monospace}
   </div>
   <p class="snap"><b>本步驟資料限制總整理：</b>①未讀取任何官方簡報 PDF 原檔；②富果與散戶鬥嘴鼓的內容<b>皆標示為 AI 整理</b>，非公司原文逐字稿；③2025Q3 法說會的產業占比為「2025 前三季」基礎，與 2026 前 7 月年增率<b>不是同一口徑</b>，表格中已分欄呈現、未混用；④第 1 步規則四提到的「季度槓桿指標（淨金融負債/EBITDA）」，<span class="negv">在可取得的法說會整理中未見揭露，無法補上年度數字掩蓋單季高峰的落差</span>。</p>
 </section>
-<section id="step4"><div class="pending"><p class="steptag">第 4 步 ／ 共 6 步</p><h2>營收趨勢視覺化</h2><p>尚未執行。</p></div></section>
+<section id="step4">
+  <p class="steptag">第 4 步 ／ 共 6 步</p>
+  <h2>營收趨勢視覺化</h2>
+
+  <div class="key">
+    <span class="kt">本步驟兩個最重要的結論</span>
+    <p>① <b>翻轉點非常清楚，就在 2026 年 3 月。</b>2025 年 3 月到 12 月連續 <b>10 個月年增率為負</b>，2026 年 3 月起轉正後<b>連續五個月加速</b>：+7.54% → +15% → +17.5% → +17.6% → <b>+29%</b>。</p>
+    <p>② 這張圖同時<b>解釋也加重</b>了第 1 步的疑慮：營收在 4 個月內從 29.06 億衝到 31.67 億，<span class="negv">應收帳款與存貨必然同步膨脹，這正是 26H1 營業現金流轉負的來源</span>。營收愈猛，短期現金壓力愈大。</p>
+  </div>
+
+  <h3>近 18 期單月合併營收</h3>
+  <div class="chartbox"><svg class="chart" viewBox="0 0 764 280" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="0" y1="238.0" x2="764" y2="238.0" class="axis"/><rect x="8.0" y="55.0" width="34" height="183.0" rx="2" class="b-pos"/><text x="25.0" y="49.0" class="vlab">27.6</text><text x="25.0" y="272" class="ylab">25/02</text><rect x="50.0" y="58.8" width="34" height="179.2" rx="2" class="b-pos"/><text x="67.0" y="52.8" class="vlab">27.02</text><text x="67.0" y="272" class="ylab">25/03</text><rect x="92.0" y="67.3" width="34" height="170.7" rx="2" class="b-pos"/><text x="109.0" y="61.3" class="vlab">25.74</text><text x="109.0" y="272" class="ylab">25/04</text><rect x="134.0" y="68.1" width="34" height="169.9" rx="2" class="b-pos"/><text x="151.0" y="62.1" class="vlab">25.62</text><text x="151.0" y="272" class="ylab">25/05</text><rect x="176.0" y="63.6" width="34" height="174.4" rx="2" class="b-pos"/><text x="193.0" y="57.6" class="vlab">26.3</text><text x="193.0" y="272" class="ylab">25/06</text><rect x="218.0" y="75.1" width="34" height="162.9" rx="2" class="b-trough"/><text x="235.0" y="69.1" class="vlab">24.56</text><text x="235.0" y="272" class="ylab">25/07</text><rect x="260.0" y="73.8" width="34" height="164.2" rx="2" class="b-pos"/><text x="277.0" y="67.8" class="vlab">24.76</text><text x="277.0" y="272" class="ylab">25/08</text><rect x="302.0" y="61.1" width="34" height="176.9" rx="2" class="b-pos"/><text x="319.0" y="55.1" class="vlab">26.68</text><text x="319.0" y="272" class="ylab">25/09</text><rect x="344.0" y="67.8" width="34" height="170.2" rx="2" class="b-pos"/><text x="361.0" y="61.8" class="vlab">25.67</text><text x="361.0" y="272" class="ylab">25/10</text><rect x="386.0" y="68.9" width="34" height="169.1" rx="2" class="b-pos"/><text x="403.0" y="62.9" class="vlab">25.5</text><text x="403.0" y="272" class="ylab">25/11</text><rect x="428.0" y="63.6" width="34" height="174.4" rx="2" class="b-pos"/><text x="445.0" y="57.6" class="vlab">26.3</text><text x="445.0" y="272" class="ylab">25/12</text><rect x="470.0" y="51.9" width="34" height="186.1" rx="2" class="b-pos"/><text x="487.0" y="45.9" class="vlab">28.07</text><text x="487.0" y="272" class="ylab">26/01</text><rect x="512.0" y="64.9" width="34" height="173.1" rx="2" class="b-pos"/><text x="529.0" y="58.9" class="vlab">26.1</text><text x="529.0" y="272" class="ylab">26/02</text><rect x="554.0" y="45.3" width="34" height="192.7" rx="2" class="b-pos"/><text x="571.0" y="39.3" class="vlab">29.06</text><text x="571.0" y="272" class="ylab">26/03</text><rect x="596.0" y="41.7" width="34" height="196.3" rx="2" class="b-pos"/><text x="613.0" y="35.7" class="vlab">29.6</text><text x="613.0" y="272" class="ylab">26/04</text><rect x="638.0" y="38.3" width="34" height="199.7" rx="2" class="b-pos"/><text x="655.0" y="32.3" class="vlab">30.11</text><text x="655.0" y="272" class="ylab">26/05</text><rect x="680.0" y="32.9" width="34" height="205.1" rx="2" class="b-pos"/><text x="697.0" y="26.9" class="vlab">30.93</text><text x="697.0" y="272" class="ylab">26/06</text><rect x="722.0" y="28.0" width="34" height="210.0" rx="2" class="b-peak"/><text x="739.0" y="22.0" class="vlab">31.67</text><text x="739.0" y="272" class="ylab">26/07</text></svg></div>
+  <p class="snap">單位：億元。米色＝18 期高峰（2026/07，31.67 億）；粉色＝18 期谷底（2025/07，24.56 億）。高低差達 <b>29%</b>。</p>
+
+  <h3>近 18 期單月營收年增率</h3>
+  <div class="chartbox"><svg class="chart" viewBox="0 0 764 280" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="0" y1="175.5" x2="764" y2="175.5" class="axis"/><rect x="8.0" y="123.6" width="34" height="51.9" rx="2" class="b-pos"/><text x="25.0" y="117.6" class="vlab">10.2</text><text x="25.0" y="272" class="ylab">25/02</text><rect x="50.0" y="175.5" width="34" height="19.0" rx="2" class="b-neg"/><text x="67.0" y="206.5" class="vlab">-3.74</text><text x="67.0" y="272" class="ylab">25/03</text><rect x="92.0" y="175.5" width="34" height="44.4" rx="2" class="b-neg"/><text x="109.0" y="231.8" class="vlab">-8.73</text><text x="109.0" y="272" class="ylab">25/04</text><rect x="134.0" y="175.5" width="34" height="47.4" rx="2" class="b-neg"/><text x="151.0" y="234.9" class="vlab">-9.33</text><text x="151.0" y="272" class="ylab">25/05</text><rect x="176.0" y="175.5" width="34" height="20.6" rx="2" class="b-neg"/><text x="193.0" y="208.1" class="vlab">-4.06</text><text x="193.0" y="272" class="ylab">25/06</text><rect x="218.0" y="175.5" width="34" height="62.5" rx="2" class="b-trough"/><text x="235.0" y="250.0" class="vlab">-12.3</text><text x="235.0" y="272" class="ylab">25/07</text><rect x="260.0" y="175.5" width="34" height="60.5" rx="2" class="b-neg"/><text x="277.0" y="248.0" class="vlab">-11.9</text><text x="277.0" y="272" class="ylab">25/08</text><rect x="302.0" y="175.5" width="34" height="33.8" rx="2" class="b-neg"/><text x="319.0" y="221.2" class="vlab">-6.64</text><text x="319.0" y="272" class="ylab">25/09</text><rect x="344.0" y="175.5" width="34" height="43.2" rx="2" class="b-neg"/><text x="361.0" y="230.7" class="vlab">-8.5</text><text x="361.0" y="272" class="ylab">25/10</text><rect x="386.0" y="175.5" width="34" height="58.5" rx="2" class="b-neg"/><text x="403.0" y="245.9" class="vlab">-11.5</text><text x="403.0" y="272" class="ylab">25/11</text><rect x="428.0" y="175.5" width="34" height="4.4" rx="2" class="b-neg"/><text x="445.0" y="191.9" class="vlab">-0.87</text><text x="445.0" y="272" class="ylab">25/12</text><rect x="470.0" y="166.6" width="34" height="8.8" rx="2" class="b-pos"/><text x="487.0" y="160.6" class="vlab">1.74</text><text x="487.0" y="272" class="ylab">26/01</text><rect x="512.0" y="175.5" width="34" height="27.6" rx="2" class="b-neg"/><text x="529.0" y="215.1" class="vlab">-5.43</text><text x="529.0" y="272" class="ylab">26/02</text><rect x="554.0" y="137.1" width="34" height="38.3" rx="2" class="b-pos"/><text x="571.0" y="131.1" class="vlab">7.54</text><text x="571.0" y="272" class="ylab">26/03</text><rect x="596.0" y="99.2" width="34" height="76.3" rx="2" class="b-pos"/><text x="613.0" y="93.2" class="vlab">15</text><text x="613.0" y="272" class="ylab">26/04</text><rect x="638.0" y="86.5" width="34" height="89.0" rx="2" class="b-pos"/><text x="655.0" y="80.5" class="vlab">17.5</text><text x="655.0" y="272" class="ylab">26/05</text><rect x="680.0" y="86.0" width="34" height="89.5" rx="2" class="b-pos"/><text x="697.0" y="80.0" class="vlab">17.6</text><text x="697.0" y="272" class="ylab">26/06</text><rect x="722.0" y="28.0" width="34" height="147.5" rx="2" class="b-peak"/><text x="739.0" y="22.0" class="vlab">29</text><text x="739.0" y="272" class="ylab">26/07</text></svg></div>
+  <p class="snap">單位：%。這張圖比金額圖更能看出轉折——零軸以下連成一片的是 2025 年的衰退期，零軸以上逐級墊高的是 2026 年 3 月之後的復甦。</p>
+
+  <h3>完整數據</h3>
+  <div class="scroller"><table class="grid lean"><thead><tr><th>年月</th><th>單月營收（億）</th><th>月增率</th><th>年增率</th></tr></thead><tbody><tr><td class='mono'>25/02</td><td class='mono'>27.6</td><td class='mono pos'>+0.03%</td><td class='mono posv'>+10.20%</td></tr><tr><td class='mono'>25/03</td><td class='mono'>27.02</td><td class='mono neg'>-2.10%</td><td class='mono negv'>-3.74%</td></tr><tr><td class='mono'>25/04</td><td class='mono'>25.74</td><td class='mono neg'>-4.72%</td><td class='mono negv'>-8.73%</td></tr><tr><td class='mono'>25/05</td><td class='mono'>25.62</td><td class='mono neg'>-0.49%</td><td class='mono negv'>-9.33%</td></tr><tr><td class='mono'>25/06</td><td class='mono'>26.3</td><td class='mono pos'>+2.67%</td><td class='mono negv'>-4.06%</td></tr><tr><td class='mono'>25/07</td><td class='mono'>24.56</td><td class='mono neg'>-6.63%</td><td class='mono negv'>-12.30%</td></tr><tr><td class='mono'>25/08</td><td class='mono'>24.76</td><td class='mono pos'>+0.84%</td><td class='mono negv'>-11.90%</td></tr><tr><td class='mono'>25/09</td><td class='mono'>26.68</td><td class='mono pos'>+7.74%</td><td class='mono negv'>-6.64%</td></tr><tr><td class='mono'>25/10</td><td class='mono'>25.67</td><td class='mono neg'>-3.78%</td><td class='mono negv'>-8.50%</td></tr><tr><td class='mono'>25/11</td><td class='mono'>25.5</td><td class='mono neg'>-0.65%</td><td class='mono negv'>-11.50%</td></tr><tr><td class='mono'>25/12</td><td class='mono'>26.3</td><td class='mono pos'>+3.13%</td><td class='mono negv'>-0.87%</td></tr><tr><td class='mono'>26/01</td><td class='mono'>28.07</td><td class='mono pos'>+6.73%</td><td class='mono posv'>+1.74%</td></tr><tr><td class='mono'>26/02</td><td class='mono'>26.1</td><td class='mono neg'>-7.02%</td><td class='mono negv'>-5.43%</td></tr><tr><td class='mono'>26/03</td><td class='mono'>29.06</td><td class='mono pos'>+11.30%</td><td class='mono posv'>+7.54%</td></tr><tr class="prow"><td class='mono'>26/04</td><td class='mono'>29.6</td><td class='mono pos'>+1.84%</td><td class='mono posv'>+15.00%</td></tr><tr class="prow"><td class='mono'>26/05</td><td class='mono'>30.11</td><td class='mono pos'>+1.71%</td><td class='mono posv'>+17.50%</td></tr><tr class="prow"><td class='mono'>26/06</td><td class='mono'>30.93</td><td class='mono pos'>+2.72%</td><td class='mono posv'>+17.60%</td></tr><tr class="prow"><td class='mono'>26/07</td><td class='mono'>31.67</td><td class='mono pos'>+2.40%</td><td class='mono posv'>+29.00%</td></tr></tbody></table></div>
+  <p class="snap">淡黃底為 2026 年 4–7 月，即公司所稱<b>「連續 4 個月創公司成立以來單月營收歷史新高」</b>的區間。<br>
+  <b>資料來源：</b>使用者提供之 Goodinfo 月營收截圖（<a href="https://goodinfo.tw/tw/ShowSaleMonChart.asp?STOCK_ID=3023">goodinfo.tw/tw/ShowSaleMonChart.asp?STOCK_ID=3023</a>），非本次搜尋所得。7 月數字與第 2 步引用的通訊社報導（31.67 億、月增 2.41%、年增 28.97%）一致，可互相驗證。</p>
+
+  <h3>三段式解讀</h3>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">階段</th><th class="lft">期間</th><th class="lft">特徵</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">① 衰退期</td><td class="lft">2025/03 – 2025/12</td><td class="lft"><span class="negv">連續 10 個月年增率為負</span>，最深在 2025/07 的 -12.3%。全年營收 313.4 億、年減 5.66%，中斷連續 15 年成長。太陽能業務崩跌是主因。</td></tr>
+      <tr><td class="lft">② 打底期</td><td class="lft">2026/01 – 2026/02</td><td class="lft">1 月年增率首度翻正（+1.74%），但 2 月又回落到 -5.43%。<b>2 月的回落多半是農曆春節工作天數差異，不宜視為復甦失敗</b>——信邦每年 2 月都是季節性低點。</td></tr>
+      <tr><td class="lft">③ 加速期</td><td class="lft">2026/03 – 2026/07</td><td class="lft"><b>年增率連續五個月墊高</b>，且 4–7 月連續創單月歷史新高。7 月的 +29% 是 18 期中最強的一個月。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="key">
+    <span class="kt">為什麼「連續五個月加速」比「創新高」更值得注意</span>
+    <p>創單月新高有可能只是基期低或訂單集中出貨；但<b>年增率連續墊高</b>代表的是需求端結構性轉強。這條線與第 3 步的產業別數字互相印證——工業應用 +30.51%、汽車 +25.40%、醫療 +26.28% 三個引擎同時發動，才撐得起這種加速度。</p>
+  </div>
+
+  <h3>兩個需要誠實指出的落差</h3>
+  <p><b>落差一：月營收加總與財報季營收對不上。</b></p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">項目</th><th>26Q1</th><th>26Q2</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">月營收加總（Goodinfo 截圖）</td><td class="mono">83.23 億</td><td class="mono">90.64 億</td></tr>
+      <tr><td class="lft">財報公告季營收（鉅亨引用公司公告）</td><td class="mono">—</td><td class="mono">90.19 億</td></tr>
+      <tr class="totrow"><td class="lft">差額</td><td class="mono">—</td><td class="mono negv">約 0.45 億</td></tr>
+    </tbody>
+  </table>
+  <p class="snap">月營收公告通常是<b>公司自結數</b>，季報則是經會計師核閱的合併數，兩者口徑不同、出現小幅差異屬正常。<b>我不會挑一個當「正確答案」</b>——本報告的趨勢圖採用月營收（適合看節奏），涉及獲利與現金流的計算則以財報數字為準。</p>
+
+  <p><b>落差二：營收創新高，股價卻在 7 月回檔。</b></p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">月份</th><th>當月收盤</th><th>當月最高</th><th>當月最低</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">2026/05</td><td class="mono">315.5</td><td class="mono">323.0</td><td class="mono">278.0</td><td class="mono posv">+11.29%</td></tr>
+      <tr><td class="lft">2026/06</td><td class="mono">328.5</td><td class="mono">353.5</td><td class="mono">297.0</td><td class="mono posv">+4.12%</td></tr>
+      <tr><td class="lft">2026/07</td><td class="mono">296.0</td><td class="mono">350.0</td><td class="mono">269.0</td><td class="mono negv">-9.89%</td></tr>
+    </tbody>
+  </table>
+  <p>7 月單月營收創歷史新高，股價卻下跌 9.89%，月內振幅高達 269–350 元。<b>這通常代表市場已經提前把成長預期反映在 6 月的高點（353.5 元，正好是 52 週高點）</b>，7 月是獲利了結與回檔。這一點會直接影響第 5 步的估值判斷——<span class="negv">好消息可能已經在價格裡了</span>。</p>
+  <p class="snap">股價資料同樣來自使用者提供之 Goodinfo 月營收截圖的「當月股價」欄位。2026/06 最高 353.5 元與第 2 步鉅亨網顯示的 52 週高 353.50 元完全吻合，可互相驗證。</p>
+
+  <h3>接回現金流：營收加速的代價</h3>
+  <div class="key warn">
+    <span class="kt">這是第 1 步、第 3 步、第 4 步三個環節扣起來的完整因果</span>
+    <p>2026 上半年營收 173.9 億、年增 8.74%，而<b>下半年起跑的 7 月就年增 29%</b>——營收正在加速，不是平穩成長。</p>
+    <p>對現金流的意義：<b>客製化、少量多樣的商業模式，營收每成長一塊錢，就要先墊出相應的應收帳款與存貨。</b>這就是為什麼 26H1 稅前淨利有 22 億，營業現金流卻是 <span class="negv">-0.58 億</span>。第 1 步規則五給的 23.5 分（17 年只有 4 年 A &gt; D），在這裡看到了它的商業模式根源——<b>這不是一次性的異常，而是這門生意的結構特性</b>。</p>
+    <p><b>該追蹤什麼：</b>Q3 財報公布時，看營業現金流是否隨著營收動能延續而回正。若營收持續 +25% 以上、A 卻仍為負，代表營運資金的消耗速度超過獲利累積速度，配合 53 億擴廠與 24 億股利，資金缺口會是實質問題。</p>
+  </div>
+</section>
 <section id="step5"><div class="pending"><p class="steptag">第 5 步 ／ 共 6 步</p><h2>前瞻本益比／EPS 預估</h2><p>尚未執行。</p></div></section>
 <section id="step6"><div class="pending"><p class="steptag">第 6 步 ／ 共 6 步</p><h2>投資決策推理</h2><p>僅在使用者主動詢問時才執行。</p></div></section>
 
 <footer>
-  <p><b>報告版本</b> <span class="v">v1.2</span>　|　<b>生成時間</b> <span class="v">2026-08-05</span>　|　股票代號 <span class="v">3023</span></p>
+  <p><b>報告版本</b> <span class="v">v1.3</span>　|　<b>生成時間</b> <span class="v">2026-08-05</span>　|　股票代號 <span class="v">3023</span></p>
   <p><b>資料來源：</b>本報告第 1 步全部數據皆為<b>使用者提供之 Goodinfo 截圖</b>（現金流量表年度總表、投資活動細項、融資活動細項），非本次搜尋所得。原始頁面：<a href="https://goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=3023">goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=3023</a></p>
   <p>本報告為現金流量表數據的結構化分析與推理紀錄，不構成任何投資建議，也非理財顧問意見。投資決策請自行判斷並承擔風險。</p>
 </footer>

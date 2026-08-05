@@ -183,8 +183,8 @@ footer .v{font-family:"IBM Plex Mono",monospace}
     <p class="sub">在查詢股價、EPS、產業地位與任何新聞背景之前，先只用現金流量表的數字，替這家公司做一次不帶預設立場的體檢。</p>
     <div class="metaline">
       <span>資料年度 <b>2009–2025（17 年）＋ 26H1</b></span>
-      <span>已完成步驟 <b>1–4 ／ 6</b></span>
-      <span>報告版本 <b>v1.3</b></span>
+      <span>已完成步驟 <b>1–5 ／ 6</b></span>
+      <span>報告版本 <b>v1.4</b></span>
       <span>生成日期 <b>2026-08-05</b></span>
     </div>
   </div>
@@ -196,7 +196,7 @@ footer .v{font-family:"IBM Plex Mono",monospace}
     <button class="pad" data-target="step2"><b>02</b>基本資訊</button>
     <button class="pad" data-target="step3"><b>03</b>法說會</button>
     <button class="pad" data-target="step4"><b>04</b>營收趨勢</button>
-    <button class="pad locked" data-target="step5" disabled><b>05</b>前瞻本益比</button>
+    <button class="pad" data-target="step5"><b>05</b>前瞻本益比</button>
     <button class="pad locked" data-target="step6" disabled><b>06</b>投資決策</button>
   </div>
 </nav>
@@ -695,11 +695,154 @@ footer .v{font-family:"IBM Plex Mono",monospace}
     <p><b>該追蹤什麼：</b>Q3 財報公布時，看營業現金流是否隨著營收動能延續而回正。若營收持續 +25% 以上、A 卻仍為負，代表營運資金的消耗速度超過獲利累積速度，配合 53 億擴廠與 24 億股利，資金缺口會是實質問題。</p>
   </div>
 </section>
-<section id="step5"><div class="pending"><p class="steptag">第 5 步 ／ 共 6 步</p><h2>前瞻本益比／EPS 預估</h2><p>尚未執行。</p></div></section>
+<section id="step5">
+  <p class="steptag">第 5 步 ／ 共 6 步</p>
+  <h2>前瞻本益比／EPS 預估</h2>
+
+  <div class="key">
+    <span class="kt">本步驟兩個最重要的結論</span>
+    <p>① 以 2026/08/05 盤中股價 <b>314.5 元</b>、FactSet 2026 年 EPS 中位數 <b>14.94 元</b>計算，<b>前瞻本益比約 21.1 倍</b>（區間 20.1–22.1 倍）。分析師目標價中位數 365 元，距現價約 <b>+16%</b>。</p>
+    <p>② 但要非常小心：<span class="negv">同一組分析師在 2025 年對信邦的 EPS 預估，從 14.9 元一路下修到 13.43 元，而實際只有 13.02 元——連最後一次下修後的數字都沒達到。</span>目標價則從 264.5 元一路上修到 365 元，<b>幾乎是跟著股價跑，而不是領先股價</b>。</p>
+  </div>
+
+  <h3>先分清楚兩個常被混用的名詞</h3>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">名詞</th><th class="lft">公式</th><th class="lft">回答什麼問題</th></tr></thead>
+    <tbody>
+      <tr><td class="lft"><b>前瞻本益比</b></td><td class="lft">現在股價 ÷ 預估 EPS</td><td class="lft"><b>「現在貴不貴？」</b>已知股價，求隱含倍數</td></tr>
+      <tr><td class="lft"><b>目標本益比法</b></td><td class="lft">預估 EPS × 假設合理倍數</td><td class="lft"><b>「合理價可能落在哪？」</b>已知倍數，求目標價</td></tr>
+    </tbody>
+  </table>
+  <p class="snap">兩者是同一條公式的不同用法，<b>不是同一件事</b>。下面分開呈現，不混用。</p>
+
+  <h3>法人 EPS 預估（2026 年，N+1）</h3>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">項目</th><th>數值</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">分析師人數</td><td class="mono">8 位</td></tr>
+      <tr><td class="lft">2026 年 EPS 中位數</td><td class="mono posv">14.94 元</td></tr>
+      <tr><td class="lft">最高估值 ／ 最低估值</td><td class="mono">15.66 元 ／ 14.21 元</td></tr>
+      <tr><td class="lft">目標價中位數</td><td class="mono">365 元</td></tr>
+      <tr><td class="lft">目標價最高 ／ 最低</td><td class="mono">400 元 ／ 270 元</td></tr>
+      <tr class="totrow"><td class="lft">綜合評級</td><td class="mono">積極樂觀 8 位、中立 0 位、保守 0 位</td></tr>
+    </tbody>
+  </table>
+  <p class="snap"><b>來源：</b><a href="https://news.cnyes.com/news/id/6486889">鉅亨速報／FactSet 2026/06/06</a>（EPS 中位數由 14.71 上修至 14.94）、<a href="https://news.cnyes.com/news/id/6486886">鉅亨速報／FactSet 2026/06/06</a>（目標價中位數由 327.5 上修至 365，幅度 11.45%；最高 400、最低 270；8 位分析師全數積極樂觀）。<span class="negv">這是 2026 年 6 月的調查，距今約兩個月，7 月營收年增 29% 的結果尚未反映在這組數字裡。</span></p>
+
+  <h3>這個預估的達成難度有多高？</h3>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">推算過程</th><th>數值</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">2026 上半年實際 EPS</td><td class="mono">7.36 元</td></tr>
+      <tr><td class="lft">要達成全年 14.94 元，下半年需要</td><td class="mono posv">7.58 元</td></tr>
+      <tr><td class="lft">相當於較上半年成長</td><td class="mono">僅 +3.0%</td></tr>
+      <tr><td class="lft">相當於較 2025 下半年成長（2025H2 約 5.99 元）</td><td class="mono">約 +26.5%</td></tr>
+    </tbody>
+  </table>
+  <p class="snap"><b>此為推算數字</b>，非任何來源直接載明：2025H2 EPS 係以 2025 全年 13.02 元減去 2025H1（由 2026H1 稅後純益 17.68 億、年增 5.05% 反推得 16.83 億、約 7.01 元）推得，可能與公司實際公告有小幅落差。</p>
+  <p><b>判讀：</b>下半年只要與上半年持平再多 3%，就能達標。而 7 月營收已年增 29%、連 4 個月創新高，<b>從營收動能看，14.94 元的達成難度不高，甚至偏保守</b>。真正的變數在毛利率與費用率——第 2 步提到 Q2 營益率已因「主動加大策略性投資」年減 0.85 個百分點，若下半年費用繼續放大，營收成長未必等比例轉成 EPS。</p>
+
+  <h3>2027 年（N+2）：找不到明確的 EPS 預估</h3>
+  <p><b>誠實說明：搜尋範圍內沒有找到 FactSet 或券商對信邦 2027 年 EPS 的明確中位數預估。</b>能找到的只有營收預估：</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">FactSet 營收預估（億元）</th><th>2026 年</th><th>2027 年</th><th>2028 年</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">中位數</td><td class="mono">350.8</td><td class="mono">395.9</td><td class="mono">458.2</td></tr>
+      <tr><td class="lft">平均值</td><td class="mono">347.6</td><td class="mono">394.8</td><td class="mono">456.1</td></tr>
+      <tr><td class="lft">最高 ／ 最低</td><td class="mono">360.9 ／ 330.0</td><td class="mono">422.3 ／ 366.7</td><td class="mono">497.8 ／ 410.4</td></tr>
+      <tr class="totrow"><td class="lft">隱含年增率（以中位數計，<b>推算</b>）</td><td class="mono">+11.9%</td><td class="mono">+12.9%</td><td class="mono">+15.7%</td></tr>
+    </tbody>
+  </table>
+  <p class="snap"><b>來源：</b><a href="https://today.line.me/tw/v3/article/0M7rW3G">鉅亨速報／FactSet 2026/05/20（LINE TODAY 轉載）</a>。原始數字單位為新台幣千元，本表換算為億元。<b>年增率一列為推算</b>（以各年中位數相除，2026 年係對比 2025 年實際營收 313.4 億）。</p>
+  <p>若硬要推 2027 年 EPS，只能用<b>假設淨利率維持</b>的方式反推：</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">推算步驟</th><th>數值</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">2027 年營收中位數預估</td><td class="mono">395.9 億</td></tr>
+      <tr><td class="lft">假設淨利率（2025 年為 10.09%、2026H1 為 10.17%）</td><td class="mono">10.1%</td></tr>
+      <tr><td class="lft">推得稅後淨利</td><td class="mono">約 40.0 億</td></tr>
+      <tr class="totrow"><td class="lft">÷ 2.40 億股 = <b>推算 2027 年 EPS</b></td><td class="mono negv">約 16.7 元</td></tr>
+    </tbody>
+  </table>
+  <div class="key alert">
+    <span class="kt">這個 16.7 元請務必當成「敏感度試算」而非預估</span>
+    <p>它<b>不是任何分析師給的數字</b>，是我用營收預估乘上假設淨利率反推出來的。淨利率只要從 10.1% 掉到 9%，EPS 就變成 14.8 元；升到 11%，則是 18.1 元。<b>對淨利率假設極度敏感，不應當成投資依據。</b></p>
+  </div>
+
+  <h3>前瞻本益比：現在貴不貴？</h3>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">基準 EPS</th><th>EPS（元）</th><th>對應本益比（股價 314.5 元）</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">近四季實際（已知）</td><td class="mono">12.77</td><td class="mono">24.6 倍</td></tr>
+      <tr><td class="lft">2026 年預估 · 最低估值</td><td class="mono">14.21</td><td class="mono">22.1 倍</td></tr>
+      <tr class="totrow"><td class="lft"><b>2026 年預估 · 中位數</b></td><td class="mono posv">14.94</td><td class="mono posv"><b>21.1 倍</b></td></tr>
+      <tr><td class="lft">2026 年預估 · 最高估值</td><td class="mono">15.66</td><td class="mono">20.1 倍</td></tr>
+      <tr><td class="lft">2027 年 <b>推算</b>（非分析師預估）</td><td class="mono">約 16.7</td><td class="mono">約 18.8 倍</td></tr>
+    </tbody>
+  </table>
+  <p class="snap">股價採 2026/08/05 盤中 314.5 元（<a href="https://www.cnyes.com/twstock/3023">鉅亨網</a>），為單一時點快照、非即時報價。本益比一列為以該股價除以各 EPS 之<b>推算數字</b>。</p>
+
+  <h3>目標本益比法：合理價可能落在哪？</h3>
+  <p>這是<b>敏感度試算，不是預測</b>。倍數怎麼選沒有標準答案，結果對倍數假設高度敏感：</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">假設倍數</th><th>× 2026 EPS 14.94 元</th><th>× 2027 推算 EPS 16.7 元</th><th class="lft">相對現價 314.5 元</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">18 倍（保守）</td><td class="mono negv">269 元</td><td class="mono">301 元</td><td class="lft negv">2026 基準下有 -14% 下檔</td></tr>
+      <tr class="totrow"><td class="lft">22 倍（中性）</td><td class="mono">329 元</td><td class="mono">367 元</td><td class="lft">接近現價，約 +5%</td></tr>
+      <tr><td class="lft">26 倍（樂觀）</td><td class="mono posv">388 元</td><td class="mono posv">434 元</td><td class="lft posv">約 +23%</td></tr>
+    </tbody>
+  </table>
+  <p class="snap">倍數區間的選擇參考了「信邦過去五年本益比多在 18–25 倍波動」的說法（<a href="https://vocus.cc/article/695c5ce0fd89780001e140a2">vocus 個人專欄，2026/01</a>）。<span class="negv">這是第三方部落格的敘述，我未能從官方或財經資料庫獨立驗證這個歷史區間，請自行斟酌。</span>表中所有價格皆為<b>推算數字</b>。</p>
+  <p><b>判讀：</b>現價 314.5 元大致落在「22 倍 × 2026 年預估 EPS」的位置，也就是<b>不便宜、但也還沒到明顯高估</b>。分析師目標價中位數 365 元隱含約 24.4 倍，屬於樂觀端。</p>
+
+  <h3 id="est-history">最重要的一段：這組預估過去準嗎？</h3>
+  <div class="key alert">
+    <span class="kt">2025 年的紀錄不好看</span>
+    <p>FactSet 對信邦 <b>2025 年 EPS</b> 的預估，在 2025 年整年是一路往下修的：</p>
+  </div>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">調查時點</th><th>2025 年 EPS 預估中位數</th><th>當時目標價</th><th>分析師人數</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">（較早）</td><td class="mono">14.90</td><td class="mono">335 元</td><td class="mono">—</td></tr>
+      <tr><td class="lft">2025/05/29</td><td class="mono">14.67</td><td class="mono">280 元</td><td class="mono">9 位</td></tr>
+      <tr><td class="lft">（後續）</td><td class="mono">14.14</td><td class="mono">266.5 元</td><td class="mono">8 位</td></tr>
+      <tr><td class="lft">（後續）</td><td class="mono">13.97</td><td class="mono">270 元</td><td class="mono">7 位</td></tr>
+      <tr><td class="lft">2025/10/23</td><td class="mono">13.43</td><td class="mono">264.5 元</td><td class="mono">7 位</td></tr>
+      <tr class="totrow"><td class="lft"><b>2025 年實際 EPS</b></td><td class="mono negv"><b>13.02</b></td><td class="mono">—</td><td class="mono">—</td></tr>
+    </tbody>
+  </table>
+  <p><span class="negv">最初預估 14.90 元，實際只有 13.02 元，落差 -12.6%。</span>而且即使一路下修到 10 月的 13.43 元，<b>實際數字仍然低於它</b>。這代表分析師在 2025 年<b>持續高估、且修正速度落後於現實</b>。</p>
+
+  <h3>目標價的變化軌跡：跟著股價跑</h3>
+  <div class="chartbox"><svg class="chart" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="0" y1="218.0" x2="500" y2="218.0" class="axis"/><rect x="30.0" y="72.2" width="64" height="145.8" rx="2" class="b-pos"/><text x="62.0" y="66.2" class="vlab">280</text><text x="62.0" y="252" class="ylab">25/05</text><rect x="124.0" y="80.3" width="64" height="137.7" rx="2" class="b-trough"/><text x="156.0" y="74.3" class="vlab">264</text><text x="156.0" y="252" class="ylab">25/10</text><rect x="218.0" y="55.6" width="64" height="162.4" rx="2" class="b-pos"/><text x="250.0" y="49.6" class="vlab">312</text><text x="250.0" y="252" class="ylab">26/04</text><rect x="312.0" y="47.5" width="64" height="170.5" rx="2" class="b-pos"/><text x="344.0" y="41.5" class="vlab">328</text><text x="344.0" y="252" class="ylab">26/05</text><rect x="406.0" y="28.0" width="64" height="190.0" rx="2" class="b-peak"/><text x="438.0" y="22.0" class="vlab">365</text><text x="438.0" y="252" class="ylab">26/06</text></svg></div>
+  <p class="snap">FactSet 目標價中位數變化（元）。米色＝最高點（2026/06 的 365 元）、粉色＝最低點（2025/10 的 264.5 元）。</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">時點</th><th>目標價中位數</th><th>當時實際股價</th><th class="lft">動作</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">2025/10/23</td><td class="mono">264.5 元</td><td class="mono">—</td><td class="lft negv">下修（EPS 同步下修至 13.43）</td></tr>
+      <tr><td class="lft">2026/04 下旬</td><td class="mono">312 元</td><td class="mono">—</td><td class="lft">上修</td></tr>
+      <tr><td class="lft">2026/05/20</td><td class="mono">327.5 元</td><td class="mono">306.5 元</td><td class="lft">上修 3.97%（由 315 起）</td></tr>
+      <tr class="prow"><td class="lft">2026/06/05</td><td class="mono">365 元</td><td class="mono">329 元</td><td class="lft posv">上修 11.45%</td></tr>
+    </tbody>
+  </table>
+  <p><b>觀察：</b>目標價每一次調整，都出現在股價已經先漲上去之後。2026/05/20 調到 327.5 元時股價已 306.5 元、2026/06/05 調到 365 元時股價已 329 元——<b>目標價始終只比當時股價高一小截</b>。這是常見的現象，但意味著<span class="negv">「距目標價還有 16% 空間」這句話的參考價值，遠低於它表面看起來的樣子</span>。</p>
+  <p class="snap"><b>來源：</b>2025 年各次調查 <a href="https://news.cnyes.com/news/id/5999029">鉅亨/FactSet（14.67，目標價280）</a>、<a href="https://news.cnyes.com/news/id/6048257">（14.14，目標價266.5）</a>、<a href="https://news.cnyes.com/news/id/6076221">（13.97，目標價270）</a>、<a href="https://news.cnyes.com/news/id/6203084">2025/10/23（13.43，目標價264.5）</a>；2026 年 <a href="https://www.sinotrade.com.tw/richclub/news/69eeaef7a1ae92e74cdcc62f">永豐金證券轉載（14.63，目標價312）</a>、<a href="https://news.cnyes.com/news/id/6464584">2026/05/20（目標價327.5，當日收盤306.5）</a>、<a href="https://news.cnyes.com/news/id/6486886">2026/06/06（目標價365，5日收盤329）</a>。2025 年實際 EPS 13.02 元為使用者提供之 Goodinfo 截圖，並與 <a href="https://goodinfo.tw/tw/StockDetail/StockDetail.asp?STOCK_ID=3023">Goodinfo 公告訊息欄之鉅亨報導標題</a>相符。<br>
+  <span class="negv">「較早」與「後續」兩列因搜尋結果未標示明確日期，僅能確認其在時序上的相對位置，不臆測具體日期。</span></p>
+
+  <h3>估值小結</h3>
+  <div class="key warn">
+    <span class="kt">把估值放回現金流的脈絡</span>
+    <p><b>單看估值：</b>21.1 倍前瞻本益比，對一家營收重回兩位數成長、且有 AI／機器人／無人機題材的公司，不算貴。分析師全體看多（8 位全數積極樂觀），目標價中位數 365 元。</p>
+    <p><b>但要記得三件事：</b></p>
+    <p>① <span class="negv">同一批分析師去年高估了 12.6%</span>，而且目標價是跟著股價走的。</p>
+    <p>② 這組 6 月的預估<b>尚未反映 7 月營收年增 29%</b>，有上修空間——但也代表現在的股價可能已經先反映了。第 4 步看到 6 月股價最高 353.5 元（52 週高）、7 月回檔 9.89%，市場情緒本身就在震盪。</p>
+    <p>③ <b>最關鍵的一點：本益比是用「帳面獲利」算的，而信邦十七年裡只有 4 年營業現金流大於稅前淨利。</b>若 2027 年真的做到推算的 16.7 元 EPS，但營業現金流仍追不上（同時還要付 24 億股利、蓋 53 億新廠），那麼<span class="negv">「便宜的本益比」與「緊繃的現金流」會同時存在</span>。這正是第 1 步規則五給 23.5 分的意義——它提醒你別只用損益表估值。</p>
+  </div>
+</section>
 <section id="step6"><div class="pending"><p class="steptag">第 6 步 ／ 共 6 步</p><h2>投資決策推理</h2><p>僅在使用者主動詢問時才執行。</p></div></section>
 
 <footer>
-  <p><b>報告版本</b> <span class="v">v1.3</span>　|　<b>生成時間</b> <span class="v">2026-08-05</span>　|　股票代號 <span class="v">3023</span></p>
+  <p><b>報告版本</b> <span class="v">v1.4</span>　|　<b>生成時間</b> <span class="v">2026-08-05</span>　|　股票代號 <span class="v">3023</span></p>
   <p><b>資料來源：</b>本報告第 1 步全部數據皆為<b>使用者提供之 Goodinfo 截圖</b>（現金流量表年度總表、投資活動細項、融資活動細項），非本次搜尋所得。原始頁面：<a href="https://goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=3023">goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=3023</a></p>
   <p>本報告為現金流量表數據的結構化分析與推理紀錄，不構成任何投資建議，也非理財顧問意見。投資決策請自行判斷並承擔風險。</p>
 </footer>

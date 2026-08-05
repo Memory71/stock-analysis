@@ -155,8 +155,8 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">2059</span>川湖</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、EPS、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。使用者提供的截圖雖含「年度股價」與「稅後EPS」兩欄，本步驟<b>刻意排除不採用</b>。</p>
   <div class="meta">
-    <span>報告版本 v1.2</span><span>生成時間 2026-08-06</span>
-    <span>目前進度：第 3 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
+    <span>報告版本 v1.3</span><span>生成時間 2026-08-06</span>
+    <span>目前進度：第 4 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
   </div>
 </header>
 
@@ -164,7 +164,7 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button>
   <button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button>
   <button class="pad" data-t="step3"><span class="k">03</span>法說會</button>
-  <button class="pad locked" data-t="step4"><span class="k">04</span>營收趨勢</button>
+  <button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button>
   <button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button>
   <button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button>
 </nav>
@@ -741,7 +741,223 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 <section id="step4">
   <div class="steptag">第 4 步／共 6 步</div>
   <h2>營收趨勢視覺化</h2>
-  <div class="pending">尚未執行。</div>
+
+  <div class="key">
+    <div class="kt">本步驟重點</div>
+    <p>把 18 期月營收攤開來看，成長<b>不是一條平滑的斜線，而是一個明確的斷點</b>：2025 年 1 月到 2026 年 3 月這 15 個月，月營收從 12.33 億緩步爬到 19.18 億（+55.6%，平均月增約 3%）；接著<b>三個月內從 19.18 億跳到 44.43 億（+131.6%）</b>。</p>
+    <p>轉折點在 <b>2026 年 4 月</b>。這正好對應 5/7 法說會上公司說的「4 月業績躍升<b>並非偶發事件</b>，是新產品與平台推出所致」。</p>
+    <p>另一個容易被忽略的細節：<span class="negv-t">年增率在 2026 年 2 月觸底到 +31.2%</span>，是這 18 期最低——<b>在爆發前，成長率其實先減速了兩個月</b>。</p>
+  </div>
+
+  <h3>月營收趨勢（2025/01 – 2026/06）</h3>
+  <div class="chartbox"><svg class="bars" viewBox="0 0 980 230" preserveAspectRatio="xMidYMid meet" role="img">
+<rect class="b-trough" x="20.7" y="157.5" width="32.0" height="50.5" rx="1.5"/>
+<text class="bval sm" x="36.7" y="152.5">12.3</text>
+<rect class="b-normal" x="74.0" y="153.1" width="32.0" height="54.9" rx="1.5"/>
+<text class="bval sm" x="90.0" y="148.1">13.4</text>
+<rect class="b-normal" x="127.3" y="151.4" width="32.0" height="56.6" rx="1.5"/>
+<text class="bval sm" x="143.3" y="146.4">13.8</text>
+<rect class="b-normal" x="180.7" y="148.6" width="32.0" height="59.4" rx="1.5"/>
+<text class="bval sm" x="196.7" y="143.6">14.5</text>
+<rect class="b-normal" x="234.0" y="150.9" width="32.0" height="57.1" rx="1.5"/>
+<text class="bval sm" x="250.0" y="145.9">13.9</text>
+<rect class="b-normal" x="287.3" y="151.2" width="32.0" height="56.8" rx="1.5"/>
+<text class="bval sm" x="303.3" y="146.2">13.9</text>
+<rect class="b-normal" x="340.7" y="150.4" width="32.0" height="57.6" rx="1.5"/>
+<text class="bval sm" x="356.7" y="145.4">14.1</text>
+<rect class="b-normal" x="394.0" y="148.4" width="32.0" height="59.6" rx="1.5"/>
+<text class="bval sm" x="410.0" y="143.4">14.6</text>
+<rect class="b-normal" x="447.3" y="146.3" width="32.0" height="61.7" rx="1.5"/>
+<text class="bval sm" x="463.3" y="141.3">15.1</text>
+<rect class="b-normal" x="500.7" y="143.8" width="32.0" height="64.2" rx="1.5"/>
+<text class="bval sm" x="516.7" y="138.8">15.7</text>
+<rect class="b-normal" x="554.0" y="140.0" width="32.0" height="68.0" rx="1.5"/>
+<text class="bval sm" x="570.0" y="135.0">16.6</text>
+<rect class="b-normal" x="607.3" y="137.5" width="32.0" height="70.5" rx="1.5"/>
+<text class="bval sm" x="623.3" y="132.5">17.2</text>
+<rect class="b-normal" x="660.7" y="135.3" width="32.0" height="72.7" rx="1.5"/>
+<text class="bval sm" x="676.7" y="130.3">17.8</text>
+<rect class="b-normal" x="714.0" y="136.0" width="32.0" height="72.0" rx="1.5"/>
+<text class="bval sm" x="730.0" y="131.0">17.6</text>
+<rect class="b-normal" x="767.3" y="129.4" width="32.0" height="78.6" rx="1.5"/>
+<text class="bval sm" x="783.3" y="124.4">19.2</text>
+<rect class="b-normal" x="820.7" y="101.7" width="32.0" height="106.3" rx="1.5"/>
+<text class="bval sm" x="836.7" y="96.7">26.0</text>
+<rect class="b-normal" x="874.0" y="52.7" width="32.0" height="155.3" rx="1.5"/>
+<text class="bval sm" x="890.0" y="47.7">37.9</text>
+<rect class="b-peak" x="927.3" y="26.0" width="32.0" height="182.0" rx="1.5"/>
+<text class="bval sm" x="943.3" y="21.0">44.4</text>
+<line class="axis" x1="6" y1="208.0" x2="974" y2="208.0"/>
+<text class="blab" x="36.7" y="224">25/01</text>
+<text class="blab" x="90.0" y="224">25/02</text>
+<text class="blab" x="143.3" y="224">25/03</text>
+<text class="blab" x="196.7" y="224">25/04</text>
+<text class="blab" x="250.0" y="224">25/05</text>
+<text class="blab" x="303.3" y="224">25/06</text>
+<text class="blab" x="356.7" y="224">25/07</text>
+<text class="blab" x="410.0" y="224">25/08</text>
+<text class="blab" x="463.3" y="224">25/09</text>
+<text class="blab" x="516.7" y="224">25/10</text>
+<text class="blab" x="570.0" y="224">25/11</text>
+<text class="blab" x="623.3" y="224">25/12</text>
+<text class="blab" x="676.7" y="224">26/01</text>
+<text class="blab" x="730.0" y="224">26/02</text>
+<text class="blab" x="783.3" y="224">26/03</text>
+<text class="blab" x="836.7" y="224">26/04</text>
+<text class="blab" x="890.0" y="224">26/05</text>
+<text class="blab" x="943.3" y="224">26/06</text>
+</svg></div>
+  <p class="cap">單位：億元。米色為高點（2026/06 的 44.43 億），粉色為低點（2025/01 的 12.33 億）。<b>2026 年 7 月營收於本報告生成日（2026/08/06）尚未公布</b>，公告期限為 8/10 前。</p>
+  <p><b>三個階段看得很清楚：</b></p>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">階段</th><th class="rh">期間</th><th>月營收區間</th><th class="rh">特徵</th></tr></thead><tbody>
+    <tr><th class="rh">① 穩定爬升</th><td class="l">2025/01 – 2025/12</td><td class="n">12.33 → 17.22 億</td><td class="l">十二個月只有兩個月月減，月增率多為個位數。<b>這是第一步看到「2025 年 A 衝到 113 億」的營收基礎</b>。</td></tr>
+    <tr><th class="rh">② 短暫停滯</th><td class="l">2026/01 – 2026/03</td><td class="n">17.75 → 19.18 億</td><td class="l">三個月幾乎持平，2 月還月減 1.01%。<b>年增率在此期間降到 +31.2% 的區間低點</b>。</td></tr>
+    <tr class="hlrow"><th class="rh">③ 垂直起飛</th><td class="l">2026/04 – 2026/06</td><td class="n">25.96 → 44.43 億</td><td class="l">連續四個月改寫單月新高，6 月年增 <b>+220.5%</b>。單月營收已超過 2025 全年的四分之一。</td></tr>
+  </tbody></table></div>
+
+  <h3>月營收年增率（%）</h3>
+  <div class="chartbox"><svg class="bars" viewBox="0 0 980 210" preserveAspectRatio="xMidYMid meet" role="img">
+<rect class="b-normal" x="20.7" y="123.2" width="32.0" height="64.8" rx="1.5"/>
+<text class="bval sm" x="36.7" y="118.2">88.2</text>
+<rect class="b-normal" x="74.0" y="67.0" width="32.0" height="121.0" rx="1.5"/>
+<text class="bval sm" x="90.0" y="62.0">164.7</text>
+<rect class="b-normal" x="127.3" y="130.8" width="32.0" height="57.2" rx="1.5"/>
+<text class="bval sm" x="143.3" y="125.8">77.9</text>
+<rect class="b-normal" x="180.7" y="127.5" width="32.0" height="60.5" rx="1.5"/>
+<text class="bval sm" x="196.7" y="122.5">82.3</text>
+<rect class="b-normal" x="234.0" y="143.6" width="32.0" height="44.4" rx="1.5"/>
+<text class="bval sm" x="250.0" y="138.6">60.5</text>
+<rect class="b-normal" x="287.3" y="142.2" width="32.0" height="45.8" rx="1.5"/>
+<text class="bval sm" x="303.3" y="137.2">62.4</text>
+<rect class="b-normal" x="340.7" y="144.8" width="32.0" height="43.2" rx="1.5"/>
+<text class="bval sm" x="356.7" y="139.8">58.8</text>
+<rect class="b-normal" x="394.0" y="138.5" width="32.0" height="49.5" rx="1.5"/>
+<text class="bval sm" x="410.0" y="133.5">67.4</text>
+<rect class="b-normal" x="447.3" y="126.8" width="32.0" height="61.2" rx="1.5"/>
+<text class="bval sm" x="463.3" y="121.8">83.3</text>
+<rect class="b-normal" x="500.7" y="141.8" width="32.0" height="46.2" rx="1.5"/>
+<text class="bval sm" x="516.7" y="136.8">62.9</text>
+<rect class="b-normal" x="554.0" y="141.2" width="32.0" height="46.8" rx="1.5"/>
+<text class="bval sm" x="570.0" y="136.2">63.7</text>
+<rect class="b-normal" x="607.3" y="148.7" width="32.0" height="39.3" rx="1.5"/>
+<text class="bval sm" x="623.3" y="143.7">53.5</text>
+<rect class="b-normal" x="660.7" y="155.7" width="32.0" height="32.3" rx="1.5"/>
+<text class="bval sm" x="676.7" y="150.7">43.9</text>
+<rect class="b-trough" x="714.0" y="165.1" width="32.0" height="22.9" rx="1.5"/>
+<text class="bval sm" x="730.0" y="160.1">31.2</text>
+<rect class="b-normal" x="767.3" y="159.4" width="32.0" height="28.6" rx="1.5"/>
+<text class="bval sm" x="783.3" y="154.4">38.9</text>
+<rect class="b-normal" x="820.7" y="129.9" width="32.0" height="58.1" rx="1.5"/>
+<text class="bval sm" x="836.7" y="124.9">79.1</text>
+<rect class="b-normal" x="874.0" y="61.6" width="32.0" height="126.4" rx="1.5"/>
+<text class="bval sm" x="890.0" y="56.6">172.0</text>
+<rect class="b-peak" x="927.3" y="26.0" width="32.0" height="162.0" rx="1.5"/>
+<text class="bval sm" x="943.3" y="21.0">220.5</text>
+<line class="axis" x1="6" y1="188.0" x2="974" y2="188.0"/>
+<text class="blab" x="36.7" y="204">25/01</text>
+<text class="blab" x="90.0" y="204">25/02</text>
+<text class="blab" x="143.3" y="204">25/03</text>
+<text class="blab" x="196.7" y="204">25/04</text>
+<text class="blab" x="250.0" y="204">25/05</text>
+<text class="blab" x="303.3" y="204">25/06</text>
+<text class="blab" x="356.7" y="204">25/07</text>
+<text class="blab" x="410.0" y="204">25/08</text>
+<text class="blab" x="463.3" y="204">25/09</text>
+<text class="blab" x="516.7" y="204">25/10</text>
+<text class="blab" x="570.0" y="204">25/11</text>
+<text class="blab" x="623.3" y="204">25/12</text>
+<text class="blab" x="676.7" y="204">26/01</text>
+<text class="blab" x="730.0" y="204">26/02</text>
+<text class="blab" x="783.3" y="204">26/03</text>
+<text class="blab" x="836.7" y="204">26/04</text>
+<text class="blab" x="890.0" y="204">26/05</text>
+<text class="blab" x="943.3" y="204">26/06</text>
+</svg></div>
+  <p class="cap">單位：%。高點為 2026/06 的 +220.5%，低點為 2026/02 的 +31.2%。</p>
+  <p>這張圖比營收圖更能看出<b>基期效應與真實動能的交界</b>。2025 年上半年的高年增率（+60% 到 +165%）有一部分是 2024 年基期偏低造成的；到 2026 年 1–3 月，基期墊高後年增率自然回落到 30–40%。<b>真正的訊號是 4 月之後年增率不但沒有繼續衰退，反而從 +38.9% 一路衝到 +220.5%</b>——在基期已經抬高的情況下還能加速，代表這是需求端的實質變化，不是比較基準的錯覺。</p>
+
+  <h3>2025 vs 2026 同月對照（1–6 月）</h3>
+  <div class="chartbox"><svg class="bars" viewBox="0 0 980 220" preserveAspectRatio="xMidYMid meet" role="img">
+<rect class="b-s1" x="42.0" y="150.3" width="48.0" height="47.7" rx="1.5"/>
+<text class="bval sm" x="66.0" y="146.3">12.3</text>
+<rect class="b-s2" x="90.0" y="129.3" width="48.0" height="68.7" rx="1.5"/>
+<text class="bval sm" x="114.0" y="125.3">17.8</text>
+<rect class="b-s1" x="202.0" y="146.1" width="48.0" height="51.9" rx="1.5"/>
+<text class="bval sm" x="226.0" y="142.1">13.4</text>
+<rect class="b-s2" x="250.0" y="130.0" width="48.0" height="68.0" rx="1.5"/>
+<text class="bval sm" x="274.0" y="126.0">17.6</text>
+<rect class="b-s1" x="362.0" y="144.5" width="48.0" height="53.5" rx="1.5"/>
+<text class="bval sm" x="386.0" y="140.5">13.8</text>
+<rect class="b-s2" x="410.0" y="123.7" width="48.0" height="74.3" rx="1.5"/>
+<text class="bval sm" x="434.0" y="119.7">19.2</text>
+<rect class="b-s1" x="522.0" y="141.9" width="48.0" height="56.1" rx="1.5"/>
+<text class="bval sm" x="546.0" y="137.9">14.5</text>
+<rect class="b-s2" x="570.0" y="97.5" width="48.0" height="100.5" rx="1.5"/>
+<text class="bval sm" x="594.0" y="93.5">26.0</text>
+<rect class="b-s1" x="682.0" y="144.0" width="48.0" height="54.0" rx="1.5"/>
+<text class="bval sm" x="706.0" y="140.0">13.9</text>
+<rect class="b-s2" x="730.0" y="51.2" width="48.0" height="146.8" rx="1.5"/>
+<text class="bval sm" x="754.0" y="47.2">37.9</text>
+<rect class="b-s1" x="842.0" y="144.3" width="48.0" height="53.7" rx="1.5"/>
+<text class="bval sm" x="866.0" y="140.3">13.9</text>
+<rect class="b-s2" x="890.0" y="26.0" width="48.0" height="172.0" rx="1.5"/>
+<text class="bval sm" x="914.0" y="22.0">44.4</text>
+<line class="axis" x1="6" y1="198.0" x2="974" y2="198.0"/>
+<text class="blab" x="90.0" y="214">1 月</text>
+<text class="blab" x="250.0" y="214">2 月</text>
+<text class="blab" x="410.0" y="214">3 月</text>
+<text class="blab" x="570.0" y="214">4 月</text>
+<text class="blab" x="730.0" y="214">5 月</text>
+<text class="blab" x="890.0" y="214">6 月</text>
+</svg></div>
+  <div class="legend"><span><i class="sw s1"></i>2025 年（億元）</span><span><i class="sw s2"></i>2026 年（億元）</span></div>
+  <p class="cap">同月直接對照，可以看出差距是從 4 月開始拉開的：1–3 月大約多 4～5 億，4 月起變成多 11 億、24 億、31 億。</p>
+
+  <h3>季營收（2025Q1 – 2026Q2）</h3>
+  <div class="chartbox"><svg class="bars" viewBox="0 0 980 210" preserveAspectRatio="xMidYMid meet" role="img">
+<rect class="b-trough" x="42.0" y="128.9" width="96.0" height="59.1" rx="1.5"/>
+<text class="bval sm" x="90.0" y="123.9">39.5</text>
+<rect class="b-normal" x="202.0" y="124.7" width="96.0" height="63.3" rx="1.5"/>
+<text class="bval sm" x="250.0" y="119.7">42.3</text>
+<rect class="b-normal" x="362.0" y="122.6" width="96.0" height="65.4" rx="1.5"/>
+<text class="bval sm" x="410.0" y="117.6">43.7</text>
+<rect class="b-normal" x="522.0" y="114.0" width="96.0" height="74.0" rx="1.5"/>
+<text class="bval sm" x="570.0" y="109.0">49.5</text>
+<rect class="b-normal" x="682.0" y="106.5" width="96.0" height="81.5" rx="1.5"/>
+<text class="bval sm" x="730.0" y="101.5">54.5</text>
+<rect class="b-peak" x="842.0" y="26.0" width="96.0" height="162.0" rx="1.5"/>
+<text class="bval sm" x="890.0" y="21.0">108.3</text>
+<line class="axis" x1="6" y1="188.0" x2="974" y2="188.0"/>
+<text class="blab" x="90.0" y="204">25Q1</text>
+<text class="blab" x="250.0" y="204">25Q2</text>
+<text class="blab" x="410.0" y="204">25Q3</text>
+<text class="blab" x="570.0" y="204">25Q4</text>
+<text class="blab" x="730.0" y="204">26Q1</text>
+<text class="blab" x="890.0" y="204">26Q2</text>
+</svg></div>
+  <p class="cap">單位：億元。由使用者提供的月營收逐季加總，<b>本報告推算</b>：25Q1 39.54、25Q2 42.29、25Q3 43.69、25Q4 49.48、26Q1 54.50、26Q2 108.30。其中 26Q1 與 26Q2 分別與法說會公布的 54.49 億、經濟日報報導的 108.30 億相符（差異來自四捨五入）。</p>
+  <p><b>2026Q2 的 108.30 億是單季首度破百億</b>，季增 98.7%、年增 156.1%。對照 2025 年前三季都還在 39～44 億的區間，<b>一個季度就跳過了兩年份的成長</b>。</p>
+
+  <div class="key warn">
+    <div class="kt">一個目前無法解釋、需要在 Q2 法說會追問的落差</div>
+    <p>5/7 法說會上公司說「<b>稼動率尚未達 80%</b>」，當時的月營收水準是 3 月 19.18 億、4 月 25.96 億。但<b>6 月營收已達 44.43 億，是 3 月的 2.3 倍</b>。</p>
+    <p>這代表兩種可能，目前的公開資訊<b>不足以判定是哪一種</b>：①稼動率的計算基準與月營收不是線性對應（例如以標準工時而非產出計算），②公司在兩個月內透過加班與增班大幅拉高了實際產出，那麼<b>目前很可能已接近現有產能上限</b>。若是後者，在休士頓廠（9–10 月）與台灣二廠（2027 年中）投產之前，<b>44 億上下可能就是短期天花板</b>。這是 Q2 法說會最值得追問的一題。</p>
+  </div>
+
+  <h3>把營收放回全年來看</h3>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">情境（皆為本報告推算，非法人預估）</th><th>2026 全年營收</th><th>對 2025 年的倍數</th></tr></thead><tbody>
+    <tr><th class="rh">下半年每月維持 6 月水準（44.43 億）</th><td class="n">約 429 億</td><td class="n posv">2.45 倍</td></tr>
+    <tr><th class="rh">下半年每月回落到 Q2 平均（36.10 億）</th><td class="n">約 380 億</td><td class="n posv">2.17 倍</td></tr>
+    <tr><th class="rh">下半年每月降回 4 月水準（25.96 億）</th><td class="n">約 319 億</td><td class="n posv">1.82 倍</td></tr>
+  </tbody></table></div>
+  <p class="cap">2025 全年營收 175.01 億。<b>這三個情境是單純的算術外推，不是預測</b>，目的只是說明「上半年已經 162.8 億」這件事對全年的意涵——即使下半年完全不再成長、甚至回落到 4 月的水準，全年營收仍會是去年的 1.8 倍以上。實際 EPS 還要看毛利率、匯率與一次性費用，第 5 步會處理估值。</p>
+
+  <div class="snap">
+    <b>資料來源：</b>月營收（2025/01–2026/06 共 18 期單月營收、月增率、年增率、累計營收）為<b>使用者於本次對話提供的 Goodinfo 每月營收截圖</b>，非本次搜尋所得，亦未由 Claude 自行擷取網頁。原始頁面：<a href="https://goodinfo.tw/tw/ShowSaleMonChart.asp?STOCK_ID=2059">goodinfo.tw 2059 每月營收</a>。<br>
+    <b>交叉核對結果：</b>截圖中 2025/08–2026/05 共十期的單月營收數字，與第 2 步查得的 <a href="https://tw.stock.yahoo.com/quote/2059.TW/revenue">Yahoo 股市營收表</a> <b>逐月一致，無任何出入</b>。26Q1、26Q2 的季合計亦與法說會與 <a href="https://money.udn.com/money/story/5607/9611658">經濟日報</a>報導相符。<br>
+    <b>推算數字：</b>季營收合計、三階段的成長幅度（+55.6%／+131.6%）、全年三情境營收與倍數，皆為<b>本報告依截圖原始月營收計算</b>，非查得的公布欄位。<br>
+    <b>刻意未採用：</b>截圖左半部含「當月股價」欄位（開盤／收盤／最高／最低／漲跌），<b>本步驟未使用該區塊任何數字</b>，股價相關資訊一律以第 2 步查得並註明時點者為準。
+  </div>
 </section>
 
 <section id="step5">
@@ -757,7 +973,7 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 </section>
 
 <footer>
-  2059 川湖 · 個股初步分析報告 v1.2 · 生成於 2026-08-06<br>
+  2059 川湖 · 個股初步分析報告 v1.3 · 生成於 2026-08-06<br>
   本報告為分析框架下的推理與整理，非投資建議。所有數據以公司正式財報與公開資訊觀測站公告為準。
 </footer>
 

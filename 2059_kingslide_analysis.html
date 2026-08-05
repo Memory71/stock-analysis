@@ -155,14 +155,14 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">2059</span>川湖</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、EPS、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。使用者提供的截圖雖含「年度股價」與「稅後EPS」兩欄，本步驟<b>刻意排除不採用</b>。</p>
   <div class="meta">
-    <span>報告版本 v1.0</span><span>生成時間 2026-08-05</span>
-    <span>目前進度：第 1 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
+    <span>報告版本 v1.1</span><span>生成時間 2026-08-06</span>
+    <span>目前進度：第 2 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
   </div>
 </header>
 
 <nav class="stepnav" aria-label="步驟導覽">
   <button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button>
-  <button class="pad locked" data-t="step2"><span class="k">02</span>基本資訊</button>
+  <button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button>
   <button class="pad locked" data-t="step3"><span class="k">03</span>法說會</button>
   <button class="pad locked" data-t="step4"><span class="k">04</span>營收趨勢</button>
   <button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button>
@@ -530,7 +530,112 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 <section id="step2">
   <div class="steptag">第 2 步／共 6 步</div>
   <h2>基本資訊查詢</h2>
-  <div class="pending">尚未執行。第一步已通過 60 分關卡，等待使用者確認後開始查詢股價、EPS、殖利率、營收與法說會資訊。</div>
+
+  <div class="key">
+    <div class="kt">本步驟重點</div>
+    <p><b>股本十七年沒動過</b>——實收資本額 952,970,720 元、已發行普通股 95,297,072 股，<b>無股票分割、無減資、無現金增資換股</b>，所有跨年度 EPS 與每股淨值可直接比較，不需回溯調整。</p>
+    <p>盲測階段看到的「2023→2025 年營業現金流從 32.8 億跳到 113 億」，答案是 <b>AI 伺服器導軌</b>：2025 年導軌產品佔總銷售額 <b>97.87%</b>，2026 上半年營收 <b>162.80 億元、年增 98.95%</b>，Q2 單季首度突破百億。</p>
+    <p>但估值已經走在很前面：最近可查得的收盤價（2026/08/04）<b>9,495 元</b>，對應本益比約 <span class="negv-t">83.7 倍</span>、現金殖利率 <span class="negv-t">0.54%</span>。52 週區間 2,575～9,495 元，一年之內漲了約 <b>2.7 倍</b>。</p>
+  </div>
+
+  <h4>股本變動確認（查詢每股數字前的必要步驟）</h4>
+  <p class="lead">依規則，查 EPS／每股淨值前必須先確認近年是否有股本變動。<b>結論：沒有。</b>第一步的 Goodinfo 截圖顯示平均股本自 2014 年起固定為 9.53 億元，與 Yahoo 股市 2026/07 頁面揭露的 952,970,720 元一致。因此本報告所有 EPS 年增率、本益比皆為同一基礎，<b>不存在「分割前後基期不一致」的失真風險</b>。</p>
+
+  <h3>股價與估值快照</h3>
+  <div class="key warn">
+    <div class="kt">關於這組數字的時效</div>
+    <p>下表為<b>特定時點的快照，不是即時報價</b>。鉅亨網個股頁顯示成交價 9,495 元、漲幅 +9.96%（漲停），聚財網則標示該價格為 <b>2026/08/04 收盤</b>。本報告生成日為 2026/08/06，<b>股價很可能已經變動</b>，正式交易請以你自己的看盤軟體／券商 App 為準。</p>
+  </div>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">項目</th><th>數值</th><th>說明</th></tr></thead><tbody>
+    <tr><th class="rh">收盤價</th><td class="n">9,495 元</td><td class="l">2026/08/04 收盤，當日漲停 +9.96%</td></tr>
+    <tr><th class="rh">52 週高</th><td class="n">9,495 元</td><td class="l">即當日價位，同時是歷史新高</td></tr>
+    <tr><th class="rh">52 週低</th><td class="n">2,575 元</td><td class="l">一年區間漲幅約 <b>2.7 倍</b></td></tr>
+    <tr><th class="rh">市值</th><td class="n">9,048 億元</td><td class="l">發行股數 9,529.71 萬股</td></tr>
+    <tr><th class="rh">本益比</th><td class="n negv">83.7 倍</td><td class="l">以近四季 EPS 113.45 元計算</td></tr>
+    <tr class="hlrow"><th class="rh">現金殖利率</th><td class="n negv">0.54%</td><td class="l"><b>本報告推算</b>：2025 年度股利 51 元 ÷ 9,495 元。鉅亨網頁面顯示的 0.34% 是用<b>已發放的 2024 年度股利 32.2 元</b>計算，兩者基準不同</td></tr>
+    <tr><th class="rh">每股淨值</th><td class="n">330.85 元</td><td class="l">2026Q1，Yahoo 股市。<b>與鉅亨網顯示的 172.47 元不符</b>，見下方說明</td></tr>
+    <tr><th class="rh">股價淨值比</th><td class="n">28.7 倍</td><td class="l"><b>本報告推算</b>：9,495 ÷ 330.85</td></tr>
+  </tbody></table></div>
+  <p class="cap"><b>每股淨值的兩個版本要講清楚：</b>Yahoo 股市標示 2026Q1 為 330.85 元，鉅亨網個股頁顯示 172.47 元，兩者相差約 1.92 倍。用法說會揭露的「2025 年底帳上現金約 240.7 億元、負債比僅 20%」反推，股東權益量級應在 300 億元以上，<b>對應每股淨值三百餘元</b>，因此本報告採用 330.85 元，並判斷鉅亨網該欄位可能沿用較早期間的基礎。<b>這不是股本變動造成的失真</b>（股本已確認未變），而是資料更新時點差異。</p>
+
+  <h3>EPS 與獲利結構</h3>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">最新四季 EPS</th><th>金額</th><th class="rh">最近四年 EPS</th><th>金額</th></tr></thead><tbody>
+    <tr><th class="rh">2026 Q1</th><td class="n">36.58 元</td><th class="rh">2025</th><td class="n">103.23 元</td></tr>
+    <tr><th class="rh">2025 Q4</th><td class="n">36.88 元</td><th class="rh">2024</th><td class="n">64.59 元</td></tr>
+    <tr><th class="rh">2025 Q3</th><td class="n">33.55 元</td><th class="rh">2023</th><td class="n">28.38 元</td></tr>
+    <tr class="hlrow"><th class="rh">2025 Q2</th><td class="n negv">6.45 元</td><th class="rh">2022</th><td class="n">42.56 元</td></tr>
+    <tr><th class="rh">近四季合計</th><td class="n">113.45 元</td><th class="rh">2025 年增率</th><td class="n posv">+59.8%</td></tr>
+  </tbody></table></div>
+  <p class="cap">2025 Q2 的 6.45 元是明顯的離群值——該季<b>認列鉅額匯兌損失</b>（2025 年 5 月新台幣急升）。這是帳面損失，並未等量消耗營業現金。</p>
+  <div class="key">
+    <div class="kt">這一點直接回頭修正第一步的解讀</div>
+    <p>第一步規則五算出「2025 年 A ÷ 稅後淨利 = 115%」，當時只能推論是營運資金回收。現在知道還有第二個原因：<b>2025Q2 的鉅額匯損壓低了帳面淨利，但沒有同步壓低營業現金流</b>，因此當年 A 對淨利的比值被墊高。<b>盲測階段的分數不做追溯修改</b>，但解讀時要知道 115% 這個數字含有匯兌因素，不宜視為純粹的收現能力改善。</p>
+  </div>
+  <h4>2026Q1 獲利品質（法說會與 Yahoo 財務資訊）</h4>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">指標</th><th>2026 Q1</th><th class="rh">指標</th><th>2026 Q1</th></tr></thead><tbody>
+    <tr><th class="rh">營業毛利率</th><td class="n posv">77.74%</td><th class="rh">稅前淨利率</th><td class="n posv">79.85%</td></tr>
+    <tr><th class="rh">營業利益率</th><td class="n posv">67.06%</td><th class="rh">股東權益報酬率</th><td class="n">11.71%</td></tr>
+    <tr><th class="rh">單季營收</th><td class="n">54.49 億</td><th class="rh">資產報酬率</th><td class="n">9.36%</td></tr>
+  </tbody></table></div>
+  <p class="cap">稅前淨利率 79.85% <b>高於</b>營業利益率 67.06%，代表業外（含利息收入與匯兌）貢獻可觀——這正呼應第一步規則三「核心對照要看 A、不要只看 D」的理由。另外公司說明 Q1 因應急單產生約 <b>2 億元一次性空運費</b>，影響 EPS 約 1.5 元。</p>
+
+  <h3>近期營收</h3>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">2026 年</th><th>1 月</th><th>2 月</th><th>3 月</th><th>4 月</th><th>5 月</th><th>6 月</th><th>上半年</th></tr></thead><tbody>
+    <tr><th class="rh">合併營收（億元）</th><td class="n">17.75</td><td class="n">17.57</td><td class="n">19.18</td><td class="n">25.96</td><td class="n">37.91</td><td class="n posv">44.43</td><td class="n posv">162.80</td></tr>
+    <tr><th class="rh">年增率</th><td class="n posv">+43.9%</td><td class="n posv">+31.2%</td><td class="n posv">+38.9%</td><td class="n posv">+79.1%</td><td class="n posv">+172.1%</td><td class="n posv">+220.5%</td><td class="n posv">+99.0%</td></tr>
+    <tr><th class="rh">月增率</th><td class="n posv">+3.1%</td><td class="n negv">−1.0%</td><td class="n posv">+9.2%</td><td class="n posv">+35.3%</td><td class="n posv">+46.1%</td><td class="n posv">+17.2%</td><td class="n muted">—</td></tr>
+  </tbody></table></div>
+  <p class="cap">6 月營收連續第四個月改寫單月新高。<b>Q1 54.49 億 → Q2 108.30 億</b>（季增 98.7%、年增 156.1%），單季首度突破百億。上半年 162.80 億已逼近 2025 全年的 175.01 億。<b>7 月營收於本報告生成時尚未查得公告</b>（公告期限為次月 10 日前），是最近的一個待驗證點。趨勢圖留待第 4 步繪製。</p>
+
+  <h3>股利政策</h3>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">項目</th><th>內容</th></tr></thead><tbody>
+    <tr><th class="rh">2025 年度現金股利</th><td class="l"><b>51.00 元</b>（配息率約 49.4%，本報告推算：51 ÷ 103.23）</td></tr>
+    <tr><th class="rh">2024 年度現金股利</th><td class="l">32.20 元（配息率約 49.9%），除息日 2025/08/28</td></tr>
+    <tr><th class="rh">除息日</th><td class="l"><b>2026/08/27</b>（尚未除息），最後過戶日 2026/08/28</td></tr>
+    <tr><th class="rh">現金股利發放日</th><td class="l">2026/10/01</td></tr>
+    <tr><th class="rh">配息紀錄</th><td class="l">已連續 24 年發放股利，累計 242.86 元；近 5 年平均現金殖利率 1.70%</td></tr>
+  </tbody></table></div>
+  <p class="cap">配息率兩年都落在 <b>約 50%</b>，是穩定的政策而非臨時決定。這解釋了第一步規則四看到的現象：融資活動現金流年年為負、且九成以上是股利——公司把大約一半的獲利現金化發還股東。</p>
+
+  <h3>法說會時程</h3>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">日期</th><th class="rh">場次</th><th class="rh">重點</th></tr></thead><tbody>
+    <tr class="hlrow"><th class="rh">2026 Q2</th><td class="l">尚未召開／未查得公告</td><td class="l">MoneyDJ 2026/07/21 報導<b>預計 8 月上旬</b>舉行 Q2 財報法說會。本報告生成日為 8/6，尚未查到已召開紀錄</td></tr>
+    <tr><th class="rh">2026/05/07</th><td class="l">Q1 法說會</td><td class="l">Q1 營收 54.49 億、EPS 36.58 元；Q2 展望「熱鬧滾滾」；預期單月營收 20 億以上成常態</td></tr>
+    <tr><th class="rh">2026/05/20</th><td class="l">券商邀約場次</td><td class="l">受邀參加美林、花旗、高盛、摩根士丹利證券舉辦之法人說明會（僅說明既有營運概況）</td></tr>
+    <tr><th class="rh">2026/02/25</th><td class="l">2025 Q4 及全年法說會</td><td class="l">2025 全年營收 175 億、EPS 103.23 元；年底帳上現金約 240.7 億、負債比僅 20%</td></tr>
+    <tr><th class="rh">2025/11/07</th><td class="l">Q3 法說會</td><td class="l">宣布投資逾 10 億元興建川湖二廠，2027 年中量產、增約 20% 產能；2025–2027 資本支出預估 10～20 億元</td></tr>
+  </tbody></table></div>
+  <p class="cap">公司投資人關係信箱 ir@kingslide.com、官網 <a href="http://www.kingslide.com">kingslide.com</a>。<b>本報告未直接讀取 MOPS 官方簡報 PDF</b>（該類連結受 robots.txt 限制無法擷取），上表法說會重點來自財經媒體與第三方逐字稿整理文章，並非我讀過官方簡報原檔。</p>
+
+  <h3>盲測留下的三個問題，現在有答案了</h3>
+  <div class="tw"><table class="grid"><thead><tr><th class="rh">第一步的疑問</th><th class="rh">第二步查到的答案</th></tr></thead><tbody>
+    <tr><th class="rh">① 2023→2025 年 A 從 32.8 億跳到 113 億，原因是什麼？</th><td class="l"><b>AI 伺服器導軌需求</b>。2025 年導軌產品佔總銷售額 97.87%，需求自 GB200、GB300 世代持續放大。這是產品組合單一、動能集中的成長，<b>不是多角化分散</b>——集中度既是效率也是風險。</td></tr>
+    <tr><th class="rh">② 2025 年資本支出拉到十七年新高 9.20 億，在擴什麼？</th><td class="l"><b>兩座新廠</b>：美國德州（休士頓）廠，以及投資逾 10 億元的台灣川湖二廠（2027 年中量產、增約 20% 產能）。公司在 2025/11 法說會揭露 2025–2027 年資本支出預估落在 10～20 億元。<b>對照第一步：這個量級仍遠低於單年營業現金流</b>，資本紀律沒有改變。</td></tr>
+    <tr><th class="rh">③ 帳上 241 億現金（26Q1 為 272 億）打算怎麼用？</th><td class="l">目前看到的用途主要是<b>提高股利</b>——2025 年度配息 51 元，較前一年 32.2 元增加 58%，但配息率仍維持在約 50%。資本支出年均 10～20 億元用不掉這筆現金，<b>現金持續堆積的狀況短期不會改變</b>，這也是每股淨值快速墊高、ROE 被稀釋的原因之一（2026Q1 單季 ROE 11.71%）。</td></tr>
+  </tbody></table></div>
+
+  <div class="key warn">
+    <div class="kt">一個需要如實揭露的說法變動</div>
+    <p>美國廠量產時點在不同時間點的說法不一致，<b>兩個版本都是真實的、只是時間點不同</b>：2025/11 法說會說「2026 年中量產」；2026/05 法說會與 6 月底報導則改為「<b>9 至 10 月間</b>」或「最快 9 月加入量產」。<b>以較新的版本為準</b>，並列為後續觀察項目——新廠量產遞延本身就是一個值得追蹤的訊號。</p>
+  </div>
+
+  <div class="snap">
+    <b>資料來源（每筆數字對應其真正的出處）：</b><br>
+    ・股本 952,970,720 元／已發行 95,297,072 股／2026Q1 三率／每股淨值 330.85 元／EPS 數列／2025 年度股利 51 元／除息日 2026/08/27／發放日 2026/10/01：<a href="https://tw.stock.yahoo.com/quote/2059.TW/profile">Yahoo 股市 2059 基本資料</a>（頁面標示資料時間 2026/07/14）<br>
+    ・收盤價 9,495 元／52 週高低 9,495–2,575／市值 9,048 億／本益比 83.69／近四季 EPS 113.45／鉅亨網每股淨值 172.47 元：<a href="https://www.cnyes.com/twstock/2059">鉅亨網 2059 個股總覽</a><br>
+    ・確認 9,495 元為 2026/08/04 收盤價：<a href="https://stock.wearn.com/a2059.html">聚財網 2059</a><br>
+    ・2026 年 1–5 月月營收明細與年增率：<a href="https://tw.stock.yahoo.com/quote/2059.TW/revenue">Yahoo 股市 2059 營收表</a><br>
+    ・6 月營收 44.43 億／Q2 108.30 億／上半年 162.80 億、年增 98.95%：<a href="https://money.udn.com/money/story/5607/9611658">經濟日報</a>、<a href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=3ee1f491-5b0d-43e1-8eeb-2d5ada6f04f0">MoneyDJ</a><br>
+    ・Q2 法說會預計 8 月上旬舉行：<a href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=3ee1f491-5b0d-43e1-8eeb-2d5ada6f04f0">MoneyDJ 2026/07/21</a><br>
+    ・2026/05/07 法說會重點（Q2「熱鬧滾滾」、單月 20 億成常態、2 億元空運費、北美廠 9–10 月量產）：<a href="https://blog.fugle.tw/post/earnings-call-2059-2026-05-07">富果直送法說會備忘錄</a>、<a href="https://vocus.cc/article/69fec5d2fd89780001e6b2f3">vocus 法說會問答整理</a><br>
+    ・2026/02/25 法說會（2025 全年 175 億、年底現金 240.7 億、負債比 20%、導軌佔比 97.87%）：<a href="https://blog.fugle.tw/post/earnings-call-2059-2026-02-25">富果直送法說會備忘錄</a><br>
+    ・2025/11/07 法說會（川湖二廠逾 10 億、增 20% 產能、2025–2027 資本支出 10–20 億）：<a href="https://money.udn.com/money/story/5612/9124979">經濟日報</a>、<a href="https://blog.fugle.tw/post/earnings-call-2059-2025-11-07">富果直送法說會備忘錄</a><br>
+    ・2025Q2 認列鉅額匯損：<a href="https://blog.fugle.tw/post/earnings-call-2059-2025-11-07">富果直送法說會備忘錄</a><br>
+    ・2026/05/20 券商邀約法說會公告：<a href="https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=2059">Goodinfo 公告訊息欄</a><br><br>
+    <b>來源品質說明：</b>富果直送與 vocus 的法說會備忘錄皆註明為<b>依官方法說會影音檔以 AI 輔助整理</b>，非公司正式文件；本報告採用其中與經濟日報／MoneyDJ 可交叉驗證的部分。<b>本報告未讀取任何 MOPS 官方簡報 PDF 原檔。</b><br>
+    <b>推算數字：</b>殖利率 0.54%、股價淨值比 28.7 倍、配息率 49.4%／49.9%、52 週漲幅約 2.7 倍，皆為本報告依上列原始數字計算，非查得的公布欄位。<br>
+    <b>未採用之來源：</b>查詢過程中出現的個人／小型團隊經營之個股資訊網站（含頁面殘留未解析模板變數 <code>{{...}}</code> 者，以及未附原始報導連結、僅轉述「市占率逾六成」等說法的部落格彙整頁），因無法確認原始出處，<b>相關數字未寫入本報告</b>。
+  </div>
 </section>
 
 <section id="step3">
@@ -558,7 +663,7 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 </section>
 
 <footer>
-  2059 川湖 · 個股初步分析報告 v1.0 · 生成於 2026-08-05<br>
+  2059 川湖 · 個股初步分析報告 v1.1 · 生成於 2026-08-06<br>
   本報告為分析框架下的推理與整理，非投資建議。所有數據以公司正式財報與公開資訊觀測站公告為準。
 </footer>
 

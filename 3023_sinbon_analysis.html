@@ -183,8 +183,8 @@ footer .v{font-family:"IBM Plex Mono",monospace}
     <p class="sub">在查詢股價、EPS、產業地位與任何新聞背景之前，先只用現金流量表的數字，替這家公司做一次不帶預設立場的體檢。</p>
     <div class="metaline">
       <span>資料年度 <b>2009–2025（17 年）＋ 26H1</b></span>
-      <span>已完成步驟 <b>1–2 ／ 6</b></span>
-      <span>報告版本 <b>v1.1</b></span>
+      <span>已完成步驟 <b>1–3 ／ 6</b></span>
+      <span>報告版本 <b>v1.2</b></span>
       <span>生成日期 <b>2026-08-05</b></span>
     </div>
   </div>
@@ -194,7 +194,7 @@ footer .v{font-family:"IBM Plex Mono",monospace}
   <div class="inner">
     <button class="pad active" data-target="step1"><b>01</b>現金流六大規則</button>
     <button class="pad" data-target="step2"><b>02</b>基本資訊</button>
-    <button class="pad locked" data-target="step3" disabled><b>03</b>法說會</button>
+    <button class="pad" data-target="step3"><b>03</b>法說會</button>
     <button class="pad locked" data-target="step4" disabled><b>04</b>營收趨勢</button>
     <button class="pad locked" data-target="step5" disabled><b>05</b>前瞻本益比</button>
     <button class="pad locked" data-target="step6" disabled><b>06</b>投資決策</button>
@@ -500,13 +500,137 @@ footer .v{font-family:"IBM Plex Mono",monospace}
   </table>
   <p><b>整體判讀：</b>第 1 步最嚇人的那個訊號（三重疊加）被季節性解釋掉了，這是好消息。但<b>換來的是一個更具體的新問題</b>——公司正在同時做三件很花錢的事：衝營收（吃掉營運資金）、蓋兩座新廠（53 億）、維持每年 24 億的股利承諾。這三件事的現金總需求，很可能超過目前的營業現金流水準。</p>
 </section>
-<section id="step3"><div class="pending"><p class="steptag">第 3 步 ／ 共 6 步</p><h2>法說會資料深入討論</h2><p>尚未執行。</p></div></section>
+<section id="step3">
+  <p class="steptag">第 3 步 ／ 共 6 步</p>
+  <h2>法說會資料深入討論</h2>
+
+  <div class="key">
+    <span class="kt">本步驟兩個最重要的結論</span>
+    <p>① 信邦的成長故事是<b>真的有訂單、有客戶、有認證在支撐</b>，不是純題材：半導體設備客戶從 2 家擴到 <b>6 家</b>、多家人形機器人客戶已進入<b>少量至中量出貨</b>、直流快充液冷系統是<b>全球首家取得 UL 認證</b>並打進日本車廠。</p>
+    <p>② 但故事的代價全部落在現金流上：<span class="negv">苗栗三座廠產能已滿、大型機櫃訂單要等新廠、研發費用一年 12.4 億（年增 22%）、53 億新廠支出</span>。第 1 步的規則五（A 長期小於 D）與規則四（股利剛性）在這裡找到了完整的因果解釋。</p>
+  </div>
+
+  <h3>先講清楚：這一步的資料是怎麼來的</h3>
+  <div class="key warn">
+    <span class="kt">查證等級聲明</span>
+    <p><b>我沒有讀過任何一份官方法說會簡報 PDF 原檔</b>——MOPS 的簡報連結（mopsov.twse.com.tw）受 robots.txt 限制，即使拿到確切網址也無法擷取內容。以下內容全部來自<b>財經媒體與第三方整理文章</b>。</p>
+    <p><b>主要依據場次選擇說明：</b>時間上最新的自辦法說會是 <b>2026/06/11</b>，但目前能找到的整理內容偏向公司簡介與產品應用列舉，資訊量有限；<b>2025/11/04 那場（2025Q3）反而有完整的 Q&amp;A 逐字重點與 2026 年展望</b>。依「選用資訊量最完整的場次」原則，以 2025/11/04 為主要依據，再用 2026 年的新聞逐項更新到最新狀態。</p>
+  </div>
+
+  <h3>方向一 · 產能佈局與新廠：這是整個故事的瓶頸</h3>
+  <p>信邦的產能佈局分成兩條線在走——<b>海外是為了避關稅，台灣是為了接 AI 大單</b>。</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">據點</th><th class="lft">狀態與時程</th><th class="lft">目的</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">墨西哥新廠</td><td class="lft">2025 年 8 月已啟用</td><td class="lft">承接美國客戶自中國轉移的產能</td></tr>
+      <tr><td class="lft">美國擴廠</td><td class="lft">2025 年 9 月已啟用</td><td class="lft">因應「美國製造」趨勢</td></tr>
+      <tr><td class="lft">苗栗現有三座廠</td><td class="lft"><span class="negv">產能已滿載</span></td><td class="lft">現有業務</td></tr>
+      <tr><td class="lft">台中港科技園區廠</td><td class="lft">2027 年投入量產</td><td class="lft">2026/04 董事會通過</td></tr>
+      <tr><td class="lft">苗栗銅鑼科學園區廠</td><td class="lft">2029 年投入量產，<b>投資額上調 35%</b></td><td class="lft">半導體設備核心生產基地</td></tr>
+      <tr class="totrow"><td class="lft">兩座新廠合計投資</td><td class="lft">53.05 億元</td><td class="lft">—</td></tr>
+    </tbody>
+  </table>
+  <p class="snap"><b>時程版本落差（如實揭露，兩者皆為真實但屬不同時間點）：</b>2025 年 9 月的報導提到「第四座廠將在 2027 年投產，可望迎來大型機櫃訂單」，未指明廠名；2026 年 4 月的董事會公告則明列台中港廠 2027 年、銅鑼廠 2029 年。兩者可能是同一座廠（台中港＝第四座），也可能是銅鑼廠時程後延。<b>我無法從現有資料確認是哪一種，不臆測，以 2026/04 的董事會公告版本為準。</b></p>
+
+  <div class="key alert">
+    <span class="kt">這一段是整份報告最關鍵的因果連結</span>
+    <p>2025 年 9 月報導明確指出：<b>半導體設備訂單能見度已達 2027 年</b>，但受限於廠房高度與面積，信邦<span class="negv">只能先承接小機櫃訂單，大機櫃要等新廠完成</span>。</p>
+    <p>換句話說——<b>訂單不是問題，產能才是問題。</b>這解釋了為什麼公司敢在 2026 年 4 月一口氣拍板 53 億元擴廠，也解釋了為什麼第 1 步看到 <b>2023–2025 年固定資產支出連三年墊高（5.71 → 6.84 → 7.62 億）而營業現金流沒有同步創高</b>——錢已經先花下去，收成要等 2027 年之後。</p>
+  </div>
+
+  <h3>方向二 · 無人機：目前最強的短期動能</h3>
+  <p>這是四個方向裡<b>唯一已經在營收數字上看得到、而且公司敢給出量化指引</b>的業務。</p>
+  <ul>
+    <li><b>市場定位很明確</b>：聚焦具高法規門檻與營運壁壘的<b>「商用運輸」</b>市場，<b>避開競爭激烈的消費型空拍應用</b>。</li>
+    <li><b>法規紅利已經到位</b>：美國聯邦航空總署（FAA）正式核准相關營運與製造，市場已由驗證階段進入實際商業化營運。</li>
+    <li><b>公司量化指引</b>：預估無人機相關業務<b>今年較去年呈現倍數成長</b>，且未來兩年將持續維持強勁動能。</li>
+    <li><b>提供的產品</b>：物流無人機的充電線束、影像擷取線束；以及運輸無人機配套的電池組充電機櫃。</li>
+  </ul>
+  <p>值得注意的是，信邦<b>把無人機歸類在「工業應用」項下</b>。這剛好對應到前 7 月工業應用年增 30.51%、是五大產業中成長最快的一項——<b>但公司沒有揭露無人機在其中占多少</b>，所以無法單獨驗證「倍數成長」這句話。</p>
+  <p class="snap"><b>來源：</b>FAA 核准、商用運輸定位、倍數成長指引 <a href="https://news.cnyes.com/news/id/6558621">鉅亨網 2026/08/04</a>、<a href="https://www.chinatimes.com/realtimenews/20260804003916-260410">時報資訊 2026/08/04</a>；無人機歸類於工業應用與王紹新對載人無人機的看法 <a href="https://vocus.cc/article/68c39106fd89780001540ea2">vocus 整理之工商時報報導（2025/09）</a>（<b>第三方轉載整理，非原始報導頁面</b>）。</p>
+
+  <h3>方向三 · 人形機器人與 AI 新領域：時程有具體說法，但占比仍極小</h3>
+  <p>公司在 2025Q3 法說會給了一組<b>罕見地具體的時間表與天花板數字</b>：</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">時間</th><th class="lft">公司說法</th><th class="lft">目前驗證狀態</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">2026 年</td><td class="lft">人形機器人可看到<b>「小煙火」</b>，開始小量出貨</td><td class="lft posv">2026/07 公司證實：多家人形機器人客戶產品已進入<b>少量至中量出貨</b>，由開發驗證邁向試量產 ✓</td></tr>
+      <tr><td class="lft">2027 年</td><td class="lft">有機會<b>「大放異彩」</b></td><td class="lft">尚未到期，無法驗證</td></tr>
+      <tr><td class="lft">長期</td><td class="lft">此業務潛力占整體營收 <b>10%–15%</b></td><td class="lft negv">目前占比「仍非常小」，公司未揭露具體數字</td></tr>
+    </tbody>
+  </table>
+  <p><b>AI 佈局是三層結構</b>，不只是機器人一項：</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">層級</th><th class="lft">內容</th><th class="lft">最具體的證據</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">AI 核心引擎<br>（半導體設備）</td><td class="lft">業務模式從零組件供應升級為<b>系統整合與機櫃組裝</b></td><td class="lft posv">國際半導體設備主要客戶<b>由 2 家擴展至 6 家</b></td></tr>
+      <tr><td class="lft">AI 基礎設施<br>（電力系統）</td><td class="lft">數據中心高電流／高壓線束、配電櫃</td><td class="lft">客戶涵蓋全球主要電力設備模組大廠</td></tr>
+      <tr><td class="lft">AI 終端應用<br>（機器人、智慧交通）</td><td class="lft">人形機器人（從單一部位線束擴展到<b>全身完整解決方案</b>）、倉儲與協作機器人、EVTOL、智慧零售</td><td class="lft">EVTOL 線束為 <b>2028 年洛杉磯奧運選手專用空中交通</b>指定廠商</td></tr>
+    </tbody>
+  </table>
+  <p><b>策略聯盟補足自己做不到的部分</b>：與宇隆科技簽 MOU 共同開發機器人用的 RV、諧波及行星減速機；與德國 Swobbee 合作拓展歐洲兩輪電動機車與充電櫃；與正凌精密在工業、汽車、醫療連接器長期合作。</p>
+  <p>另外有一個容易被忽略但金額不小的案子：與<b>全球市佔率最高的釣具品牌合作的智慧釣具專案，潛在訂單規模可達十幾億台幣</b>。這說明信邦「客製化、少量多樣」的模式確實能不時撈到意外的大單。</p>
+  <p class="snap"><b>來源：</b>小煙火／大放異彩時程、10–15% 長期占比、半導體客戶 2→6 家、EVTOL 奧運指定、智慧釣具專案、策略聯盟 <a href="https://blog.fugle.tw/post/earnings-call-3023-2025-11-04">富果 2025/11/04 法說會備忘錄</a>（<b>該文標示為 AI 依證交所官方影音檔整理，非公司原文</b>）；2026 年試量產進度 <a href="https://news.cnyes.com/news/id/6521634">鉅亨網 2026/07/03</a>；產品應用細項（BMS 電池管理、智慧零售、智慧倉儲、智慧配送）<a href="https://poorstock.com/earningcall/3023">散戶鬥嘴鼓 2026/06/11 法說會整理</a>。</p>
+
+  <h3>方向四 · 中美關稅下的「一個世界，兩個系統」</h3>
+  <p>這是公司對地緣政治風險的正式回答，內容比一般的官話具體：</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">區域</th><th class="lft">策略</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">美國與墨西哥</td><td class="lft"><b>擴產需求非常大</b>，許多美國客戶希望加速把中國的生產轉移至墨西哥</td></tr>
+      <tr><td class="lft">歐洲</td><td class="lft">現有產線<b>尚未滿載</b>，且歐洲客戶在中國生產亦可行，<b>暫無積極擴產計畫</b></td></tr>
+      <tr><td class="lft">中國</td><td class="lft">中國本地客戶穩定成長，<b>產線保留以服務內需市場</b></td></tr>
+    </tbody>
+  </table>
+  <p>公司的總結是：<b>「除了中國產能剛好滿足需求外，其他地區的產能未來仍會非常不足。」</b></p>
+  <p>這句話值得留意——它同時是<b>好消息（需求旺）與壞消息（要一直花錢蓋廠）</b>。而且注意矛盾點：關稅戰讓公司必須在美國、墨西哥、台灣同時建置產能，<span class="negv">產能重複投資會拉低整體資產利用效率</span>，這是「一個世界，兩個系統」的隱藏成本。</p>
+
+  <h3>五大產業（MAGIC）結構的轉變</h3>
+  <p>2025 年拖垮全局的是綠能，2026 年前 7 月已經完全換了一批引擎：</p>
+  <div class="chartbox"><svg class="chart" viewBox="0 0 540 250" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="0" y1="165.6" x2="540" y2="165.6" class="axis"/><rect x="30.0" y="28.0" width="72" height="137.6" rx="2" class="b-peak"/><text x="66.0" y="22.0" class="vlab">30.51</text><text x="66.0" y="242" class="ylab">工業應用</text><rect x="132.0" y="47.1" width="72" height="118.5" rx="2" class="b-pos"/><text x="168.0" y="41.1" class="vlab">26.28</text><text x="168.0" y="242" class="ylab">醫療照護</text><rect x="234.0" y="51.0" width="72" height="114.5" rx="2" class="b-pos"/><text x="270.0" y="45.0" class="vlab">25.4</text><text x="270.0" y="242" class="ylab">汽車</text><rect x="336.0" y="165.6" width="72" height="36.5" rx="2" class="b-neg"/><text x="372.0" y="214.0" class="vlab">-8.09</text><text x="372.0" y="242" class="ylab">綠能</text><rect x="438.0" y="165.6" width="72" height="42.4" rx="2" class="b-trough"/><text x="474.0" y="220.0" class="vlab">-9.41</text><text x="474.0" y="242" class="ylab">通訊電子</text></svg></div>
+  <p class="snap">2026 年前 7 月累計營收年增率（%），米色＝最強、粉色＝最弱。</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">產業</th><th>2025 前三季<br>營收占比</th><th>2025 前三季<br>年增率</th><th>2026 前 7 月<br>年增率</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">工業應用（含半導體設備、無人機）</td><td class="mono">31%</td><td class="mono">+0.9%</td><td class="mono posv">+30.51%</td></tr>
+      <tr><td class="lft">通訊及電子周邊</td><td class="mono">24%</td><td class="mono">+9.8%</td><td class="mono negv">-9.41%</td></tr>
+      <tr><td class="lft">綠能</td><td class="mono">21%</td><td class="mono negv">-28.8%</td><td class="mono negv">-8.09%</td></tr>
+      <tr><td class="lft">汽車</td><td class="mono">15%</td><td class="mono">+2.2%</td><td class="mono posv">+25.40%</td></tr>
+      <tr><td class="lft">醫療及健康照護</td><td class="mono">9%</td><td class="mono">+0.3%</td><td class="mono posv">+26.28%</td></tr>
+    </tbody>
+  </table>
+  <p><b>三個觀察：</b></p>
+  <ul>
+    <li><b>公司的預測基本兌現了。</b>2025Q3 法說會說 2026 年成長動能來自「工業應用與汽車」，實際前 7 月工業 +30.51%、汽車 +25.40%，是前兩名。醫療當時說「穩定成長但幅度不大」，結果 +26.28% 反而<b>超出公司自己的預期</b>。</li>
+    <li><b>綠能仍在流血但止血中</b>：從 -28.8% 收斂到 -8.09%。公司說正在開發另一家大型綠能客戶，已進入最終規格與報價階段，希望 2–3 年內讓太陽能業務重返榮景——<span class="negv">這是尚未兌現的承諾，要持續追蹤</span>。</li>
+    <li><b>通訊從 +9.8% 翻轉成 -9.41%</b>，是唯一由正轉負的項目。公司在 2025Q3 曾說通訊是「今年成長最強勁的領域，受惠 AI 基礎設施建置需求」，<span class="negv">如今卻轉負，公司尚未對此提出解釋</span>。這是我在這一步發現、但目前查不到答案的疑點。</li>
+  </ul>
+
+  <h3>把法說會的話，對回第 1 步的現金流數字</h3>
+  <p>這是本流程「現金流優先」設計的價值所在——先看數字、再聽故事，然後檢查兩者對不對得上。</p>
+  <table class="grid lean" style="min-width:auto">
+    <thead><tr><th class="lft">第 1 步從數字看到的現象</th><th class="lft">法說會提供的解釋</th><th>對得上嗎</th></tr></thead>
+    <tbody>
+      <tr><td class="lft">規則五：17 年僅 4 年 A &gt; D，近十年只有 1 年通過</td><td class="lft">公司長年高速成長＋研發費用年增 22%（達 12.4 億）＋客製化少量多樣模式綁住大量營運資金</td><td class="jud ok">對得上</td></tr>
+      <tr><td class="lft">規則二／三：2023–2025 資本支出連三年墊高，A 卻未再創高</td><td class="lft">半導體設備訂單能見度已到 2027 年，但苗栗三廠滿載、大機櫃訂單要等新廠——<b>先投錢、後收成</b></td><td class="jud ok">對得上</td></tr>
+      <tr><td class="lft">規則四：現金股利八年單向增加到 24.61 億，從未減少</td><td class="lft">公司明言<b>歷年配發率約 70%，未來此政策預計持續</b></td><td class="jud ok">對得上（且證實剛性）</td></tr>
+      <tr><td class="lft">26H1 營業現金流轉負</td><td class="lft">營收連 4 個月創高，營運資金隨之膨脹</td><td class="jud ok">合理，但<b>公司未逐項揭露</b></td></tr>
+      <tr><td class="lft">2025 年 C 出現「償還公司債 -8.17 億＋短期借款 +9.03 億」的短債填長債</td><td class="lft"><span class="negv">法說會與公開報導均未說明</span></td><td class="jud no">查無解釋</td></tr>
+    </tbody>
+  </table>
+  <div class="key warn">
+    <span class="kt">綜合判讀</span>
+    <p>信邦的故事<b>誠實度相當高</b>——公司自己承認 2025 年是最辛苦的一年、承認太陽能面臨「寒冬」、承認新業務占比「仍非常小」，並不迴避壞消息。給出的時程（2026 小煙火、2027 大放異彩）也已經部分兌現。</p>
+    <p><b>但故事再好，都改變不了一個算術問題：</b>未來幾年公司要同時支應約 24 億股利、13 億新廠攤提、5–7 億維持性資本支出、12 億以上研發費用，而近三年營業現金流是 51.9 / 26.0 / 33.6 億。<span class="negv">收成期在 2027 年之後，中間這段路的資金缺口怎麼補，是最需要盯緊的事。</span></p>
+  </div>
+  <p class="snap"><b>本步驟資料限制總整理：</b>①未讀取任何官方簡報 PDF 原檔；②富果與散戶鬥嘴鼓的內容<b>皆標示為 AI 整理</b>，非公司原文逐字稿；③2025Q3 法說會的產業占比為「2025 前三季」基礎，與 2026 前 7 月年增率<b>不是同一口徑</b>，表格中已分欄呈現、未混用；④第 1 步規則四提到的「季度槓桿指標（淨金融負債/EBITDA）」，<span class="negv">在可取得的法說會整理中未見揭露，無法補上年度數字掩蓋單季高峰的落差</span>。</p>
+</section>
 <section id="step4"><div class="pending"><p class="steptag">第 4 步 ／ 共 6 步</p><h2>營收趨勢視覺化</h2><p>尚未執行。</p></div></section>
 <section id="step5"><div class="pending"><p class="steptag">第 5 步 ／ 共 6 步</p><h2>前瞻本益比／EPS 預估</h2><p>尚未執行。</p></div></section>
 <section id="step6"><div class="pending"><p class="steptag">第 6 步 ／ 共 6 步</p><h2>投資決策推理</h2><p>僅在使用者主動詢問時才執行。</p></div></section>
 
 <footer>
-  <p><b>報告版本</b> <span class="v">v1.1</span>　|　<b>生成時間</b> <span class="v">2026-08-05</span>　|　股票代號 <span class="v">3023</span></p>
+  <p><b>報告版本</b> <span class="v">v1.2</span>　|　<b>生成時間</b> <span class="v">2026-08-05</span>　|　股票代號 <span class="v">3023</span></p>
   <p><b>資料來源：</b>本報告第 1 步全部數據皆為<b>使用者提供之 Goodinfo 截圖</b>（現金流量表年度總表、投資活動細項、融資活動細項），非本次搜尋所得。原始頁面：<a href="https://goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=3023">goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=3023</a></p>
   <p>本報告為現金流量表數據的結構化分析與推理紀錄，不構成任何投資建議，也非理財顧問意見。投資決策請自行判斷並承擔風險。</p>
 </footer>
